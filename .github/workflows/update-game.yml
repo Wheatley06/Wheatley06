@@ -1,0 +1,35 @@
+
+name: Generate Space Shooter Game
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 2
+
+      - name: Generate Space Shooter GIF
+        uses: czl9707/gh-space-shooter@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          username: Wheatley06
+          output-path: game.gif
+          strategy: random
+          no-commit: true
+
+      - name: Upload GIF for inspection
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: space-shooter-preview
+          path: game.gif
+          if-no-files-found: error
+          retention-days: 1
