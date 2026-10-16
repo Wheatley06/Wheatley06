@@ -1,11 +1,13 @@
 
-name: Generate Space Shooter Game
+name: Update Space Shooter Game
 
 on:
+  schedule:
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   generate:
@@ -14,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 2
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -28,10 +32,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh-space-shooter Wheatley06 --output game.gif --strategy random
 
-      - name: Upload GIF for inspection
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: space-shooter-preview
-          path: game.gif
-          if-no-files-found: error
-          retention-days: 1
+      - name: Commit and push GIF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add game.gif
+          if git diff --cached --quiet; then
+            echo "No changes to game.gif"
+            exit 0
+          fi
+          git commit -m "Update Space Shooter game"
+          git push
