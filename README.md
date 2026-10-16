@@ -15,4 +15,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+![Space Shooter](./game.gif)
+
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-rainbow.svg)
