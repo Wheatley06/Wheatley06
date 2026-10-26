@@ -1,3 +1,12 @@
+<img
+  width="100%"
+  alt="Rainbow"
+  src="Images/Miscellaneous/lightning1.gif"
+/>
+
+
+
+
 ## Hi there 👋
 
 <!--
