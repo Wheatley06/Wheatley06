@@ -1,7 +1,7 @@
 <img
   width="100%"
   alt="Rainbow"
-  src="Images/Banners/02-gemelodigital2.png"
+  src="Images/Banners/03-gemelodigital3.png"
 />
 
 
