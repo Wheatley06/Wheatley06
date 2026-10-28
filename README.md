@@ -4,7 +4,9 @@
   src="Images/Banners/03-gemelodigital3.png"
 />
 
-
+<p align="center">
+  <img src="https://www.gitskins.com/api/section/hero?username=aesp24&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F230881355%3Fv%3D4" alt="aesp24 hero visual" />
+</p>
 
 
 ## Hi there 👋
