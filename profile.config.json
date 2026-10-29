@@ -1,0 +1,84 @@
+{
+  "$schema": "./profile.schema.json",
+  "profile": {
+    "name": "Breidly Alembert Espinal",
+    "username": "Wheatley06",
+    "headline": "Automation & Software Engineering",
+    "affiliation": "Mechatronics / Software",
+    "location": "Lima, Peru",
+    "status": "Learning / Building / Shipping",
+    "about": [
+      "I work with industrial automation, control systems and IoT, integrating sensors, controllers and communication networks for industrial and mobile equipment.",
+      "I am expanding my work toward software engineering, machine learning, cloud computing and AI-powered solutions, combining hands-on engineering with continuous learning."
+    ]
+  },
+  "research": {
+    "primary": "Automation & Applied AI",
+    "direction": "Connected intelligent systems",
+    "themes": "IoT / ML / Cloud / AI Agents",
+    "narrative": "I am interested in connecting physical systems with intelligent software through industrial IoT, data analysis, machine learning, cloud platforms and AI agents."
+  },
+  "focus": [
+    {
+      "name": "Industrial Automation",
+      "description": "Control systems, instrumentation, commissioning and diagnostics for industrial and mobile equipment."
+    },
+    {
+      "name": "IoT & Connectivity",
+      "description": "Sensors, controllers, CAN Bus and communication between connected devices."
+    },
+    {
+      "name": "Machine Learning",
+      "description": "Data preprocessing, exploratory analysis, feature engineering and predictive models."
+    },
+    {
+      "name": "Cloud & AI",
+      "description": "Exploring AWS, Microsoft Azure, AI agents and cloud-based solutions."
+    },
+    {
+      "name": "Software Engineering",
+      "description": "Python, software development, integration and process automation."
+    }
+  ],
+  "projects": [
+    {
+      "name": "MinaTech",
+      "url": "https://github.com/Wheatley06/Minatech",
+      "homepage": "",
+      "focus": "Technology project",
+      "summary": "A project exploring software and technology solutions.",
+      "heroLabel": "Featured project"
+    }
+  ],
+  "techStack": [
+    "Python",
+    "C/C++",
+    "SQL",
+    "CAN Bus",
+    "IoT",
+    "MQTT",
+    "Machine Learning",
+    "Computer Vision",
+    "LangChain",
+    "LangGraph",
+    "AWS",
+    "Microsoft Azure"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "value": "Wheatley06",
+      "url": "https://github.com/Wheatley06",
+      "logo": "github",
+      "color": "0B1220"
+    }
+  ],
+  "activity": {
+    "enabled": false,
+    "limit": 6
+  },
+  "appearance": {
+    "palette": "signal"
+  },
+  "footer": "Engineering connected systems and exploring intelligent solutions."
+}
