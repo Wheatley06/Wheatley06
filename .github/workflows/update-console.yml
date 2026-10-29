@@ -1,0 +1,49 @@
+name: Generate Profile Console
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+
+      - name: Checkout console generator
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          repository: wildanniam/GitHub-Profile-Console
+          ref: main
+          path: generator
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+
+      - name: Install generator dependencies
+        working-directory: generator
+        run: npm ci
+
+      - name: Generate console SVG assets
+        working-directory: generator
+        run: |
+          npm run generate:hero -- \
+            --source "$GITHUB_WORKSPACE/Images/Profile/Profile/wheatley-01.png" \
+            --config "$GITHUB_WORKSPACE/profile.config.json"
+
+      - name: Upload generated preview
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: profile-console-preview
+          path: generator/assets/hero/
+          if-no-files-found: error
+          retention-days: 7
