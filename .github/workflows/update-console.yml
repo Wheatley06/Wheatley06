@@ -1,10 +1,23 @@
-name: Generate Profile Console
+
+name: Update Profile Console
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Images/Profile/Profile/profile.png"
+      - "profile.config.json"
+      - ".github/workflows/update-console.yml"
+
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: profile-console
+  cancel-in-progress: true
 
 jobs:
   generate:
@@ -13,8 +26,6 @@ jobs:
     steps:
       - name: Checkout profile repository
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
-        with:
-          persist-credentials: false
 
       - name: Checkout console generator
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
@@ -25,7 +36,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
         with:
           node-version: "22"
 
@@ -37,13 +48,61 @@ jobs:
         working-directory: generator
         run: |
           npm run generate:hero -- \
-            --source "$GITHUB_WORKSPACE/Images/Profile/Profile/wheatley-01.png" \
+            --source "$GITHUB_WORKSPACE/Images/Profile/Profile/profile.png" \
             --config "$GITHUB_WORKSPACE/profile.config.json"
 
-      - name: Upload generated preview
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: profile-console-preview
-          path: generator/assets/hero/
-          if-no-files-found: error
-          retention-days: 7
+      - name: Prepare stable SVG filenames
+        run: |
+          mkdir -p assets/profile-console
+
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const source = 'generator/assets/hero';
+          const destination = 'assets/profile-console';
+
+          const manifest = JSON.parse(
+            fs.readFileSync(path.join(source, 'manifest.json'), 'utf8')
+          );
+
+          const files = {
+            desktopDark: 'console-dark.svg',
+            desktopLight: 'console-light.svg',
+            mobileDark: 'console-mobile-dark.svg',
+            mobileLight: 'console-mobile-light.svg'
+          };
+
+          for (const [key, filename] of Object.entries(files)) {
+            const generated = manifest.assets[key];
+
+            if (!generated) {
+              throw new Error(`Missing generated asset: ${key}`);
+            }
+
+            fs.copyFileSync(
+              path.join(source, generated),
+              path.join(destination, filename)
+            );
+          }
+
+          fs.copyFileSync(
+            path.join(source, 'manifest.json'),
+            path.join(destination, 'manifest.json')
+          );
+          NODE
+
+      - name: Commit and publish generated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/profile-console/
+
+          if git diff --cached --quiet; then
+            echo "No changes in generated SVG files."
+            exit 0
+          fi
+
+          git commit -m "Update profile console assets"
+          git push
