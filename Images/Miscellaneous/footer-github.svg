@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" role="img" aria-labelledby="aesp-f-title">
+  <title id="aesp-f-title">Turning data into intelligent software, engineered today for tomorrow’s development.</title>
+
+  <defs>
+    <linearGradient id="aesp-f-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#060A14"/>
+      <stop offset="0.5" stop-color="#0A1224"/>
+      <stop offset="1" stop-color="#060A14"/>
+    </linearGradient>
+    <linearGradient id="aesp-f-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+      <stop offset="0" stop-color="#1F5BFF" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#35C8FF"/>
+      <stop offset="0.65" stop-color="#B65CFF"/>
+      <stop offset="1" stop-color="#1F5BFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0;300 0;-300 0" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="aesp-f-blur" x="-20%" y="-400%" width="140%" height="900%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <style>
+      .aesp-f-text { font-family: Georgia, 'Times New Roman', serif; font-size: 20px; font-style: normal; letter-spacing: 1px; fill: #BFE3FF; }
+      @media (prefers-reduced-motion: reduce) { .aesp-f-motion { display: none; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="120" fill="url(#aesp-f-bg)"/>
+  <rect x="100" y="30" width="1000" height="2" fill="url(#aesp-f-line)"/>
+  <rect x="100" y="30" width="1000" height="2" fill="url(#aesp-f-line)" filter="url(#aesp-f-blur)" opacity="0.6"/>
+
+  <text x="600" y="80" text-anchor="middle" class="aesp-f-text">Turning data into intelligent software, engineered today for tomorrow’s development.</text>
+
+  <circle cx="600" cy="102" r="3" fill="#35C8FF"/>
+  <circle cx="600" cy="102" r="3" fill="#BFE3FF" class="aesp-f-motion">
+    <animate attributeName="r" values="3;9;3" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
