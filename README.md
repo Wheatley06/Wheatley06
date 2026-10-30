@@ -4,8 +4,6 @@
   src="Images/Banners/03-gemelodigital3.png"
 />
 
-
-
 <picture>
   <source media="(max-width: 600px)" srcset="assets/profile-console/console-mobile-dark.svg">
   <img src="assets/profile-console/console-dark.svg" alt="GitHub Profile Console" width="100%">
