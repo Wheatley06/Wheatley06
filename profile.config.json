@@ -48,22 +48,6 @@
       "focus": "Technology project",
       "summary": "A project exploring software and technology solutions.",
       "heroLabel": "Featured project"
-    },
-    {
-      "name": "Digital Twin FTR",
-      "url": "",
-      "homepage": "",
-      "focus": "Technology project",
-      "summary": "A project exploring software and technology solutions.",
-      "heroLabel": "Featured project IAthon"
-    },
-    {
-      "name": "Agents",
-      "url": "",
-      "homepage": "",
-      "focus": "Technology project",
-      "summary": "A project exploring software and technology solutions.",
-      "heroLabel": "Featured project"
     }
     
   ],
@@ -84,7 +68,7 @@
   "links": [
     {
       "label": "GitHub",
-      "value": "Wheatley06",
+      "value": "https://github.com/Wheatley06",
       "url": "https://github.com/Wheatley06",
       "logo": "github",
       "color": "0B1220"
