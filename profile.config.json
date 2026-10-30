@@ -1,10 +1,10 @@
 {
   "$schema": "./profile.schema.json",
   "profile": {
-    "name": "Breidly Alembert Espinal",
+    "name": "Breidly Alembert Espinal Toralva",
     "username": "Wheatley06",
-    "headline": "Automation & Software Engineering",
-    "affiliation": "Mechatronics / Software",
+    "headline": "Industrial Automation & Software Engineering",
+    "affiliation": "Mechatronics / Computer Science",
     "location": "Lima, Peru",
     "status": "Learning / Building / Shipping",
     "about": [
@@ -14,7 +14,7 @@
   },
   "research": {
     "primary": "Automation & Applied AI",
-    "direction": "Connected intelligent systems",
+    "direction": "Connecting intelligent systems",
     "themes": "IoT / ML / Cloud / AI Agents",
     "narrative": "I am interested in connecting physical systems with intelligent software through industrial IoT, data analysis, machine learning, cloud platforms and AI agents."
   },
