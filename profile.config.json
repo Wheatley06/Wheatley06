@@ -48,15 +48,7 @@
       "focus": "Technology project",
       "summary": "A project exploring software and technology solutions.",
       "heroLabel": "Featured project"
-    },
-  {
-    "name": "GitHub Profile Console",
-    "url": "https://github.com/Wheatley06/Wheatley06",
-    "homepage": "",
-    "focus": "Profile Automation & Development",
-    "summary": "An automated GitHub profile console featuring responsive SVG visuals, dynamic content and GitHub Actions integration.",
-    "heroLabel": "Automation project"
-  }
+    }
   ],
   "techStack": [
     "Python",
