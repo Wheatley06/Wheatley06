@@ -48,6 +48,22 @@
       "focus": "Technology project",
       "summary": "A project exploring software and technology solutions.",
       "heroLabel": "Featured project"
+    },
+    {
+      "name": "GitHub Profile Console",
+      "url": "https://github.com/Wheatley06/Wheatley06",
+      "homepage": "",
+      "focus": "Profile Automation & Development",
+      "summary": "An automated GitHub profile console.",
+      "heroLabel": "Automation project"
+    },
+    {
+      "name": "IoT Monitoring System",
+      "url": "URL_DEL_REPOSITORIO",
+      "homepage": "",
+      "focus": "IoT & Industrial Automation",
+      "summary": "Industrial monitoring using sensors and connected devices.",
+      "heroLabel": "IoT project"
     }
     
   ],
@@ -72,6 +88,27 @@
       "url": "https://github.com/Wheatley06",
       "logo": "github",
       "color": "0B1220"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "Professional Profile",
+      "url": "https://www.linkedin.com/in/TU-USUARIO/",
+      "logo": "linkedin",
+      "color": "0A66C2"
+    },
+    {
+      "label": "Kaggle",
+      "value": "Data Science",
+      "url": "https://www.kaggle.com/TU-USUARIO",
+      "logo": "kaggle",
+      "color": "20BEFF"
+    },
+    {
+      "label": "Portfolio",
+      "value": "Personal Website",
+      "url": "https://TU-DOMINIO.com",
+      "logo": "globe",
+      "color": "35D6C5"
     }
   ],
   "activity": {
