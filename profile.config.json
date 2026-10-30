@@ -15,7 +15,7 @@
   "research": {
     "primary": "Automation & Applied AI",
     "direction": "Connecting intelligent systems",
-    "themes": "IoT / ML / Cloud / AI Agents",
+    "themes": "IoT / ML / Cloud / AI Agents / Digital Twins",
     "narrative": "I am interested in connecting physical systems with intelligent software through industrial IoT, data analysis, machine learning, cloud platforms and AI agents."
   },
   "focus": [
@@ -48,7 +48,24 @@
       "focus": "Technology project",
       "summary": "A project exploring software and technology solutions.",
       "heroLabel": "Featured project"
+    },
+    {
+      "name": "Digital Twin FTR",
+      "url": "",
+      "homepage": "",
+      "focus": "Technology project",
+      "summary": "A project exploring software and technology solutions.",
+      "heroLabel": "Featured project IAthon"
+    },
+    {
+      "name": "Agents",
+      "url": "",
+      "homepage": "",
+      "focus": "Technology project",
+      "summary": "A project exploring software and technology solutions.",
+      "heroLabel": "Featured project"
     }
+    
   ],
   "techStack": [
     "Python",
