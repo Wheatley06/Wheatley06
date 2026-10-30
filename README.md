@@ -31,3 +31,9 @@ Here are some ideas to get you started:
 ![Space Shooter](./game.gif)
 
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-rainbow.svg)
+
+<img
+  width="100%"
+  alt="Rainbow"
+  src="Images/Miscellaneous/footer-github.svg"
+/>
