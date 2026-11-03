@@ -28,18 +28,24 @@ import {
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 
+
 const LAYOUT = {
   width: CANVAS.width ?? 1200,
   height: CANVAS.height ?? 480,
+
+  // Main maze
   mazeX: 245,
   mazeY: 145,
-  mazeWidth: 700,
-  mazeHeight: 270,
-  calendarX: 985,
+  mazeWidth: 520,
+  mazeHeight: 240,
+
+  // Contribution calendar
+  calendarX: 790,
   calendarY: 145,
-  calendarCell: 9,
-  calendarGap: 3,
+  calendarCell: 5,
+  calendarGap: 2,
 };
+
 
 const MAZE_STYLE = {
   wall: COLORS.cyan,
@@ -282,7 +288,7 @@ function renderContributionPanel(days = []) {
       <text x="${LAYOUT.calendarX}" y="130"
         fill="${COLORS.cyan}" font-size="10"
         letter-spacing="1.5">
-        ACTIVITY / 52 WEEKS
+        ACTIVITY / 53 WEEKS
       </text>
 
       ${renderContributionCells(days)}
