@@ -1,51 +1,24 @@
 
 /**
  * WHEATLEY06 — PAC-MAN CYBERPUNK
- * SVG animation utilities.
- *
- * Native SVG SMIL animations.
- * No external runtime dependencies.
+ * SVG SMIL animation utilities.
  */
 
 import { COLORS, EFFECTS } from "./config.js";
 
-// --------------------------------------------------
-// PAC-MAN
-// --------------------------------------------------
-
-export function renderPacmanMovement({
-  duration = 8,
-  distance = 24,
-} = {}) {
-  return `
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      additive="sum"
-      values="0 0; ${distance} 0"
-      dur="${duration}s"
-      repeatCount="indefinite"
-    />
-  `;
-}
-
 export function renderPacmanMouth(radius = 10) {
   const r = Math.max(1, Number(radius) || 10);
-  const upperY = -r * 0.65;
-  const lowerY = r * 0.65;
 
   return `
     <animate
       attributeName="d"
       values="
-        M 0 0 L ${r} ${upperY}
-        A ${r} ${r} 0 1 1 ${r} ${lowerY} Z;
-
+        M 0 0 L ${r} ${-r * 0.65}
+        A ${r} ${r} 0 1 1 ${r} ${r * 0.65} Z;
         M 0 0 L ${r} 0
         A ${r} ${r} 0 1 1 ${r} 0 Z;
-
-        M 0 0 L ${r} ${upperY}
-        A ${r} ${r} 0 1 1 ${r} ${lowerY} Z
+        M 0 0 L ${r} ${-r * 0.65}
+        A ${r} ${r} 0 1 1 ${r} ${r * 0.65} Z
       "
       dur="0.45s"
       repeatCount="indefinite"
@@ -53,12 +26,32 @@ export function renderPacmanMouth(radius = 10) {
   `;
 }
 
-/**
- * Moves Pac-Man along a precomputed SVG path.
- */
 export function renderPacmanPath({
   path,
-  duration = 30,
+  duration = 90,
+  keyPoints,
+  keyTimes,
+} = {}) {
+  if (!path) return "";
+
+  const speedAttributes = keyPoints && keyTimes
+    ? `keyPoints="${keyPoints}" keyTimes="${keyTimes}" calcMode="linear"`
+    : `calcMode="linear"`;
+
+  return `
+    <animateMotion
+      path="${path}"
+      dur="${duration}s"
+      ${speedAttributes}
+      rotate="auto"
+      repeatCount="indefinite"
+    />
+  `;
+}
+
+export function renderGhostEscape({
+  path,
+  duration = 90,
   delay = 0,
 } = {}) {
   if (!path) return "";
@@ -69,211 +62,141 @@ export function renderPacmanPath({
       dur="${duration}s"
       begin="${delay}s"
       rotate="auto"
-      repeatCount="indefinite"
       calcMode="linear"
+      repeatCount="indefinite"
     />
   `;
 }
 
-/**
- * Temporarily changes Pac-Man's speed.
- */
-export function renderSpeedBoost({
-  duration = 30,
-  boostStart = 8,
-  boostEnd = 14,
+export function renderGhostCapture({
+  duration = 90,
+  captureTime = 60,
 } = {}) {
-  const normalSpeed = 1;
-  const boostedSpeed = 1.8;
+  const fraction = Math.max(
+    0.01,
+    Math.min(0.97, captureTime / duration)
+  );
+
+  const fadeEnd = Math.min(0.99, fraction + 0.012);
 
   return `
     <animate
       attributeName="opacity"
-      values="1;1;1"
+      values="1;1;0;0;1"
+      keyTimes="0;${fraction};${fadeEnd};0.999;1"
       dur="${duration}s"
       repeatCount="indefinite"
-    />
-
-    <set
-      attributeName="data-speed"
-      to="${boostedSpeed}"
-      begin="${boostStart}s"
-      dur="${Math.max(0, boostEnd - boostStart)}s"
     />
   `;
 }
 
-// --------------------------------------------------
-// GHOSTS
-// --------------------------------------------------
+export function renderCollectiblePickup({
+  duration = 90,
+  pickupTime = 5,
+} = {}) {
+  const fraction = Math.max(
+    0.001,
+    Math.min(0.97, pickupTime / duration)
+  );
+
+  const fadeEnd = Math.min(0.99, fraction + 0.003);
+
+  return `
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;${fraction};${fadeEnd};0.999;1"
+      dur="${duration}s"
+      repeatCount="indefinite"
+    />
+  `;
+}
+
+export function renderSpecialCoinGlow() {
+  return `
+    <animate
+      attributeName="r"
+      values="3;4.5;3"
+      dur="0.7s"
+      repeatCount="indefinite"
+    />
+  `;
+}
 
 export function renderGhostMovement(index = 0) {
-  const delay = Math.max(0, index) * 0.35;
-
   return `
     <animateTransform
       attributeName="transform"
       type="translate"
       additive="sum"
-      values="0 0; 0 -4; 0 0; 0 4; 0 0"
+      values="0 0;0 -3;0 0;0 3;0 0"
       dur="2.4s"
-      begin="${delay}s"
+      begin="${Math.max(0, index) * 0.35}s"
       repeatCount="indefinite"
     />
   `;
 }
-
-/**
- * Moves a ghost along its escape route.
- */
-export function renderGhostEscape({
-  path,
-  duration = 24,
-  delay = 0,
-} = {}) {
-  if (!path) return "";
-
-  return `
-    <animateMotion
-      path="${path}"
-      dur="${duration}s"
-      begin="${delay}s"
-      rotate="auto"
-      repeatCount="indefinite"
-      calcMode="linear"
-    />
-  `;
-}
-
-/**
- * Makes a captured ghost disappear and return
- * at the beginning of the next cycle.
- */
-export function renderGhostCapture({
-  duration = 30,
-  captureTime = 20,
-} = {}) {
-  return `
-    <animate
-      attributeName="opacity"
-      values="1;1;0;0;1"
-      keyTimes="0;${captureTime / duration};${captureTime / duration + 0.001};0.99;1"
-      dur="${duration}s"
-      repeatCount="indefinite"
-    />
-  `;
-}
-
-// --------------------------------------------------
-// WALLS
-// --------------------------------------------------
 
 export function renderWallGlow(index = 0) {
-  const delay = (Math.max(0, index) % 5) * 0.25;
-
   return `
     <animate
       attributeName="opacity"
-      values="0.65; 1; 0.65"
+      values="0.65;1;0.65"
       dur="2.5s"
-      begin="${delay}s"
+      begin="${(Math.max(0, index) % 5) * 0.25}s"
       repeatCount="indefinite"
     />
   `;
 }
 
-// --------------------------------------------------
-// CONTRIBUTIONS AND COINS
-// --------------------------------------------------
-
 export function renderContributionGlow(intensity = 1) {
-  const safeIntensity = Math.max(
-    0.25,
-    Math.min(1, Number(intensity) || 0.25)
-  );
+  const value = Math.max(0.2, Math.min(1, Number(intensity) || 0.2));
 
   return `
     <animate
       attributeName="opacity"
-      values="${safeIntensity * 0.65}; ${safeIntensity}; ${safeIntensity * 0.65}"
+      values="${value * 0.65};${value};${value * 0.65}"
       dur="3s"
       repeatCount="indefinite"
     />
   `;
 }
 
-/**
- * Makes a collectible disappear when Pac-Man reaches it.
- */
-export function renderCollectiblePickup({
-  duration = 30,
-  pickupTime = 5,
+export function renderSpeedBoost({
+  duration = 90,
+  start = 10,
+  end = 18,
 } = {}) {
-  const time = Math.max(0, Math.min(1, pickupTime / duration));
-
   return `
     <animate
       attributeName="opacity"
-      values="1;1;0;0;1"
-      keyTimes="0;${time};${Math.min(0.999, time + 0.001)};0.999;1"
+      values="1;1;0.72;1"
+      keyTimes="0;${start / duration};${end / duration};1"
       dur="${duration}s"
       repeatCount="indefinite"
     />
   `;
 }
 
-/**
- * Special coin pulse.
- */
-export function renderSpecialCoinGlow() {
-  return `
-    <animate
-      attributeName="r"
-      values="3;5;3"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-
-    <animate
-      attributeName="opacity"
-      values="0.65;1;0.65"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-  `;
-}
-
-// --------------------------------------------------
-// PARTICLES
-// --------------------------------------------------
-
-export function renderParticle({
-  x = 0,
-  y = 0,
+function renderParticle({
+  x,
+  y,
   radius = 2,
   color = COLORS.cyan,
   delay = 0,
-} = {}) {
-  const safeRadius = Math.max(0.1, Number(radius) || 2);
-
+}) {
   return `
-    <circle
-      cx="${x}"
-      cy="${y}"
-      r="${safeRadius}"
-      fill="${color}"
-    >
+    <circle cx="${x}" cy="${y}" r="${radius}" fill="${color}">
       <animate
         attributeName="opacity"
-        values="0; 1; 0"
+        values="0;1;0"
         dur="2.5s"
         begin="${delay}s"
         repeatCount="indefinite"
       />
-
       <animate
         attributeName="r"
-        values="${safeRadius}; ${safeRadius * 1.8}; ${safeRadius}"
+        values="${radius};${radius * 1.8};${radius}"
         dur="2.5s"
         begin="${delay}s"
         repeatCount="indefinite"
@@ -294,11 +217,5 @@ export function renderHudParticles() {
     { x: 1080, y: 180, color: COLORS.cyan, delay: 1.2 },
   ];
 
-  return `
-    <g>
-      ${particles.map((particle) =>
-        renderParticle(particle)
-      ).join("")}
-    </g>
-  `;
+  return `<g>${particles.map(renderParticle).join("")}</g>`;
 }
