@@ -1,0 +1,13 @@
+{
+  "name": "wheatley06-pacman-cyberpunk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Custom animated cyberpunk GitHub contribution visualization",
+  "scripts": {
+    "check": "node --check src/config.js && node --check src/maze.js && node --check src/contributions.js && node --check src/renderer.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
