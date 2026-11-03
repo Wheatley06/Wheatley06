@@ -7,7 +7,7 @@
   "description": "Custom cyberpunk Pac-Man GitHub contribution visualization",
   "scripts": {
     "check": "node --check src/game-engine.js && node --check src/config.js && node --check src/maze.js && node --check src/contributions.js && node --check src/animation.js && node --check src/renderer.js && node --check src/generate.js && node --check src/test-renderer.js",
-    "test": "node tests/maze.test.js && node src/test-renderer.js",
+    "test": "node tests/maze.test.js && node tests/game-engine.test.js && node src/test-renderer.js",
     "generate": "node src/generate.js"
   },
   "engines": {
