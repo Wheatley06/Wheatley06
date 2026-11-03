@@ -432,7 +432,7 @@ function renderPacman() {
       <path d="M0 0 L${radius} ${-radius * 0.65}
         A${radius} ${radius} 0 1 0 ${radius} ${radius * 0.65} Z"
         fill="${COLORS.background}">
-        ${renderPacmanMouth()}
+        ${renderPacmanMouth(radius)}
       </path>
 
       <circle cx="${radius * 0.12}"
