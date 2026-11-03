@@ -1,182 +1,135 @@
 
-/**
- * WHEATLEY06 — PAC-MAN CYBERPUNK
- *
- * Extended horizontal maze.
- * The height remains unchanged.
- *
- * Symbols:
- * # = wall
- * . = corridor / collectible position
- * P = Pac-Man starting position
- * G = Ghost starting position
- */
+import assert from "node:assert/strict";
 
-export const MAZE_CONFIG = {
-  columns: 50,
-  rows: 13,
-  cellSize: 24,
-
-  wallColor: "#1677FF",
-  wallGlow: "#00CFFF",
-  background: "#0D1117",
-
-  wallThickness: 2.2,
-  cornerRadius: 5,
-};
-
-export const MAZE_LAYOUT = [
-  "##################################################",
-  "#P...............................................#",
-  "#....####....####....####....####....####........#",
-  "#................................................#",
-  "#........####....####....####....####....####....#",
-  "#................................................#",
-  "#....####....####....####....####....####........#",
-  "#................................................#",
-  "#........####....####....####....####....####....#",
-  "#................................................#",
-  "#....####....####....####....####....####........#",
-  "#......G.......G.......G.......G.......G.........#",
-  "##################################################",
-];
+import {
+  MAZE_CONFIG,
+  MAZE_LAYOUT,
+  validateMaze,
+  getMazeCell,
+  getMazeEntities,
+  getWallSegments,
+  getMazeDimensions,
+} from "../src/maze.js";
 
 // --------------------------------------------------
-// VALIDATION
+// MAZE VALIDATION
 // --------------------------------------------------
 
-export function validateMaze(layout = MAZE_LAYOUT) {
-  if (!Array.isArray(layout) || layout.length === 0) {
-    throw new Error("Maze layout must be a non-empty array.");
-  }
+function testMazeValidation() {
+  const result = validateMaze();
 
-  const width = layout[0].length;
+  assert.equal(result.valid, true);
+  assert.equal(result.columns, 50);
+  assert.equal(result.rows, 13);
+  assert.equal(result.ghostCount, 5);
 
-  if (layout.some((row) => row.length !== width)) {
-    throw new Error("All maze rows must have the same width.");
-  }
-
-  if (
-    width !== MAZE_CONFIG.columns ||
-    layout.length !== MAZE_CONFIG.rows
-  ) {
-    throw new Error("Maze dimensions do not match MAZE_CONFIG.");
-  }
-
-  const allowedCharacters = new Set([
-    "#",
-    ".",
-    "P",
-    "G",
-    " ",
-  ]);
-
-  for (const row of layout) {
-    for (const character of row) {
-      if (!allowedCharacters.has(character)) {
-        throw new Error(`Invalid maze character: ${character}`);
-      }
-    }
-  }
-
-  const entities = getMazeEntities(layout);
-
-  if (!entities.pacman) {
-    throw new Error("Pac-Man starting position is missing.");
-  }
-
-  if (entities.ghosts.length !== 5) {
-    throw new Error("The maze must contain exactly five ghosts.");
-  }
-
-  return {
-    valid: true,
-    columns: width,
-    rows: layout.length,
-    ghostCount: entities.ghosts.length,
-  };
+  console.log("✓ Maze validation");
 }
 
 // --------------------------------------------------
-// CELL ACCESS
+// MAZE DIMENSIONS
 // --------------------------------------------------
 
-export function getMazeCell(x, y, layout = MAZE_LAYOUT) {
-  if (
-    !Number.isInteger(x) ||
-    !Number.isInteger(y) ||
-    y < 0 ||
-    y >= layout.length ||
-    x < 0 ||
-    x >= layout[y].length
-  ) {
-    return null;
-  }
+function testMazeDimensions() {
+  const dimensions = getMazeDimensions();
 
-  return layout[y][x];
+  assert.equal(dimensions.columns, 50);
+  assert.equal(dimensions.rows, 13);
+
+  assert.equal(
+    dimensions.width,
+    50 * MAZE_CONFIG.cellSize
+  );
+
+  assert.equal(
+    dimensions.height,
+    13 * MAZE_CONFIG.cellSize
+  );
+
+  console.log("✓ Maze dimensions");
 }
 
 // --------------------------------------------------
-// ENTITIES
+// MAZE ENTITIES
 // --------------------------------------------------
 
-export function getMazeEntities(layout = MAZE_LAYOUT) {
-  const entities = {
-    pacman: null,
-    ghosts: [],
-  };
+function testMazeEntities() {
+  const entities = getMazeEntities();
 
-  layout.forEach((row, y) => {
-    [...row].forEach((cell, x) => {
-      if (cell === "P") {
-        entities.pacman = { x, y };
-      }
+  assert.ok(entities.pacman);
+  assert.equal(entities.ghosts.length, 5);
 
-      if (cell === "G") {
-        entities.ghosts.push({ x, y });
-      }
-    });
-  });
-
-  return entities;
+  console.log("✓ Pac-Man and five ghosts");
 }
 
 // --------------------------------------------------
-// WALL GEOMETRY
+// MAZE CELLS
 // --------------------------------------------------
 
-export function getWallSegments(layout = MAZE_LAYOUT) {
-  const segments = [];
+function testMazeCells() {
+  assert.equal(getMazeCell(0, 0), "#");
+  assert.equal(getMazeCell(1, 1), "P");
 
-  layout.forEach((row, y) => {
-    [...row].forEach((cell, x) => {
-      if (cell === "#") {
-        segments.push({
-          x,
-          y,
-          width: 1,
-          height: 1,
-          type: "wall",
-        });
-      }
-    });
-  });
+  assert.equal(getMazeCell(-1, 0), null);
+  assert.equal(getMazeCell(0, -1), null);
 
-  return segments;
+  assert.equal(getMazeCell(50, 0), null);
+  assert.equal(getMazeCell(0, 13), null);
+
+  console.log("✓ Maze cell access");
 }
 
 // --------------------------------------------------
-// DIMENSIONS
+// WALL SEGMENTS
 // --------------------------------------------------
 
-export function getMazeDimensions(layout = MAZE_LAYOUT) {
-  const rows = layout.length;
-  const columns = layout[0]?.length ?? 0;
+function testWallSegments() {
+  const walls = getWallSegments();
 
-  return {
-    columns,
-    rows,
-    width: columns * MAZE_CONFIG.cellSize,
-    height: rows * MAZE_CONFIG.cellSize,
-  };
+  assert.ok(walls.length > 0);
+
+  assert.ok(
+    walls.every((wall) => wall.type === "wall")
+  );
+
+  console.log("✓ Wall segments");
+}
+
+// --------------------------------------------------
+// INVALID MAZE
+// --------------------------------------------------
+
+function testInvalidMaze() {
+  assert.throws(
+    () => validateMaze(["###", "#P#", "##"]),
+    /same width/
+  );
+
+  console.log("✓ Invalid maze detection");
+}
+
+// --------------------------------------------------
+// RUN TESTS
+// --------------------------------------------------
+
+function runTests() {
+  console.log("\nPAC-MAN MAZE TESTS\n");
+
+  testMazeValidation();
+  testMazeDimensions();
+  testMazeEntities();
+  testMazeCells();
+  testWallSegments();
+  testInvalidMaze();
+
+  console.log("\nALL MAZE TESTS PASSED\n");
+}
+
+try {
+  runTests();
+} catch (error) {
+  console.error("\nMAZE TEST FAILED:");
+  console.error(error);
+
+  process.exitCode = 1;
 }
