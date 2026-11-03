@@ -1,0 +1,75 @@
+
+name: Pac-Man - Generate
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "pacman/**"
+      - ".github/workflows/pacman-generate.yml"
+
+  schedule:
+    - cron: "17 7 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pacman-generation
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate contribution visualization
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Generate Pac-Man SVG
+        working-directory: pacman
+        env:
+          GITHUB_USERNAME: Wheatley06
+          GITHUB_TOKEN: ${{ secrets.PACMAN_TOKEN }}
+        run: npm run generate
+
+      - name: Prepare generated SVG
+        run: |
+          mkdir -p /tmp/pacman-publish
+          cp pacman/output/pacman-contributions.svg \
+            /tmp/pacman-publish/pacman-contributions.svg
+
+      - name: Publish SVG to pacman-output branch
+        env:
+          BRANCH_NAME: pacman-output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin "$BRANCH_NAME" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH_NAME"
+            git checkout -B "$BRANCH_NAME" "origin/$BRANCH_NAME"
+          else
+            git checkout --orphan "$BRANCH_NAME"
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          cp /tmp/pacman-publish/pacman-contributions.svg .
+          git add pacman-contributions.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "chore(pacman): update contribution visualization"
+            git push origin "$BRANCH_NAME"
+          fi
