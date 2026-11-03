@@ -11,49 +11,59 @@ import {
   getMazeDimensions,
 } from "../src/maze.js";
 
+// MAZE VALIDATION
+
 function testMazeValidation() {
   const result = validateMaze();
 
   assert.equal(result.valid, true);
-  assert.equal(result.columns, MAZE_CONFIG.columns);
-  assert.equal(result.rows, MAZE_CONFIG.rows);
+  assert.equal(result.columns, 50);
+  assert.equal(result.rows, 13);
+  assert.equal(result.ghostCount, 5);
 
   console.log("✓ Maze validation");
 }
 
+// MAZE DIMENSIONS
+
 function testMazeDimensions() {
   const dimensions = getMazeDimensions();
 
-  assert.equal(dimensions.columns, 28);
+  assert.equal(dimensions.columns, 50);
   assert.equal(dimensions.rows, 13);
-  assert.equal(
-    dimensions.width,
-    28 * MAZE_CONFIG.cellSize
-  );
-  assert.equal(
-    dimensions.height,
-    13 * MAZE_CONFIG.cellSize
-  );
+
+  assert.equal(dimensions.width, 50 * MAZE_CONFIG.cellSize);
+  assert.equal(dimensions.height, 13 * MAZE_CONFIG.cellSize);
 
   console.log("✓ Maze dimensions");
 }
+
+// MAZE ENTITIES
 
 function testMazeEntities() {
   const entities = getMazeEntities();
 
   assert.ok(entities.pacman);
-  assert.ok(entities.ghosts.length >= 1);
+  assert.equal(entities.ghosts.length, 5);
 
-  console.log("✓ Maze entities");
+  console.log("✓ Pac-Man and five ghosts");
 }
+
+// MAZE CELLS
 
 function testMazeCells() {
   assert.equal(getMazeCell(0, 0), "#");
+  assert.equal(getMazeCell(1, 1), "P");
+
   assert.equal(getMazeCell(-1, 0), null);
   assert.equal(getMazeCell(0, -1), null);
+  assert.equal(getMazeCell(50, 0), null);
+  assert.equal(getMazeCell(0, 13), null);
 
   console.log("✓ Maze cell access");
 }
+
+// WALL SEGMENTS
 
 function testWallSegments() {
   const walls = getWallSegments();
@@ -64,6 +74,8 @@ function testWallSegments() {
   console.log("✓ Wall segments");
 }
 
+// INVALID MAZE
+
 function testInvalidMaze() {
   assert.throws(
     () => validateMaze(["###", "#P#", "##"]),
@@ -72,6 +84,8 @@ function testInvalidMaze() {
 
   console.log("✓ Invalid maze detection");
 }
+
+// RUN TESTS
 
 function runTests() {
   console.log("\nPAC-MAN MAZE TESTS\n");
