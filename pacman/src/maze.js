@@ -1,9 +1,13 @@
+
 /**
  * Wheatley06 Pac-Man Cyberpunk
  * Maze layout and geometry configuration.
  *
- * This module defines the arcade environment.
- * Rendering and animation are handled by separate modules.
+ * # = wall
+ * . = corridor
+ * P = Pac-Man
+ * G = Ghost
+ *   = empty space
  */
 
 export const MAZE_CONFIG = {
@@ -17,14 +21,6 @@ export const MAZE_CONFIG = {
   cornerRadius: 5,
 };
 
-/**
- * Maze legend:
- * # = wall
- * . = corridor
- * P = Pac-Man starting position
- * G = Ghost starting position
- *   = empty space
- */
 export const MAZE_LAYOUT = [
   "############################",
   "#P....#.......##.......#...#",
@@ -41,9 +37,10 @@ export const MAZE_LAYOUT = [
   "############################",
 ];
 
-/**
- * Validate the maze dimensions and allowed characters.
- */
+// --------------------------------------------------
+// VALIDATION
+// --------------------------------------------------
+
 export function validateMaze(layout = MAZE_LAYOUT) {
   if (!Array.isArray(layout) || layout.length === 0) {
     throw new Error("Maze layout must be a non-empty array.");
@@ -53,6 +50,10 @@ export function validateMaze(layout = MAZE_LAYOUT) {
 
   if (layout.some((row) => row.length !== width)) {
     throw new Error("All maze rows must have the same width.");
+  }
+
+  if (width !== MAZE_CONFIG.columns || layout.length !== MAZE_CONFIG.rows) {
+    throw new Error("Maze dimensions do not match MAZE_CONFIG.");
   }
 
   const allowedCharacters = new Set(["#", ".", "P", "G", " "]);
@@ -65,6 +66,16 @@ export function validateMaze(layout = MAZE_LAYOUT) {
     }
   }
 
+  const entities = getMazeEntities(layout);
+
+  if (!entities.pacman) {
+    throw new Error("Pac-Man starting position is missing.");
+  }
+
+  if (entities.ghosts.length === 0) {
+    throw new Error("At least one ghost position is required.");
+  }
+
   return {
     valid: true,
     columns: width,
@@ -72,9 +83,10 @@ export function validateMaze(layout = MAZE_LAYOUT) {
   };
 }
 
-/**
- * Retrieve a maze cell.
- */
+// --------------------------------------------------
+// CELL ACCESS
+// --------------------------------------------------
+
 export function getMazeCell(x, y, layout = MAZE_LAYOUT) {
   if (
     !Number.isInteger(x) ||
@@ -90,9 +102,10 @@ export function getMazeCell(x, y, layout = MAZE_LAYOUT) {
   return layout[y][x];
 }
 
-/**
- * Retrieve special character positions.
- */
+// --------------------------------------------------
+// ENTITIES
+// --------------------------------------------------
+
 export function getMazeEntities(layout = MAZE_LAYOUT) {
   const entities = {
     pacman: null,
@@ -114,9 +127,10 @@ export function getMazeEntities(layout = MAZE_LAYOUT) {
   return entities;
 }
 
-/**
- * Convert maze walls into SVG-ready rectangles.
- */
+// --------------------------------------------------
+// WALL GEOMETRY
+// --------------------------------------------------
+
 export function getWallSegments(layout = MAZE_LAYOUT) {
   const segments = [];
 
@@ -124,10 +138,10 @@ export function getWallSegments(layout = MAZE_LAYOUT) {
     [...row].forEach((cell, x) => {
       if (cell === "#") {
         segments.push({
-          x: x * MAZE_CONFIG.cellSize,
-          y: y * MAZE_CONFIG.cellSize,
-          width: MAZE_CONFIG.cellSize,
-          height: MAZE_CONFIG.cellSize,
+          x,
+          y,
+          width: 1,
+          height: 1,
           type: "wall",
         });
       }
@@ -137,12 +151,18 @@ export function getWallSegments(layout = MAZE_LAYOUT) {
   return segments;
 }
 
-/**
- * Return the complete maze dimensions in pixels.
- */
+// --------------------------------------------------
+// DIMENSIONS
+// --------------------------------------------------
+
 export function getMazeDimensions(layout = MAZE_LAYOUT) {
+  const rows = layout.length;
+  const columns = layout[0]?.length ?? 0;
+
   return {
-    width: layout[0].length * MAZE_CONFIG.cellSize,
-    height: layout.length * MAZE_CONFIG.cellSize,
+    columns,
+    rows,
+    width: columns * MAZE_CONFIG.cellSize,
+    height: rows * MAZE_CONFIG.cellSize,
   };
 }
