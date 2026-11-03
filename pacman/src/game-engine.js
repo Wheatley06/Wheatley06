@@ -248,7 +248,15 @@ function createEscapeRoute(start, target, layout, ghostIndex) {
   return route;
 }
 
-function createGhostRoutes(layout, pacmanRoute, boostWindows) {
+
+export function createGhostRoutes(
+  layout = MAZE_LAYOUT,
+  pacmanRoute = createPacmanRoute(layout),
+  boostWindows = buildBoostWindows(
+    pacmanRoute,
+    getCollectibles(layout).specialCoins
+  )
+) {
   const { ghosts } = getMazeEntities(layout);
   const indexes = getFirstVisitIndexes(pacmanRoute);
 
