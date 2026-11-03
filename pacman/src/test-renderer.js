@@ -2,7 +2,10 @@
 import assert from "node:assert/strict";
 
 import { renderPacmanSvg } from "./renderer.js";
-import { createGameEvents } from "./game-engine.js";
+import {
+  createGameEvents,
+  validateGameEngine,
+} from "./game-engine.js";
 import { MAZE_LAYOUT } from "./maze.js";
 
 function testSvgDocument() {
@@ -26,6 +29,17 @@ function testVisualIdentity() {
   console.log("✓ Cyberpunk visual identity");
 }
 
+function testGameEngine() {
+  const result = validateGameEngine(MAZE_LAYOUT);
+
+  assert.equal(result.valid, true);
+  assert.equal(result.ghostCount, 5);
+  assert.equal(result.specialCoinCount, 5);
+  assert.ok(result.routeLength > 0);
+
+  console.log("✓ Game engine and connected routes");
+}
+
 function testAnimatedRoutes() {
   const svg = renderPacmanSvg();
   const events = createGameEvents(MAZE_LAYOUT);
@@ -38,31 +52,41 @@ function testAnimatedRoutes() {
 
   assert.ok(
     motionCount >= 6,
-    `Expected Pac-Man and five ghost motion animations; found ${motionCount}`
+    `Expected at least six motion animations; found ${motionCount}`
   );
 
-  console.log("✓ Pac-Man and ghost movement animations");
+  console.log("✓ Pac-Man and ghost movement");
 }
 
 function testGhostColors() {
   const svg = renderPacmanSvg();
 
-  const expectedColors = [
+  for (const color of [
     "#00CFFF",
     "#8B35FF",
     "#D946EF",
     "#FF5C8A",
     "#35E6A5",
-  ];
-
-  for (const color of expectedColors) {
-    assert.ok(
-      svg.includes(color),
-      `Missing ghost color: ${color}`
-    );
+  ]) {
+    assert.ok(svg.includes(color), `Missing ghost color: ${color}`);
   }
 
   console.log("✓ Five distinct ghost colors");
+}
+
+function testBoostAndCaptureEvents() {
+  const events = createGameEvents(MAZE_LAYOUT);
+
+  assert.equal(events.specialCoins.length, 5);
+  assert.equal(events.ghosts.length, 5);
+  assert.ok(events.boostWindows.length > 0);
+
+  for (const ghost of events.ghosts) {
+    assert.ok(ghost.route.length > 0);
+    assert.ok(ghost.captureIndex >= 0);
+  }
+
+  console.log("✓ Boost windows and ghost capture timeline");
 }
 
 function testContributionRendering() {
@@ -77,24 +101,22 @@ function testContributionRendering() {
   const svg = renderPacmanSvg({ contributions });
 
   for (const day of contributions) {
-    assert.ok(
-      svg.includes(day.date),
-      `Contribution date missing: ${day.date}`
-    );
+    assert.ok(svg.includes(day.date));
   }
 
   assert.ok(svg.includes("CONTRIBUTIONS"));
 
-  console.log("✓ Contribution data rendered inside the maze");
+  console.log("✓ Contribution cells inside maze corridors");
 }
 
 function testCollectibles() {
   const svg = renderPacmanSvg();
 
   assert.ok(svg.includes("#FFE600"));
-  assert.ok(svg.includes("animate"));
+  assert.ok(svg.includes("attributeName=\"opacity\""));
+  assert.ok(svg.includes("attributeName=\"r\""));
 
-  console.log("✓ Collectible animations");
+  console.log("✓ Normal and special collectible animations");
 }
 
 function testSvgIntegrity() {
@@ -113,23 +135,25 @@ function testSvgIntegrity() {
 }
 
 function runTests() {
-  console.log("\nPAC-MAN RENDERER TESTS\n");
+  console.log("\nPAC-MAN CONSOLIDATED TESTS\n");
 
   testSvgDocument();
   testVisualIdentity();
+  testGameEngine();
   testAnimatedRoutes();
   testGhostColors();
+  testBoostAndCaptureEvents();
   testContributionRendering();
   testCollectibles();
   testSvgIntegrity();
 
-  console.log("\nALL RENDERER TESTS PASSED\n");
+  console.log("\nALL PAC-MAN TESTS PASSED\n");
 }
 
 try {
   runTests();
 } catch (error) {
-  console.error("\nRENDERER TEST FAILED:");
+  console.error("\nPAC-MAN TEST FAILED:");
   console.error(error);
   process.exitCode = 1;
 }
