@@ -1,40 +1,44 @@
 
 /**
- * Wheatley06 Pac-Man Cyberpunk
- * Maze layout and geometry configuration.
+ * WHEATLEY06 — PAC-MAN CYBERPUNK
  *
+ * Extended horizontal maze.
+ * The height remains unchanged.
+ *
+ * Symbols:
  * # = wall
- * . = corridor
- * P = Pac-Man
- * G = Ghost
- *   = empty space
+ * . = corridor / collectible position
+ * P = Pac-Man starting position
+ * G = Ghost starting position
  */
 
 export const MAZE_CONFIG = {
-  columns: 28,
+  columns: 40,
   rows: 13,
   cellSize: 24,
+
   wallColor: "#1677FF",
   wallGlow: "#00CFFF",
   background: "#0D1117",
+
   wallThickness: 2.2,
   cornerRadius: 5,
 };
 
 export const MAZE_LAYOUT = [
-  "############################",
-  "#P....#.......##.......#...#",
-  "##.##..#.#####.##.#####.#.##",
-  "#......#................#..#",
-  "###.####.##.####.##.####.###",
-  "#......#....##....#........#",
-  "##.####.####.##.####.####.##",
-  "#......#................#..#",
-  "###.##.#.####.##.####.#.##.#",
-  "#....#........##......#....#",
-  "#.##.#####.##.##.##.#####.##",
-  "#.....G........G...........#",
-  "############################",
+  "########################################",
+  "#P.....................................#",
+  "#....####....####....####....####......#",
+  "#......................................#",
+  "#........####....####....####....####..#",
+  "#......................................#",
+  "#....####....####....####....####......#",
+  "#......................................#",
+  "#........####....####....####....####..#",
+  "#......................................#",
+  "#....####....####....####....####......#",
+  "#......G.......G.......G.......G....G..#",
+  "########################################",
 ];
 
 // --------------------------------------------------
@@ -52,11 +56,20 @@ export function validateMaze(layout = MAZE_LAYOUT) {
     throw new Error("All maze rows must have the same width.");
   }
 
-  if (width !== MAZE_CONFIG.columns || layout.length !== MAZE_CONFIG.rows) {
+  if (
+    width !== MAZE_CONFIG.columns ||
+    layout.length !== MAZE_CONFIG.rows
+  ) {
     throw new Error("Maze dimensions do not match MAZE_CONFIG.");
   }
 
-  const allowedCharacters = new Set(["#", ".", "P", "G", " "]);
+  const allowedCharacters = new Set([
+    "#",
+    ".",
+    "P",
+    "G",
+    " ",
+  ]);
 
   for (const row of layout) {
     for (const character of row) {
@@ -72,14 +85,15 @@ export function validateMaze(layout = MAZE_LAYOUT) {
     throw new Error("Pac-Man starting position is missing.");
   }
 
-  if (entities.ghosts.length === 0) {
-    throw new Error("At least one ghost position is required.");
+  if (entities.ghosts.length !== 5) {
+    throw new Error("The maze must contain exactly five ghosts.");
   }
 
   return {
     valid: true,
     columns: width,
     rows: layout.length,
+    ghostCount: entities.ghosts.length,
   };
 }
 
