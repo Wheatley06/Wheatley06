@@ -1,0 +1,44 @@
+
+name: Pac-Man - Validation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "pacman/**"
+      - ".github/workflows/pacman-validation.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pacman-validation
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Pac-Man project
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: pacman
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Check JavaScript syntax
+        run: npm run check
+
+      - name: Run project tests
+        run: npm test
