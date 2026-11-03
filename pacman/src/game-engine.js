@@ -1,9 +1,9 @@
 
 /**
  * WHEATLEY06 — PAC-MAN CYBERPUNK
- * Game engine: paths, collectibles and ghost escape.
+ * Game engine: maze traversal and collectible planning.
  *
- * Pure JavaScript.
+ * Deterministic SVG animation planning.
  * No external dependencies.
  */
 
@@ -13,10 +13,6 @@ import {
   getMazeCell,
 } from "./maze.js";
 
-// --------------------------------------------------
-// CONFIGURATION
-// --------------------------------------------------
-
 export const GAME_CONFIG = {
   specialCoinCount: 5,
   ghostCount: 5,
@@ -25,16 +21,16 @@ export const GAME_CONFIG = {
   boostedSpeed: 1.8,
 };
 
-// --------------------------------------------------
-// MAZE NAVIGATION
-// --------------------------------------------------
-
 const DIRECTIONS = [
   { x: 1, y: 0 },
   { x: -1, y: 0 },
   { x: 0, y: 1 },
   { x: 0, y: -1 },
 ];
+
+function keyOf(position) {
+  return `${position.x},${position.y}`;
+}
 
 function isWalkable(x, y, layout = MAZE_LAYOUT) {
   const cell = getMazeCell(x, y, layout);
@@ -61,18 +57,18 @@ export function findPath(start, target, layout = MAZE_LAYOUT) {
   }
 
   const queue = [[start]];
-  const visited = new Set([`${start.x},${start.y}`]);
+  const visited = new Set([keyOf(start)]);
 
   while (queue.length > 0) {
     const path = queue.shift();
     const current = path[path.length - 1];
 
-    if (current.x === target.x && current.y === target.y) {
+    if (keyOf(current) === keyOf(target)) {
       return path;
     }
 
     for (const neighbor of getNeighbors(current, layout)) {
-      const key = `${neighbor.x},${neighbor.y}`;
+      const key = keyOf(neighbor);
 
       if (visited.has(key)) continue;
 
@@ -89,19 +85,16 @@ export function findPath(start, target, layout = MAZE_LAYOUT) {
 // --------------------------------------------------
 
 export function getCollectibles(layout = MAZE_LAYOUT) {
-  const normalCoins = [];
   const corridors = [];
 
   layout.forEach((row, y) => {
     [...row].forEach((cell, x) => {
       if (cell === ".") {
         corridors.push({ x, y });
-        normalCoins.push({ x, y, type: "normal" });
       }
     });
   });
 
-  // Special coins are distributed across the maze.
   const specialCoinCount = Math.min(
     GAME_CONFIG.specialCoinCount,
     corridors.length
@@ -111,36 +104,39 @@ export function getCollectibles(layout = MAZE_LAYOUT) {
 
   for (let index = 0; index < specialCoinCount; index++) {
     const position = Math.floor(
-      ((index + 1) * corridors.length) /
+      ((index + 1) * (corridors.length - 1)) /
       (specialCoinCount + 1)
     );
 
-    const cell = corridors[position];
-
-    if (cell) {
-      specialCoins.push({
-        ...cell,
-        type: "special",
-      });
-    }
+    specialCoins.push({
+      ...corridors[position],
+      type: "special",
+    });
   }
 
   const specialKeys = new Set(
-    specialCoins.map(({ x, y }) => `${x},${y}`)
+    specialCoins.map(keyOf)
   );
 
-  return {
-    normalCoins: normalCoins.filter(
-      ({ x, y }) => !specialKeys.has(`${x},${y}`)
-    ),
-    specialCoins,
-  };
+  const normalCoins = corridors
+    .filter((position) => !specialKeys.has(keyOf(position)))
+    .map((position) => ({
+      ...position,
+      type: "normal",
+    }));
+
+  return { normalCoins, specialCoins };
 }
 
 // --------------------------------------------------
-// PAC-MAN ROUTE
+// PAC-MAN FULL MAZE TRAVERSAL
 // --------------------------------------------------
 
+/**
+ * Creates a deterministic DFS walk.
+ * Every reachable corridor cell is visited.
+ * Backtracking keeps consecutive positions adjacent.
+ */
 export function createPacmanRoute(layout = MAZE_LAYOUT) {
   const entities = getMazeEntities(layout);
 
@@ -148,56 +144,82 @@ export function createPacmanRoute(layout = MAZE_LAYOUT) {
     throw new Error("Pac-Man starting position is missing.");
   }
 
-  const route = [];
-  const visited = new Set();
+  const route = [entities.pacman];
+  const visited = new Set([keyOf(entities.pacman)]);
 
-  let current = entities.pacman;
+  function traverse(current) {
+    const neighbors = getNeighbors(current, layout);
 
-  // Traverse every reachable corridor cell.
-  while (true) {
-    const key = `${current.x},${current.y}`;
+    for (const next of neighbors) {
+      const key = keyOf(next);
 
-    if (visited.has(key)) break;
+      if (visited.has(key)) continue;
 
-    visited.add(key);
-    route.push(current);
+      visited.add(key);
+      route.push(next);
 
-    const next = getNeighbors(current, layout).find(
-      (position) =>
-        !visited.has(`${position.x},${position.y}`)
-    );
+      traverse(next);
 
-    if (!next) break;
-
-    current = next;
+      // Return along the corridor to continue exploring.
+      route.push(current);
+    }
   }
+
+  traverse(entities.pacman);
 
   return route;
 }
 
 // --------------------------------------------------
-// GHOST ESCAPE
+// GHOST ESCAPE ROUTES
 // --------------------------------------------------
 
+/**
+ * Finds a distant reachable destination for each ghost.
+ * This creates a precomputed escape movement, not live AI.
+ */
 export function createGhostRoutes(layout = MAZE_LAYOUT) {
   const entities = getMazeEntities(layout);
 
   return entities.ghosts.map((ghost, index) => {
-    const neighbors = getNeighbors(ghost, layout);
+    const candidates = [];
 
-    const route = [
-      ghost,
-      ...neighbors.filter(
-        (position) =>
-          position.x !== ghost.x ||
-          position.y !== ghost.y
-      ),
-    ];
+    layout.forEach((row, y) => {
+      [...row].forEach((cell, x) => {
+        if (cell !== "#" && cell !== "G" && cell !== "P") {
+          const path = findPath(ghost, { x, y }, layout);
+
+          if (path.length > 1) {
+            candidates.push({
+              target: { x, y },
+              path,
+              distance: path.length,
+            });
+          }
+        }
+      });
+    });
+
+    candidates.sort((a, b) => {
+      const distanceDifference = b.distance - a.distance;
+
+      if (distanceDifference !== 0) {
+        return distanceDifference;
+      }
+
+      return (
+        (a.target.x + a.target.y + index) -
+        (b.target.x + b.target.y + index)
+      );
+    });
+
+    const escape = candidates[0];
 
     return {
       id: index,
       start: ghost,
-      route,
+      target: escape?.target ?? ghost,
+      route: escape?.path ?? [ghost],
       delay: index * 0.6,
     };
   });
@@ -211,27 +233,25 @@ export function createGameEvents(layout = MAZE_LAYOUT) {
   const collectibles = getCollectibles(layout);
   const route = createPacmanRoute(layout);
 
-  const routeIndex = new Map(
-    route.map((position, index) => [
-      `${position.x},${position.y}`,
-      index,
-    ])
-  );
+  const routeIndex = new Map();
 
-  const normalCoins = collectibles.normalCoins.map((coin) => ({
-    ...coin,
-    routeIndex: routeIndex.get(`${coin.x},${coin.y}`) ?? -1,
-  }));
+  route.forEach((position, index) => {
+    const key = keyOf(position);
 
-  const specialCoins = collectibles.specialCoins.map((coin) => ({
+    if (!routeIndex.has(key)) {
+      routeIndex.set(key, index);
+    }
+  });
+
+  const addRouteIndex = (coin) => ({
     ...coin,
-    routeIndex: routeIndex.get(`${coin.x},${coin.y}`) ?? -1,
-  }));
+    routeIndex: routeIndex.get(keyOf(coin)) ?? -1,
+  });
 
   return {
     route,
-    normalCoins,
-    specialCoins,
+    normalCoins: collectibles.normalCoins.map(addRouteIndex),
+    specialCoins: collectibles.specialCoins.map(addRouteIndex),
     ghosts: createGhostRoutes(layout),
   };
 }
@@ -273,17 +293,54 @@ export function validateGameEngine(layout = MAZE_LAYOUT) {
     throw new Error("Special coin distribution is invalid.");
   }
 
-  if (
-    events.route.some(
-      (position) => !isWalkable(position.x, position.y, layout)
-    )
-  ) {
-    throw new Error("Pac-Man route crosses a wall.");
+  for (let index = 0; index < events.route.length; index++) {
+    const position = events.route[index];
+
+    if (!isWalkable(position.x, position.y, layout)) {
+      throw new Error("Pac-Man route crosses a wall.");
+    }
+
+    if (index > 0) {
+      const previous = events.route[index - 1];
+
+      const distance =
+        Math.abs(position.x - previous.x) +
+        Math.abs(position.y - previous.y);
+
+      if (distance !== 1) {
+        throw new Error("Pac-Man route contains a discontinuity.");
+      }
+    }
+  }
+
+  const reachable = new Set(
+    events.route.map(keyOf)
+  );
+
+  const expected = new Set();
+
+  layout.forEach((row, y) => {
+    [...row].forEach((cell, x) => {
+      if (cell !== "#") {
+        const path = findPath(entities.pacman, { x, y }, layout);
+
+        if (path.length > 0) {
+          expected.add(`${x},${y}`);
+        }
+      }
+    });
+  });
+
+  for (const position of expected) {
+    if (!reachable.has(position)) {
+      throw new Error(`Unvisited corridor cell: ${position}`);
+    }
   }
 
   return {
     valid: true,
     routeLength: events.route.length,
+    visitedCells: reachable.size,
     normalCoinCount: events.normalCoins.length,
     specialCoinCount: events.specialCoins.length,
     ghostCount: events.ghosts.length,
