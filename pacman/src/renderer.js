@@ -359,6 +359,70 @@ function renderNormalCoins(events) {
   }).join("");
 }
 
+
+function renderDecorativeContributionCells(events) {
+  const corridors = [];
+
+  MAZE_LAYOUT.forEach((row, y) => {
+    [...row].forEach((cell, x) => {
+      if (cell === ".") {
+        corridors.push({ x, y });
+      }
+    });
+  });
+
+  const specialKeys = new Set(
+    events.specialCoins.map((coin) => `${coin.x},${coin.y}`)
+  );
+
+  const candidates = corridors.filter(
+    (position) =>
+      !specialKeys.has(`${position.x},${position.y}`)
+  );
+
+  const colors = [
+    "#0E4429",
+    "#006D32",
+    "#26A641",
+    "#39D353",
+  ];
+
+  const count = Math.min(24, candidates.length);
+  const { cellWidth, cellHeight } = getCellSize();
+
+  return Array.from({ length: count }, (_, index) => {
+    const candidateIndex = Math.floor(
+      ((index + 0.5) * candidates.length) / count
+    );
+
+    const position = candidates[candidateIndex];
+
+    const size = Math.min(cellWidth, cellHeight) * 0.36;
+
+    const x =
+      position.x * cellWidth + (cellWidth - size) / 2;
+
+    const y =
+      position.y * cellHeight + (cellHeight - size) / 2;
+
+    return `
+      <rect
+        x="${x}"
+        y="${y}"
+        width="${size}"
+        height="${size}"
+        rx="1.5"
+        fill="${colors[index % colors.length]}"
+        stroke="#7CFF9B"
+        stroke-opacity="0.35"
+        stroke-width="0.6"
+        opacity="0.95">
+        <title>GitHub contribution visual accent</title>
+      </rect>
+    `;
+  }).join("");
+}
+
 function renderSpecialCoins(events) {
   return events.specialCoins.map((coin, index) => {
     const center = getCellCenter(coin);
