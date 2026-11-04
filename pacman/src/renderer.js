@@ -633,6 +633,7 @@ export function renderPacmanSvg({ contributions = [] } = {}) {
         ${renderMazeWalls()}
         ${renderContributionCells(days, events)}
         ${renderNormalCoins(events)}
+        ${renderDecorativeContributionCells(events)}
         ${renderSpecialCoins(events)}
         ${renderPacman(events)}
         ${renderGhosts(events)}
