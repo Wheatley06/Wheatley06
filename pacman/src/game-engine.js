@@ -12,9 +12,7 @@ import {
 
 export const GAME_CONFIG = {
   specialCoinCount: 5,
-  ghostCount: 5,
-  boostDuration: 12,
-  boostMultiplier: 2,
+  ghostCount: 8,
   normalSpeed: 1,
 };
 
@@ -26,6 +24,7 @@ const DIRECTIONS = [
 ];
 
 const key = (p) => `${p.x},${p.y}`;
+
 const distance = (a, b) =>
   Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 
@@ -56,6 +55,7 @@ export function findPath(start, target, layout = MAZE_LAYOUT) {
 
     for (const next of getNeighbors(current, layout)) {
       if (visited.has(key(next))) continue;
+
       visited.add(key(next));
       queue.push([...path, next]);
     }
@@ -134,7 +134,7 @@ export function createPacmanRoute(layout = MAZE_LAYOUT) {
 }
 
 // --------------------------------------------------
-// BOOST TIMELINE
+// ROUTE TIMELINE
 // --------------------------------------------------
 
 function getFirstVisitIndexes(route) {
@@ -149,87 +149,48 @@ function getFirstVisitIndexes(route) {
   return indexes;
 }
 
-function buildBoostWindows(route, specialCoins) {
-  const indexes = getFirstVisitIndexes(route);
+function buildSpeedTimeline(route) {
+  const segmentCount = Math.max(1, route.length - 1);
 
-  return specialCoins
-    .map((coin) => {
-      const start = indexes.get(key(coin));
-      if (start === undefined) return null;
-
-      return {
-        start,
-        end: Math.min(
-          route.length - 1,
-          start + GAME_CONFIG.boostDuration
-        ),
-      };
-    })
-    .filter(Boolean);
-}
-
-function boostAt(index, windows) {
-  return windows.some(
-    (window) => index >= window.start && index <= window.end
+  const keyTimes = route.map((_, index) =>
+    index / segmentCount
   );
-}
-
-function buildSpeedTimeline(route, windows) {
-  const durations = [];
-
-  for (let i = 1; i < route.length; i++) {
-    durations.push(
-      boostAt(i - 1, windows)
-        ? 1 / GAME_CONFIG.boostMultiplier
-        : 1 / GAME_CONFIG.normalSpeed
-    );
-  }
-
-  const total = durations.reduce((sum, value) => sum + value, 0);
-  let elapsed = 0;
-
-  const keyTimes = [0];
-
-  for (const duration of durations) {
-    elapsed += duration;
-    keyTimes.push(total ? elapsed / total : 1);
-  }
 
   return {
     keyTimes,
-    durationUnits: total,
+    durationUnits: segmentCount / GAME_CONFIG.normalSpeed,
   };
 }
 
 // --------------------------------------------------
-// GHOST ESCAPE ROUTES
+// GHOST MOVEMENT
 // --------------------------------------------------
 
-function createEscapeRoute(start, target, layout, ghostIndex) {
+function createGhostRoute(start, layout, ghostIndex) {
   const route = [start];
   let current = start;
   let previous = null;
 
-  // Deterministic escape movement.
-  for (let step = 0; step < 8; step++) {
+  // Each ghost follows a deterministic wandering route.
+  for (let step = 0; step < 24; step++) {
     const options = getNeighbors(current, layout);
+
     const candidates = options.filter(
       (p) => !previous || key(p) !== key(previous)
     );
 
     const available = candidates.length ? candidates : options;
+
     if (!available.length) break;
 
     available.sort((a, b) => {
       const scoreA =
-        distance(a, target) * 10 +
-        ((a.x * 7 + a.y * 11 + ghostIndex) % 5);
+        (a.x * 7 + a.y * 11 + ghostIndex * 3 + step) % 17;
 
       const scoreB =
-        distance(b, target) * 10 +
-        ((b.x * 7 + b.y * 11 + ghostIndex) % 5);
+        (b.x * 7 + b.y * 11 + ghostIndex * 3 + step) % 17;
 
-      return scoreB - scoreA;
+      return scoreA - scoreB;
     });
 
     previous = current;
@@ -237,53 +198,18 @@ function createEscapeRoute(start, target, layout, ghostIndex) {
     route.push(current);
   }
 
-  // The ghost continues along a connected route toward
-  // the capture point during the scripted boost event.
-  const interception = findPath(current, target, layout);
-
-  if (interception.length > 1) {
-    route.push(...interception.slice(1));
-  }
-
   return route;
 }
 
-
-export function createGhostRoutes(
-  layout = MAZE_LAYOUT,
-  pacmanRoute = createPacmanRoute(layout),
-  boostWindows = buildBoostWindows(
-    pacmanRoute,
-    getCollectibles(layout).specialCoins
-  )
-) {
+export function createGhostRoutes(layout = MAZE_LAYOUT) {
   const { ghosts } = getMazeEntities(layout);
-  const indexes = getFirstVisitIndexes(pacmanRoute);
 
-  return ghosts.map((start, index) => {
-    const window = boostWindows[index % Math.max(1, boostWindows.length)];
-
-    const captureIndex = window
-      ? Math.min(
-          pacmanRoute.length - 1,
-          Math.floor((window.start + window.end) / 2)
-        )
-      : Math.floor(
-          ((index + 1) * pacmanRoute.length) / (ghosts.length + 1)
-        );
-
-    const target = pacmanRoute[captureIndex];
-    const route = createEscapeRoute(start, target, layout, index);
-
-    return {
-      id: index,
-      start,
-      route,
-      captureIndex,
-      capturedAt: captureIndex,
-      delay: index * 0.35,
-    };
-  });
+  return ghosts.map((start, index) => ({
+    id: index,
+    start,
+    route: createGhostRoute(start, layout, index),
+    delay: index * 0.35,
+  }));
 }
 
 // --------------------------------------------------
@@ -303,26 +229,15 @@ export function createGameEvents(layout = MAZE_LAYOUT) {
   const normalCoins = collectibles.normalCoins.map(attachIndex);
   const specialCoins = collectibles.specialCoins.map(attachIndex);
 
-  const boostWindows = buildBoostWindows(route, specialCoins);
-  const speed = buildSpeedTimeline(route, boostWindows);
-
-  const ghosts = createGhostRoutes(
-    layout,
-    route,
-    boostWindows
-  );
+  const speed = buildSpeedTimeline(route);
+  const ghosts = createGhostRoutes(layout);
 
   return {
     route,
     normalCoins,
     specialCoins,
-    boostWindows,
     speed,
     ghosts,
-    capturedGhosts: ghosts.length,
-    allGhostsCaptured: ghosts.every(
-      (ghost) => ghost.capturedAt >= 0
-    ),
   };
 }
 
@@ -350,7 +265,7 @@ export function validateGameEngine(layout = MAZE_LAYOUT) {
   const { ghosts } = getMazeEntities(layout);
 
   if (ghosts.length !== GAME_CONFIG.ghostCount) {
-    throw new Error("The maze must contain five ghosts.");
+    throw new Error("The maze must contain eight ghosts.");
   }
 
   if (events.specialCoins.length !== GAME_CONFIG.specialCoinCount) {
@@ -381,6 +296,5 @@ export function validateGameEngine(layout = MAZE_LAYOUT) {
     normalCoinCount: events.normalCoins.length,
     specialCoinCount: events.specialCoins.length,
     ghostCount: events.ghosts.length,
-    capturedGhosts: events.capturedGhosts,
   };
 }
