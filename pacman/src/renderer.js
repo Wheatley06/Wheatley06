@@ -1,24 +1,6 @@
 
-/**
- * WHEATLEY06 — PAC-MAN CYBERPUNK
- * Complete visual renderer.
- */
-
-import {
-  MAZE_LAYOUT,
-  getMazeEntities,
-  getMazeDimensions,
-  getWallSegments,
-} from "./maze.js";
-
-import {
-  PROFILE,
-  COLORS,
-  CANVAS,
-  EFFECTS,
-  getContributionColor,
-} from "./config.js";
-
+import { MAZE_CONFIG, MAZE_LAYOUT, getMazeEntities, getWallSegments } from "./maze.js";
+import { GAME_CONFIG, createGameEvents } from "./game-engine.js";
 import {
   renderPacmanMouth,
   renderGhostMovement,
@@ -26,48 +8,39 @@ import {
   renderHudParticles,
   renderPacmanPath,
   renderGhostEscape,
-  renderGhostCapture,
   renderCollectiblePickup,
   renderSpecialCoinGlow,
-  renderSpeedBoost,
 } from "./animation.js";
-
-import {
-  createGameEvents,
-  toSvgPath,
-} from "./game-engine.js";
-
-const SVG_NS = "http://www.w3.org/2000/svg";
+import { COLORS, EFFECTS } from "./config.js";
 
 const LAYOUT = {
-  width: CANVAS.width,
-  height: CANVAS.height,
+  width: 1200,
+  height: 480,
   mazeX: 45,
   mazeY: 145,
   mazeWidth: 1110,
   mazeHeight: 230,
-  panelX: 25,
-  panelY: 115,
-  panelWidth: 1150,
-  panelHeight: 290,
   cycleDuration: 90,
 };
 
-const MAZE_STYLE = {
-  wall: COLORS.cyan,
-  pellet: "#C8F8FF",
-  floor: "#0D1724",
-};
-
 const GHOST_COLORS = [
-  COLORS.cyan,
-  COLORS.purple,
-  COLORS.magenta,
-  "#FF5C8A",
-  "#35E6A5",
+  "#FF4B75",
+  "#00E5FF",
+  "#FFB84D",
+  "#B66DFF",
+  "#FF6BCE",
 ];
 
-function escapeXml(value = "") {
+const CONTRIBUTION_COLORS = [
+  "#0E4429",
+  "#006D32",
+  "#26A641",
+  "#39D353",
+];
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+function escapeXml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -76,107 +49,77 @@ function escapeXml(value = "") {
     .replaceAll("'", "&apos;");
 }
 
-function clamp(value, min, max) {
-  return Math.max(min, Math.min(max, value));
-}
-
-function getCellSize() {
-  const { columns, rows } = getMazeDimensions(MAZE_LAYOUT);
+function cellCenter(row, col) {
+  const dimensions = getMazeDimensions();
 
   return {
-    columns,
+    x: LAYOUT.mazeX + (col + 0.5) * dimensions.cellWidth,
+    y: LAYOUT.mazeY + (row + 0.5) * dimensions.cellHeight,
+  };
+}
+
+function getMazeDimensions() {
+  const rows = MAZE_LAYOUT.length;
+  const columns = MAZE_LAYOUT[0].length;
+
+  return {
     rows,
+    columns,
     cellWidth: LAYOUT.mazeWidth / columns,
     cellHeight: LAYOUT.mazeHeight / rows,
   };
 }
 
-function getCellCenter(position) {
-  const { cellWidth, cellHeight } = getCellSize();
+function getRoutePosition(route, routeIndex) {
+  if (!route || route.length === 0) return null;
 
-  return {
-    x: position.x * cellWidth + cellWidth / 2,
-    y: position.y * cellHeight + cellHeight / 2,
-  };
-}
-
-function getContributionStats(days) {
-  const counts = days.map((day) =>
-    Math.max(0, Number(day.count) || 0)
+  const index = Math.max(
+    0,
+    Math.min(routeIndex, route.length - 1)
   );
 
-  return {
-    total: counts.reduce((sum, count) => sum + count, 0),
-    max: Math.max(1, ...counts),
-  };
+  const point = route[index];
+
+  return cellCenter(point.row, point.col);
 }
 
-function getContributionPlacements(days, events) {
-  const corridors = [];
+function getPickupTime(routeIndex, events) {
+  const keyTimes = events.speed.keyTimes;
 
-  MAZE_LAYOUT.forEach((row, y) => {
-    [...row].forEach((cell, x) => {
-      if (cell === ".") corridors.push({ x, y });
-    });
-  });
+  if (!keyTimes || keyTimes.length === 0) return 0;
 
-  if (!days.length || !corridors.length) return [];
+  const normalizedTime = keyTimes[
+    Math.min(routeIndex, keyTimes.length - 1)
+  ];
 
-  const visibleDays = days.slice(-corridors.length);
-  const { max } = getContributionStats(visibleDays);
-
-  return visibleDays.map((day, index) => {
-    const corridorIndex = Math.floor(
-      index * corridors.length / visibleDays.length
-    );
-
-    const position = corridors[corridorIndex];
-    const count = Math.max(0, Number(day.count) || 0);
-
-    return {
-      ...position,
-      date: day.date ?? "",
-      count,
-      color: getContributionColor(count, max),
-      intensity: count === 0 ? 0.15 : clamp(count / max, 0.25, 1),
-    };
-  });
+  return normalizedTime * LAYOUT.cycleDuration;
 }
 
-function getPickupTime(routeIndex, routeLength) {
-  if (routeIndex < 0 || routeLength <= 1) return null;
-
-  return (
-    routeIndex / (routeLength - 1)
-  ) * LAYOUT.cycleDuration;
-}
-
-function renderDefinitions() {
+function renderBackground() {
   return `
+    <rect
+      width="${LAYOUT.width}"
+      height="${LAYOUT.height}"
+      fill="${MAZE_CONFIG.background}"
+    />
+
     <defs>
-      <linearGradient id="panelGradient" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#12243A"/>
-        <stop offset="55%" stop-color="#0B1728"/>
-        <stop offset="100%" stop-color="#101020"/>
-      </linearGradient>
+      <pattern
+        id="circuit-grid"
+        width="32"
+        height="32"
+        patternUnits="userSpaceOnUse"
+      >
+        <path
+          d="M32 0H0V32"
+          fill="none"
+          stroke="#15212D"
+          stroke-width="0.7"
+          opacity="0.55"
+        />
+      </pattern>
 
-      <linearGradient id="headerGradient" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="${COLORS.cyan}" stop-opacity="0.8"/>
-        <stop offset="50%" stop-color="${COLORS.blue}" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="${COLORS.magenta}" stop-opacity="0.8"/>
-      </linearGradient>
-
-      <linearGradient id="wallGradient" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="${COLORS.cyan}"/>
-        <stop offset="100%" stop-color="${COLORS.blue}"/>
-      </linearGradient>
-
-      <radialGradient id="backgroundGlow">
-        <stop offset="0%" stop-color="${COLORS.blue}" stop-opacity="0.18"/>
-        <stop offset="100%" stop-color="${COLORS.background}" stop-opacity="0"/>
-      </radialGradient>
-
-      <filter id="neonGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <filter id="cyan-glow">
         <feGaussianBlur stdDeviation="3" result="blur"/>
         <feMerge>
           <feMergeNode in="blur"/>
@@ -184,153 +127,200 @@ function renderDefinitions() {
         </feMerge>
       </filter>
 
-      <filter id="strongGlow" x="-150%" y="-150%" width="400%" height="400%">
-        <feGaussianBlur stdDeviation="5" result="blur"/>
+      <filter id="green-glow">
+        <feGaussianBlur stdDeviation="2" result="blur"/>
         <feMerge>
           <feMergeNode in="blur"/>
           <feMergeNode in="SourceGraphic"/>
         </feMerge>
       </filter>
 
-      <pattern id="circuitGrid" width="32" height="32"
-        patternUnits="userSpaceOnUse">
-        <path d="M32 0H0V32" fill="none"
-          stroke="${COLORS.cyan}" stroke-opacity="0.07"/>
-        <circle cx="0" cy="0" r="1.5"
-          fill="${COLORS.cyan}" opacity="0.2"/>
-      </pattern>
+      <filter id="pacman-glow">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
 
-      <clipPath id="mazeClip">
-        <rect width="${LAYOUT.mazeWidth}"
-          height="${LAYOUT.mazeHeight}"/>
+      <clipPath id="maze-clip">
+        <rect
+          x="${LAYOUT.mazeX}"
+          y="${LAYOUT.mazeY}"
+          width="${LAYOUT.mazeWidth}"
+          height="${LAYOUT.mazeHeight}"
+          rx="8"
+        />
       </clipPath>
     </defs>
-  `;
-}
 
-function renderBackground() {
-  return `
-    <rect width="${LAYOUT.width}" height="${LAYOUT.height}"
-      fill="${COLORS.background}"/>
-    <rect width="${LAYOUT.width}" height="${LAYOUT.height}"
-      fill="url(#circuitGrid)"/>
-    <ellipse cx="600" cy="240" rx="570" ry="300"
-      fill="url(#backgroundGlow)"/>
-    <path d="M0 90H1200 M0 420H1200"
-      stroke="${COLORS.cyan}" stroke-opacity="0.15"/>
-    <path d="M25 25H160L180 45H300 M900 25H1040L1060 45H1175"
-      fill="none" stroke="${COLORS.cyan}"
-      stroke-opacity="0.35" stroke-width="1.5"/>
+    <rect
+      width="${LAYOUT.width}"
+      height="${LAYOUT.height}"
+      fill="url(#circuit-grid)"
+    />
   `;
 }
 
 function renderHeader() {
   return `
     <g font-family="monospace">
-      <text x="36" y="48" fill="${COLORS.cyan}"
-        font-size="13" letter-spacing="4">
-        SYSTEM // CONTRIBUTION MATRIX
-      </text>
-      <text x="36" y="78" fill="#FFFFFF"
-        font-size="27" font-weight="bold" letter-spacing="3">
-        ${escapeXml(PROFILE.name)}
-      </text>
-      <text x="1160" y="48" text-anchor="end"
-        fill="${COLORS.teal}" font-size="12" letter-spacing="2">
-        ● ONLINE
-      </text>
-      <text x="1160" y="75" text-anchor="end"
-        fill="#8299B5" font-size="10" letter-spacing="2">
-        ${escapeXml(PROFILE.title)}
-      </text>
-      <rect x="35" y="98" width="1130" height="2"
-        fill="url(#headerGradient)"/>
+      <text
+        x="45"
+        y="36"
+        fill="#00D9FF"
+        font-size="11"
+        letter-spacing="3"
+      >SYSTEM // CONTRIBUTION MATRIX</text>
+
+      <text
+        x="45"
+        y="76"
+        fill="#E6EDF3"
+        font-size="27"
+        font-weight="bold"
+        letter-spacing="3"
+      >WHEATLEY06</text>
+
+      <circle cx="1150" cy="34" r="5" fill="#39D353">
+        <animate
+          attributeName="opacity"
+          values="1;0.35;1"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <text
+        x="1138"
+        y="56"
+        text-anchor="end"
+        fill="#39D353"
+        font-size="11"
+        letter-spacing="2"
+      >ONLINE</text>
+
+      <text
+        x="45"
+        y="116"
+        fill="#00D9FF"
+        font-size="12"
+        letter-spacing="3"
+      >PAC-MAN CONTRIBUTIONS</text>
     </g>
   `;
 }
 
-function renderPanel() {
+function renderMazePanel() {
   return `
-    <rect x="${LAYOUT.panelX}" y="${LAYOUT.panelY}"
-      width="${LAYOUT.panelWidth}" height="${LAYOUT.panelHeight}"
-      rx="12" fill="url(#panelGradient)"
-      stroke="${COLORS.cyan}" stroke-opacity="0.45"
-      stroke-width="1.5"/>
-    <path d="M45 135H170 M1030 135H1155 M45 385H170 M1030 385H1155"
-      fill="none" stroke="${COLORS.cyan}"
-      stroke-opacity="0.5" stroke-width="2"/>
-    <path d="M25 155V135Q25 115 45 115 M1155 115Q1175 115 1175 135V155
-      M25 365V385Q25 405 45 405 M1155 405Q1175 405 1175 385V365"
-      fill="none" stroke="${COLORS.cyan}"
-      stroke-width="1.5" opacity="0.7"/>
+    <rect
+      x="25"
+      y="128"
+      width="1150"
+      height="270"
+      rx="13"
+      fill="#080D14"
+      stroke="#087FAD"
+      stroke-width="1.5"
+      filter="url(#cyan-glow)"
+      opacity="0.95"
+    />
+
+    <rect
+      x="${LAYOUT.mazeX}"
+      y="${LAYOUT.mazeY}"
+      width="${LAYOUT.mazeWidth}"
+      height="${LAYOUT.mazeHeight}"
+      rx="8"
+      fill="#050A11"
+      stroke="#12364B"
+      stroke-width="1"
+    />
   `;
 }
 
-function renderMazeFloor() {
-  const { columns, rows, cellWidth, cellHeight } = getCellSize();
-  let output = "";
+function renderWalls() {
+  const segments = getWallSegments();
 
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < columns; x++) {
-      if (MAZE_LAYOUT[y][x] === "#") continue;
+  return segments.map((segment, index) => {
+    const x = LAYOUT.mazeX + segment.x * getMazeDimensions().cellWidth;
+    const y = LAYOUT.mazeY + segment.y * getMazeDimensions().cellHeight;
+    const width = segment.width * getMazeDimensions().cellWidth;
+    const height = segment.height * getMazeDimensions().cellHeight;
 
-      output += `
-        <rect x="${x * cellWidth}" y="${y * cellHeight}"
-          width="${cellWidth}" height="${cellHeight}"
-          fill="${MAZE_STYLE.floor}" opacity="0.65"/>
-      `;
-    }
-  }
-
-  return output;
-}
-
-function renderMazeWalls() {
-  const { cellWidth, cellHeight } = getCellSize();
-
-  return getWallSegments(MAZE_LAYOUT).map((wall, index) => `
-    <rect
-      x="${wall.x * cellWidth + 1}"
-      y="${wall.y * cellHeight + 1}"
-      width="${cellWidth - 2}"
-      height="${cellHeight - 2}"
-      rx="3"
-      fill="url(#wallGradient)"
-      fill-opacity="0.16"
-      stroke="${MAZE_STYLE.wall}"
-      stroke-width="1.3"
-      filter="url(#neonGlow)">
-      ${EFFECTS.animatedWalls ? renderWallGlow(index) : ""}
-    </rect>
-  `).join("");
+    return `
+      <rect
+        x="${x}"
+        y="${y}"
+        width="${width}"
+        height="${height}"
+        rx="${MAZE_CONFIG.cornerRadius}"
+        fill="none"
+        stroke="${MAZE_CONFIG.wallColor}"
+        stroke-width="${MAZE_CONFIG.wallThickness}"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        ${renderWallGlow(index)}
+      </rect>
+    `;
+  }).join("");
 }
 
 function renderContributionCells(days, events) {
-  const placements = getContributionPlacements(days, events);
-  const { cellWidth, cellHeight } = getCellSize();
+  if (!Array.isArray(days)) return "";
 
-  return placements.map((item) => {
-    const routeIndex = events.route.findIndex(
-      (p) => p.x === item.x && p.y === item.y
+  const routeIndexByCell = new Map();
+
+  events.route.forEach((point, index) => {
+    const key = `${point.row},${point.col}`;
+
+    if (!routeIndexByCell.has(key)) {
+      routeIndexByCell.set(key, index);
+    }
+  });
+
+  return days.map((day, index) => {
+    const intensity = Number(day.level ?? day.intensity ?? 0);
+
+    if (intensity <= 0) return "";
+
+    const point = events.route.find((routePoint) => {
+      return routePoint.row === day.row && routePoint.col === day.col;
+    });
+
+    if (!point) return "";
+
+    const routeIndex = routeIndexByCell.get(
+      `${point.row},${point.col}`
     );
 
-    const pickupTime = getPickupTime(routeIndex, events.route.length);
-    const x = item.x * cellWidth + cellWidth * 0.18;
-    const y = item.y * cellHeight + cellHeight * 0.18;
-    const size = Math.min(cellWidth, cellHeight) * 0.64;
+    if (routeIndex === undefined) return "";
+
+    const position = cellCenter(point.row, point.col);
+    const size = Math.max(3, getMazeDimensions().cellWidth * 0.35);
+    const color = CONTRIBUTION_COLORS[
+      Math.min(3, Math.max(0, intensity - 1))
+    ];
+
+    const pickupTime = getPickupTime(routeIndex, events);
 
     return `
-      <g opacity="${item.intensity}">
-        <title>${escapeXml(item.date)}: ${item.count} contributions</title>
-        <rect x="${x}" y="${y}" width="${size}" height="${size}"
-          rx="2" fill="${item.color}"
-          stroke="#7CFF9B" stroke-opacity="0.25" stroke-width="0.6">
-          ${pickupTime !== null
-            ? renderCollectiblePickup({
-                duration: LAYOUT.cycleDuration,
-                pickupTime,
-              })
-            : ""}
+      <g>
+        <rect
+          x="${position.x - size / 2}"
+          y="${position.y - size / 2}"
+          width="${size}"
+          height="${size}"
+          rx="1"
+          fill="${color}"
+          opacity="0.95"
+          filter="url(#green-glow)"
+        >
+          ${renderCollectiblePickup({
+            duration: LAYOUT.cycleDuration,
+            pickupTime,
+          })}
         </rect>
       </g>
     `;
@@ -339,85 +329,68 @@ function renderContributionCells(days, events) {
 
 function renderNormalCoins(events) {
   return events.normalCoins.map((coin) => {
-    const center = getCellCenter(coin);
-    const pickupTime = getPickupTime(
-      coin.routeIndex,
-      events.route.length
-    );
+    const position = cellCenter(coin.row, coin.col);
+    const pickupTime = getPickupTime(coin.routeIndex, events);
 
     return `
-      <circle cx="${center.x}" cy="${center.y}" r="1.65"
-        fill="${MAZE_STYLE.pellet}" filter="url(#neonGlow)">
-        ${pickupTime !== null
-          ? renderCollectiblePickup({
-              duration: LAYOUT.cycleDuration,
-              pickupTime,
-            })
-          : ""}
+      <circle
+        cx="${position.x}"
+        cy="${position.y}"
+        r="2.1"
+        fill="#FFE58A"
+        filter="url(#green-glow)"
+      >
+        ${renderCollectiblePickup({
+          duration: LAYOUT.cycleDuration,
+          pickupTime,
+        })}
       </circle>
     `;
   }).join("");
 }
 
-
 function renderDecorativeContributionCells(events) {
-  const corridors = [];
+  const occupied = new Set(
+    events.specialCoins.map((coin) => `${coin.row},${coin.col}`)
+  );
 
-  MAZE_LAYOUT.forEach((row, y) => {
-    [...row].forEach((cell, x) => {
-      if (cell === ".") {
-        corridors.push({ x, y });
-      }
-    });
+  const candidates = events.route.filter((point, index) => {
+    const key = `${point.row},${point.col}`;
+
+    return (
+      index > 0 &&
+      index % 3 === 0 &&
+      !occupied.has(key) &&
+      MAZE_LAYOUT[point.row][point.col] === "."
+    );
   });
 
-  const specialKeys = new Set(
-    events.specialCoins.map((coin) => `${coin.x},${coin.y}`)
-  );
+  return candidates.slice(0, 24).map((point, index) => {
+    const position = cellCenter(point.row, point.col);
+    const routeIndex = events.route.findIndex((routePoint) => {
+      return routePoint.row === point.row &&
+        routePoint.col === point.col;
+    });
 
-  const candidates = corridors.filter(
-    (position) =>
-      !specialKeys.has(`${position.x},${position.y}`)
-  );
-
-  const colors = [
-    "#0E4429",
-    "#006D32",
-    "#26A641",
-    "#39D353",
-  ];
-
-  const count = Math.min(24, candidates.length);
-  const { cellWidth, cellHeight } = getCellSize();
-
-  return Array.from({ length: count }, (_, index) => {
-    const candidateIndex = Math.floor(
-      ((index + 0.5) * candidates.length) / count
-    );
-
-    const position = candidates[candidateIndex];
-
-    const size = Math.min(cellWidth, cellHeight) * 0.36;
-
-    const x =
-      position.x * cellWidth + (cellWidth - size) / 2;
-
-    const y =
-      position.y * cellHeight + (cellHeight - size) / 2;
+    const size = 5.5;
+    const color = CONTRIBUTION_COLORS[index % CONTRIBUTION_COLORS.length];
+    const pickupTime = getPickupTime(routeIndex, events);
 
     return `
       <rect
-        x="${x}"
-        y="${y}"
+        x="${position.x - size / 2}"
+        y="${position.y - size / 2}"
         width="${size}"
         height="${size}"
-        rx="1.5"
-        fill="${colors[index % colors.length]}"
-        stroke="#7CFF9B"
-        stroke-opacity="0.35"
-        stroke-width="0.6"
-        opacity="0.95">
-        <title>GitHub contribution visual accent</title>
+        rx="1"
+        fill="${color}"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        ${renderCollectiblePickup({
+          duration: LAYOUT.cycleDuration,
+          pickupTime,
+        })}
       </rect>
     `;
   }).join("");
@@ -425,191 +398,176 @@ function renderDecorativeContributionCells(events) {
 
 function renderSpecialCoins(events) {
   return events.specialCoins.map((coin, index) => {
-    const center = getCellCenter(coin);
-    const pickupTime = getPickupTime(
-      coin.routeIndex,
-      events.route.length
-    );
+    const position = cellCenter(coin.row, coin.col);
+    const pickupTime = getPickupTime(coin.routeIndex, events);
 
     return `
-      <g transform="translate(${center.x} ${center.y})">
-        <circle r="3" fill="${COLORS.pacman}"
-          stroke="${COLORS.cyan}" stroke-width="1"
-          filter="url(#strongGlow)">
-          ${renderSpecialCoinGlow()}
-          ${pickupTime !== null
-            ? renderCollectiblePickup({
-                duration: LAYOUT.cycleDuration,
-                pickupTime,
-              })
-            : ""}
-        </circle>
-        <circle r="5.2" fill="none"
-          stroke="${COLORS.pacman}" stroke-opacity="0.35">
-          <animate attributeName="r" values="4;7;4"
-            dur="1.2s" begin="${index * 0.2}s"
-            repeatCount="indefinite"/>
-        </circle>
+      <g>
+        <g>
+          <circle
+            cx="${position.x}"
+            cy="${position.y}"
+            r="6"
+            fill="none"
+            stroke="#FFD166"
+            stroke-width="1"
+            opacity="0.7"
+          >
+            ${renderSpecialCoinGlow()}
+          </circle>
+
+          <circle
+            cx="${position.x}"
+            cy="${position.y}"
+            r="3.1"
+            fill="#FFD166"
+            stroke="#FFF1B8"
+            stroke-width="0.7"
+          />
+        </g>
+
+        <animate
+          attributeName="opacity"
+          values="1;1;0;0;1"
+          keyTimes="0;${Math.max(
+            0,
+            Math.min(1, pickupTime / LAYOUT.cycleDuration)
+          )};${Math.max(
+            0,
+            Math.min(1, pickupTime / LAYOUT.cycleDuration)
+          )};0.99;1"
+          dur="${LAYOUT.cycleDuration}s"
+          repeatCount="indefinite"
+        />
       </g>
     `;
   }).join("");
 }
 
 function renderPacman(events) {
-  const entities = getMazeEntities(MAZE_LAYOUT);
-  if (!entities.pacman) return "";
+  const route = events.route;
 
-  const { cellWidth, cellHeight } = getCellSize();
-  const radius = Math.min(cellWidth, cellHeight) * 0.42;
+  if (!route || route.length < 2) return "";
 
-  const path = toSvgPath(
-    events.route,
-    cellWidth,
-    cellHeight
-  );
-
-  const keyPoints = events.route.map(
-    (_, index) => index / Math.max(1, events.route.length - 1)
-  ).join(";");
+  const path = events.pacmanPath;
+  const keyPoints = route.map((_, index) => {
+    return index / (route.length - 1);
+  }).join(";");
 
   const keyTimes = events.speed.keyTimes.join(";");
 
-  const firstBoost = events.boostWindows[0];
+  const first = cellCenter(route[0].row, route[0].col);
 
   return `
-    <g filter="url(#strongGlow)">
-      <g>
+    <g filter="url(#pacman-glow)">
+      <circle
+        cx="${first.x}"
+        cy="${first.y}"
+        r="10"
+        fill="#FFD43B"
+      >
         ${renderPacmanPath({
           path,
           duration: LAYOUT.cycleDuration,
           keyPoints,
           keyTimes,
         })}
-
-        <circle r="${radius}" fill="${COLORS.pacman}"/>
-        <path
-          d="M0 0 L${radius} ${-radius * 0.65}
-            A${radius} ${radius} 0 1 0 ${radius} ${radius * 0.65} Z"
-          fill="${COLORS.background}">
-          ${renderPacmanMouth(radius)}
-        </path>
-        <circle cx="${radius * 0.12}" cy="${-radius * 0.48}"
-          r="${radius * 0.09}" fill="#1A1A1A"/>
-        ${firstBoost
-          ? renderSpeedBoost({
-              duration: LAYOUT.cycleDuration,
-              start: firstBoost.start / events.route.length * LAYOUT.cycleDuration,
-              end: firstBoost.end / events.route.length * LAYOUT.cycleDuration,
-            })
-          : ""}
-      </g>
+        ${renderPacmanMouth(10)}
+      </circle>
     </g>
   `;
 }
 
-// Original ghost character silhouette and eyes.
-function renderGhostShape(color, index) {
-  const { cellWidth, cellHeight } = getCellSize();
-  const radius = Math.min(cellWidth, cellHeight) * 0.4;
+function renderGhostShape(position, color, index) {
+  const x = position.x;
+  const y = position.y;
 
   return `
-    <g filter="url(#neonGlow)">
-      <g>
-        <path
-          d="
-            M ${-radius} ${radius * 0.8}
-            L ${-radius} 0
-            A ${radius} ${radius} 0 0 1 ${radius} 0
-            L ${radius} ${radius * 0.8}
-            L ${radius * 0.5} ${radius * 0.55}
-            L 0 ${radius * 0.85}
-            L ${-radius * 0.5} ${radius * 0.55}
-            Z
-          "
-          fill="${color}"
-          stroke="#FFFFFF"
-          stroke-opacity="0.35"
-          stroke-width="0.7"/>
-        <ellipse cx="${-radius * 0.32}" cy="0"
-          rx="${radius * 0.2}" ry="${radius * 0.25}" fill="#FFFFFF"/>
-        <ellipse cx="${radius * 0.32}" cy="0"
-          rx="${radius * 0.2}" ry="${radius * 0.25}" fill="#FFFFFF"/>
-        <circle cx="${-radius * 0.27}" cy="0"
-          r="${radius * 0.09}" fill="#132238"/>
-        <circle cx="${radius * 0.37}" cy="0"
-          r="${radius * 0.09}" fill="#132238"/>
-      </g>
-      ${EFFECTS.glow ? renderGhostMovement(index) : ""}
+    <g transform="translate(${x} ${y})">
+      <path
+        d="
+          M -8 7
+          L -8 -1
+          A 8 8 0 0 1 8 -1
+          L 8 7
+          L 4 4
+          L 0 7
+          L -4 4
+          Z
+        "
+        fill="${color}"
+        stroke="#FFFFFF"
+        stroke-width="0.55"
+        opacity="0.96"
+      />
+
+      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+
+      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
+      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+
+      ${renderGhostMovement(index)}
     </g>
   `;
 }
 
 function renderGhosts(events) {
-  const { cellWidth, cellHeight } = getCellSize();
-
   return events.ghosts.map((ghost, index) => {
-    const path = toSvgPath(ghost.route, cellWidth, cellHeight);
-    const captureTime =
-      ghost.captureIndex / Math.max(1, events.route.length - 1) *
-      LAYOUT.cycleDuration;
+    const ghostRoute = ghost.route;
+
+    if (!ghostRoute || ghostRoute.length < 2) return "";
+
+    const path = ghost.path;
+
+    const initialPosition = cellCenter(
+      ghostRoute[0].row,
+      ghostRoute[0].col
+    );
+
+    const color = GHOST_COLORS[index % GHOST_COLORS.length];
 
     return `
       <g>
+        ${renderGhostShape(initialPosition, color, index)}
         ${renderGhostEscape({
           path,
           duration: LAYOUT.cycleDuration,
-          delay: ghost.delay,
-        })}
-        ${renderGhostShape(GHOST_COLORS[index], index)}
-        ${renderGhostCapture({
-          duration: LAYOUT.cycleDuration,
-          captureTime,
+          delay: ghost.delay ?? 0,
         })}
       </g>
     `;
   }).join("");
 }
 
-function renderMazeLabels(events, days) {
-  const { total } = getContributionStats(days);
-
-  return `
-    <g font-family="monospace">
-      <text x="45" y="135" fill="${COLORS.cyan}"
-        font-size="9" letter-spacing="1.5">
-        NEON MAZE // ${events.route.length} MOVEMENT NODES
-      </text>
-      <text x="1155" y="135" text-anchor="end"
-        fill="${COLORS.teal}" font-size="9" letter-spacing="1.5">
-        ${total.toLocaleString("en-US")} CONTRIBUTIONS
-      </text>
-    </g>
-  `;
-}
-
 function renderFooter() {
   return `
-    <g font-family="monospace">
-      <text x="36" y="445" fill="${COLORS.cyan}"
-        font-size="10" letter-spacing="2">
-        PAC-MAN // CONTRIBUTION ENGINE
+    <g font-family="monospace" font-size="10" letter-spacing="1.4">
+      <text x="45" y="430" fill="#00D9FF">
+        PAC-MAN // ACTIVE
       </text>
-      <text x="1160" y="445" text-anchor="end"
-        fill="#8299B5" font-size="10">
-        GENERATED AUTOMATICALLY // GITHUB
+
+      <text x="600" y="430" text-anchor="middle" fill="#657B8C">
+        CONTRIBUTION DATA // REAL-TIME VISUALIZATION
       </text>
-      <path d="M35 455H1165"
-        stroke="${COLORS.cyan}" stroke-opacity="0.2"/>
+
+      <text x="1155" y="430" text-anchor="end" fill="#39D353">
+        SYSTEM ONLINE
+      </text>
     </g>
   `;
 }
 
-export function renderPacmanSvg({ contributions = [] } = {}) {
-  const days = Array.isArray(contributions)
-    ? contributions
-    : contributions?.days ?? [];
+function renderHud(events) {
+  return `
+    <g>
+      ${renderHudParticles()}
+    </g>
+  `;
+}
 
-  const events = createGameEvents(MAZE_LAYOUT);
+export function renderPacmanSvg(days = []) {
+  const events = createGameEvents();
 
   return `
     <svg
@@ -619,18 +577,14 @@ export function renderPacmanSvg({ contributions = [] } = {}) {
       height="${LAYOUT.height}"
       viewBox="0 0 ${LAYOUT.width} ${LAYOUT.height}"
       role="img"
-      aria-label="Pac-Man cyberpunk GitHub contribution visualization">
-
-      ${renderDefinitions()}
+      aria-label="Wheatley06 Pac-Man contribution matrix"
+    >
       ${renderBackground()}
-      ${renderPanel()}
       ${renderHeader()}
-      ${renderMazeLabels(events, days)}
+      ${renderMazePanel()}
 
-      <g transform="translate(${LAYOUT.mazeX} ${LAYOUT.mazeY})"
-        clip-path="url(#mazeClip)">
-        ${renderMazeFloor()}
-        ${renderMazeWalls()}
+      <g clip-path="url(#maze-clip)">
+        ${renderWalls()}
         ${renderContributionCells(days, events)}
         ${renderNormalCoins(events)}
         ${renderDecorativeContributionCells(events)}
@@ -639,8 +593,8 @@ export function renderPacmanSvg({ contributions = [] } = {}) {
         ${renderGhosts(events)}
       </g>
 
-      ${EFFECTS.particles ? renderHudParticles() : ""}
+      ${renderHud(events)}
       ${renderFooter()}
     </svg>
-  `.trim();
+  `;
 }
