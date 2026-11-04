@@ -85,7 +85,48 @@ function testInvalidMaze() {
   console.log("✓ Invalid maze detection");
 }
 
-// RUN TESTS
+function testMazeConnectivity() {
+  const { pacman } = getMazeEntities();
+  const queue = [pacman];
+  const visited = new Set([`${pacman.x},${pacman.y}`]);
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+
+    const neighbors = [
+      { x: current.x + 1, y: current.y },
+      { x: current.x - 1, y: current.y },
+      { x: current.x, y: current.y + 1 },
+      { x: current.x, y: current.y - 1 },
+    ];
+
+    for (const next of neighbors) {
+      const cell = getMazeCell(next.x, next.y);
+
+      if (cell === null || cell === "#") continue;
+
+      const id = `${next.x},${next.y}`;
+
+      if (!visited.has(id)) {
+        visited.add(id);
+        queue.push(next);
+      }
+    }
+  }
+
+  const walkableCells = MAZE_LAYOUT.join("")
+    .split("")
+    .filter((cell) => cell !== "#")
+    .length;
+
+  assert.equal(
+    visited.size,
+    walkableCells,
+    "All walkable maze cells must be connected."
+  );
+
+  console.log("✓ Maze connectivity");
+}
 
 function runTests() {
   console.log("\nPAC-MAN MAZE TESTS\n");
@@ -93,6 +134,7 @@ function runTests() {
   testMazeValidation();
   testMazeDimensions();
   testMazeEntities();
+  testMazeConnectivity();
   testMazeCells();
   testWallSegments();
   testInvalidMaze();
