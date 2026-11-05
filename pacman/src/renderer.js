@@ -1,4 +1,3 @@
-
 /**
  * WHEATLEY06 — PAC-MAN CYBERPUNK
  * SVG renderer.
@@ -32,13 +31,10 @@ import {
 const LAYOUT = {
   width: 1200,
   height: 480,
-
   mazeX: 45,
   mazeY: 145,
-
   mazeWidth: 1110,
   mazeHeight: 230,
-
   cycleDuration: 90,
 };
 
@@ -52,6 +48,9 @@ const GHOST_COLORS = [
   "#FFB84D",
   "#B66DFF",
   "#FF6BCE",
+  "#39D8A7",
+  "#F36BFF",
+  "#A5E85A",
 ];
 
 const CONTRIBUTION_COLORS = [
@@ -64,17 +63,8 @@ const CONTRIBUTION_COLORS = [
 const SVG_NS = "http://www.w3.org/2000/svg";
 
 // --------------------------------------------------
-// UTILITIES
+// DIMENSIONS
 // --------------------------------------------------
-
-function escapeXml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
-}
 
 function getMazeDimensions() {
   const rows = MAZE_LAYOUT.length;
@@ -88,47 +78,36 @@ function getMazeDimensions() {
   };
 }
 
-// All game-engine coordinates use x and y.
 function cellCenter(x, y) {
-  const dimensions = getMazeDimensions();
+  const { cellWidth, cellHeight } = getMazeDimensions();
 
   return {
-    x: LAYOUT.mazeX + (x + 0.5) * dimensions.cellWidth,
-    y: LAYOUT.mazeY + (y + 0.5) * dimensions.cellHeight,
+    x: LAYOUT.mazeX + (x + 0.5) * cellWidth,
+    y: LAYOUT.mazeY + (y + 0.5) * cellHeight,
   };
 }
 
 // --------------------------------------------------
-// ROUTE CONVERSION
+// ROUTES
 // --------------------------------------------------
 
 function routeToSvgPath(route, relativeTo = null) {
-  if (!Array.isArray(route) || route.length === 0) {
-    return "";
-  }
+  if (!Array.isArray(route) || route.length === 0) return "";
 
   const origin = relativeTo
     ? cellCenter(relativeTo.x, relativeTo.y)
-    : null;
+    : { x: 0, y: 0 };
 
   return route.map((point, index) => {
     const position = cellCenter(point.x, point.y);
 
-    const x = origin
-      ? position.x - origin.x
-      : position.x;
-
-    const y = origin
-      ? position.y - origin.y
-      : position.y;
+    const x = position.x - origin.x;
+    const y = position.y - origin.y;
 
     return `${index === 0 ? "M" : "L"} ${x} ${y}`;
   }).join(" ");
 }
 
-// Calculate the normalized distance of every route point.
-// This allows Pac-Man to spend approximately the same time
-// moving between adjacent maze cells.
 function getRouteKeyPoints(route) {
   if (!Array.isArray(route) || route.length < 2) {
     return "0;1";
@@ -149,38 +128,21 @@ function getRouteKeyPoints(route) {
     );
   }
 
-  const totalDistance = distances[distances.length - 1];
+  const total = distances[distances.length - 1] || 1;
 
-  if (totalDistance === 0) {
-    return route.map((_, index) =>
-      index / (route.length - 1)
-    ).join(";");
-  }
-
-  return distances.map((distance) =>
-    distance / totalDistance
-  ).join(";");
+  return distances
+    .map((value) => value / total)
+    .join(";");
 }
 
-// --------------------------------------------------
-// COLLECTIBLE TIMING
-// --------------------------------------------------
-
 function getPickupTime(routeIndex, events) {
-  const keyTimes = events.speed?.keyTimes;
+  const times = events.speed?.keyTimes;
 
-  if (!keyTimes || keyTimes.length === 0) {
-    return 0;
-  }
+  if (!times?.length || routeIndex < 0) return 0;
 
-  const index = Math.max(
-    0,
-    Math.min(routeIndex, keyTimes.length - 1)
-  );
+  const index = Math.min(routeIndex, times.length - 1);
 
-  const normalizedTime = keyTimes[index] ?? 0;
-
-  return normalizedTime * LAYOUT.cycleDuration;
+  return times[index] * LAYOUT.cycleDuration;
 }
 
 // --------------------------------------------------
@@ -212,7 +174,7 @@ function renderBackground() {
       </pattern>
 
       <filter id="cyan-glow">
-        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
         <feMerge>
           <feMergeNode in="blur"/>
           <feMergeNode in="SourceGraphic"/>
@@ -220,7 +182,7 @@ function renderBackground() {
       </filter>
 
       <filter id="green-glow">
-        <feGaussianBlur stdDeviation="2" result="blur"/>
+        <feGaussianBlur stdDeviation="1.6" result="blur"/>
         <feMerge>
           <feMergeNode in="blur"/>
           <feMergeNode in="SourceGraphic"/>
@@ -228,7 +190,7 @@ function renderBackground() {
       </filter>
 
       <filter id="pacman-glow">
-        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feGaussianBlur stdDeviation="3.5" result="blur"/>
         <feMerge>
           <feMergeNode in="blur"/>
           <feMergeNode in="SourceGraphic"/>
@@ -261,7 +223,6 @@ function renderBackground() {
 function renderHeader() {
   return `
     <g font-family="monospace">
-
       <text
         x="45"
         y="36"
@@ -279,12 +240,7 @@ function renderHeader() {
         letter-spacing="3"
       >WHEATLEY06</text>
 
-      <circle
-        cx="1150"
-        cy="34"
-        r="5"
-        fill="#39D353"
-      >
+      <circle cx="1150" cy="34" r="5" fill="#39D353">
         <animate
           attributeName="opacity"
           values="1;0.35;1"
@@ -309,7 +265,6 @@ function renderHeader() {
         font-size="12"
         letter-spacing="3"
       >PAC-MAN CONTRIBUTIONS</text>
-
     </g>
   `;
 }
@@ -352,20 +307,14 @@ function renderMazePanel() {
 
 function renderWalls() {
   const segments = getWallSegments();
-  const dimensions = getMazeDimensions();
+  const { cellWidth, cellHeight } = getMazeDimensions();
 
   return segments.map((segment, index) => {
-    const x =
-      LAYOUT.mazeX + segment.x * dimensions.cellWidth;
+    const x = LAYOUT.mazeX + segment.x * cellWidth;
+    const y = LAYOUT.mazeY + segment.y * cellHeight;
 
-    const y =
-      LAYOUT.mazeY + segment.y * dimensions.cellHeight;
-
-    const width =
-      segment.width * dimensions.cellWidth;
-
-    const height =
-      segment.height * dimensions.cellHeight;
+    const width = segment.width * cellWidth;
+    const height = segment.height * cellHeight;
 
     return `
       <rect
@@ -373,12 +322,9 @@ function renderWalls() {
         y="${y}"
         width="${width}"
         height="${height}"
-        rx="${MAZE_CONFIG.cornerRadius}"
-        fill="none"
-        stroke="${MAZE_CONFIG.wallColor}"
-        stroke-width="${MAZE_CONFIG.wallThickness}"
-        filter="url(#cyan-glow)"
-        opacity="0.95"
+        rx="1.5"
+        fill="${MAZE_CONFIG.wallColor}"
+        opacity="0.96"
       >
         ${renderWallGlow(index)}
       </rect>
@@ -390,37 +336,50 @@ function renderWalls() {
 // CONTRIBUTION CELLS
 // --------------------------------------------------
 
-function renderContributionCells(days, events) {
-  if (!Array.isArray(days) || days.length === 0) {
-    return "";
-  }
-
-  const routeIndexByCell = new Map();
+function getRouteIndexMap(events) {
+  const map = new Map();
 
   events.route.forEach((point, index) => {
-    const cellKey = `${point.x},${point.y}`;
+    const id = `${point.x},${point.y}`;
 
-    if (!routeIndexByCell.has(cellKey)) {
-      routeIndexByCell.set(cellKey, index);
-    }
+    if (!map.has(id)) map.set(id, index);
   });
 
-  const routeCells = [];
+  return map;
+}
+
+function getContributionCandidates(events) {
   const seen = new Set();
 
-  for (const point of events.route) {
-    const cellKey = `${point.x},${point.y}`;
+  return events.route.filter((point) => {
+    const id = `${point.x},${point.y}`;
 
-    if (
-      !seen.has(cellKey) &&
-      MAZE_LAYOUT[point.y]?.[point.x] === "."
-    ) {
-      seen.add(cellKey);
-      routeCells.push(point);
-    }
-  }
+    if (seen.has(id)) return false;
+    seen.add(id);
 
-  return days.map((day, index) => {
+    return MAZE_LAYOUT[point.y]?.[point.x] === ".";
+  });
+}
+
+function renderContributionCells(days, events) {
+  const candidates = getContributionCandidates(events);
+  const routeIndexes = getRouteIndexMap(events);
+
+  if (!candidates.length) return "";
+
+  // When real contribution data is unavailable, create
+  // a deterministic decorative distribution.
+  const source = Array.isArray(days) && days.length
+    ? days
+    : candidates
+        .filter((_, index) => index % 3 === 0)
+        .map((_, index) => ({
+          count: (index * 7 + 3) % 5 + 1,
+        }));
+
+  const used = new Set();
+
+  return source.map((day, index) => {
     const count = Number(day.count ?? 0);
 
     const intensity = Number(
@@ -438,141 +397,41 @@ function renderContributionCells(days, events) {
     const x = Number(day.x ?? day.col);
     const y = Number(day.y ?? day.row);
 
-    if (
-      Number.isInteger(x) &&
-      Number.isInteger(y)
-    ) {
+    if (Number.isInteger(x) && Number.isInteger(y)) {
       point = { x, y };
     } else {
-      point = routeCells[index % Math.max(1, routeCells.length)];
+      // Spread the cells through the maze rather than
+      // grouping them into one horizontal strip.
+      const candidateIndex = Math.floor(
+        (index * candidates.length) / source.length
+      );
+
+      point = candidates[candidateIndex];
     }
 
     if (!point || MAZE_LAYOUT[point.y]?.[point.x] !== ".") {
       return "";
     }
 
-    const routeIndex = routeIndexByCell.get(
-      `${point.x},${point.y}`
-    );
+    const id = `${point.x},${point.y}`;
 
-    if (routeIndex === undefined) {
-      return "";
-    }
+    if (used.has(id)) return "";
+    used.add(id);
+
+    const routeIndex = routeIndexes.get(id);
+
+    if (routeIndex === undefined) return "";
 
     const position = cellCenter(point.x, point.y);
+    const { cellWidth, cellHeight } = getMazeDimensions();
 
-    const size = Math.max(
-      3,
-      getMazeDimensions().cellWidth * 0.35
-    );
+    const size = Math.min(cellWidth, cellHeight) * 0.58;
 
     const color = CONTRIBUTION_COLORS[
-      Math.min(
-        3,
-        Math.max(0, Math.floor(intensity) - 1)
-      )
+      Math.min(3, Math.max(0, Math.floor(intensity) - 1))
     ];
 
     const pickupTime = getPickupTime(routeIndex, events);
-
-    return `
-      <g>
-        <rect
-          x="${position.x - size / 2}"
-          y="${position.y - size / 2}"
-          width="${size}"
-          height="${size}"
-          rx="1"
-          fill="${color}"
-          opacity="0.95"
-          filter="url(#green-glow)"
-        >
-          ${renderCollectiblePickup({
-            duration: LAYOUT.cycleDuration,
-            pickupTime,
-          })}
-        </rect>
-      </g>
-    `;
-  }).join("");
-}
-
-// --------------------------------------------------
-// NORMAL COINS
-// --------------------------------------------------
-
-function renderNormalCoins(events) {
-  return events.normalCoins.map((coin) => {
-    const position = cellCenter(coin.x, coin.y);
-
-    const pickupTime = getPickupTime(
-      coin.routeIndex,
-      events
-    );
-
-    return `
-      <circle
-        cx="${position.x}"
-        cy="${position.y}"
-        r="2.1"
-        fill="#FFE58A"
-        filter="url(#green-glow)"
-      >
-        ${renderCollectiblePickup({
-          duration: LAYOUT.cycleDuration,
-          pickupTime,
-        })}
-      </circle>
-    `;
-  }).join("");
-}
-
-// --------------------------------------------------
-// DECORATIVE CONTRIBUTION CELLS
-// --------------------------------------------------
-
-function renderDecorativeContributionCells(events) {
-  const occupied = new Set(
-    events.specialCoins.map((coin) =>
-      `${coin.x},${coin.y}`
-    )
-  );
-
-  const seen = new Set();
-
-  const candidates = events.route.filter((point, index) => {
-    const cellKey = `${point.x},${point.y}`;
-
-    if (seen.has(cellKey)) return false;
-
-    seen.add(cellKey);
-
-    return (
-      index > 0 &&
-      !occupied.has(cellKey) &&
-      MAZE_LAYOUT[point.y]?.[point.x] === "."
-    );
-  });
-
-  return candidates.slice(0, 24).map((point, index) => {
-    const position = cellCenter(point.x, point.y);
-
-    const routeIndex = events.route.findIndex(
-      (routePoint) =>
-        routePoint.x === point.x &&
-        routePoint.y === point.y
-    );
-
-    const size = 5.5;
-
-    const color = CONTRIBUTION_COLORS[
-      index % CONTRIBUTION_COLORS.length
-    ];
-
-    const pickupTime = getPickupTime(
-      routeIndex,
-      events
-    );
 
     return `
       <rect
@@ -582,7 +441,6 @@ function renderDecorativeContributionCells(events) {
         height="${size}"
         rx="1"
         fill="${color}"
-        opacity="0.95"
         filter="url(#green-glow)"
       >
         ${renderCollectiblePickup({
@@ -595,42 +453,61 @@ function renderDecorativeContributionCells(events) {
 }
 
 // --------------------------------------------------
+// NORMAL COINS
+// --------------------------------------------------
+
+function renderNormalCoins(events) {
+  return events.normalCoins.map((coin) => {
+    const position = cellCenter(coin.x, coin.y);
+    const pickupTime = getPickupTime(coin.routeIndex, events);
+
+    return `
+      <circle
+        cx="${position.x}"
+        cy="${position.y}"
+        r="1.8"
+        fill="#FFE58A"
+      >
+        ${renderCollectiblePickup({
+          duration: LAYOUT.cycleDuration,
+          pickupTime,
+        })}
+      </circle>
+    `;
+  }).join("");
+}
+
+// --------------------------------------------------
 // SPECIAL COINS
 // --------------------------------------------------
 
 function renderSpecialCoins(events) {
   return events.specialCoins.map((coin) => {
     const position = cellCenter(coin.x, coin.y);
-
-    const pickupTime = getPickupTime(
-      coin.routeIndex,
-      events
-    );
+    const pickupTime = getPickupTime(coin.routeIndex, events);
 
     return `
       <g>
-        <g>
-          <circle
-            cx="${position.x}"
-            cy="${position.y}"
-            r="6"
-            fill="none"
-            stroke="#FFD166"
-            stroke-width="1"
-            opacity="0.7"
-          >
-            ${renderSpecialCoinGlow()}
-          </circle>
+        <circle
+          cx="${position.x}"
+          cy="${position.y}"
+          r="5"
+          fill="none"
+          stroke="#FFD166"
+          stroke-width="1"
+          opacity="0.75"
+        >
+          ${renderSpecialCoinGlow()}
+        </circle>
 
-          <circle
-            cx="${position.x}"
-            cy="${position.y}"
-            r="3.1"
-            fill="#FFD166"
-            stroke="#FFF1B8"
-            stroke-width="0.7"
-          />
-        </g>
+        <circle
+          cx="${position.x}"
+          cy="${position.y}"
+          r="2.8"
+          fill="#FFD166"
+          stroke="#FFF1B8"
+          stroke-width="0.6"
+        />
 
         ${renderCollectiblePickup({
           duration: LAYOUT.cycleDuration,
@@ -648,45 +525,40 @@ function renderSpecialCoins(events) {
 function renderPacman(events) {
   const route = events.route;
 
-  if (!route || route.length < 2) {
-    return "";
-  }
+  if (!route || route.length < 2) return "";
 
-  // Convert the actual game-engine route into an SVG path.
   const path = routeToSvgPath(route);
-
   const keyPoints = getRouteKeyPoints(route);
-
   const keyTimes = events.speed.keyTimes.join(";");
 
-  const mouthRadius = 10;
+  const radius = Math.min(
+    getMazeDimensions().cellWidth,
+    getMazeDimensions().cellHeight
+  ) * 0.42;
 
   const mouthPath = `
     M 0 0
-    L ${mouthRadius} ${-mouthRadius * 0.65}
-    A ${mouthRadius} ${mouthRadius} 0 1 1
-    ${mouthRadius} ${mouthRadius * 0.65}
+    L ${radius} ${-radius * 0.65}
+    A ${radius} ${radius} 0 1 1
+    ${radius} ${radius * 0.65}
     Z
   `;
 
   return `
-    <g filter="url(#pacman-glow)">
+    <path
+      d="${mouthPath}"
+      fill="#FFD43B"
+      filter="url(#pacman-glow)"
+    >
+      ${renderPacmanMouth(radius)}
 
-      <path
-        d="${mouthPath}"
-        fill="#FFD43B"
-      >
-        ${renderPacmanMouth(mouthRadius)}
-
-        ${renderPacmanPath({
-          path,
-          duration: LAYOUT.cycleDuration,
-          keyPoints,
-          keyTimes,
-        })}
-      </path>
-
-    </g>
+      ${renderPacmanPath({
+        path,
+        duration: LAYOUT.cycleDuration,
+        keyPoints,
+        keyTimes,
+      })}
+    </path>
   `;
 }
 
@@ -697,56 +569,30 @@ function renderPacman(events) {
 function renderGhostShape(color, index) {
   return `
     <g>
-
       <path
         d="
-          M -8 7
-          L -8 -1
-          A 8 8 0 0 1 8 -1
-          L 8 7
-          L 4 4
+          M -7 7
+          L -7 -1
+          A 7 7 0 0 1 7 -1
+          L 7 7
+          L 3.5 4
           L 0 7
-          L -4 4
+          L -3.5 4
           Z
         "
         fill="${color}"
         stroke="#FFFFFF"
-        stroke-width="0.55"
-        opacity="0.96"
+        stroke-width="0.45"
+        opacity="0.97"
       />
 
-      <ellipse
-        cx="-3"
-        cy="-1"
-        rx="2.5"
-        ry="3"
-        fill="#FFFFFF"
-      />
+      <ellipse cx="-2.7" cy="-1" rx="2.1" ry="2.6" fill="#FFFFFF"/>
+      <ellipse cx="2.7" cy="-1" rx="2.1" ry="2.6" fill="#FFFFFF"/>
 
-      <ellipse
-        cx="3"
-        cy="-1"
-        rx="2.5"
-        ry="3"
-        fill="#FFFFFF"
-      />
-
-      <circle
-        cx="-2.5"
-        cy="-1"
-        r="1.2"
-        fill="#17202B"
-      />
-
-      <circle
-        cx="3.5"
-        cy="-1"
-        r="1.2"
-        fill="#17202B"
-      />
+      <circle cx="-2.2" cy="-0.8" r="1" fill="#17202B"/>
+      <circle cx="3.1" cy="-0.8" r="1" fill="#17202B"/>
 
       ${renderGhostMovement(index)}
-
     </g>
   `;
 }
@@ -757,39 +603,18 @@ function renderGhostShape(color, index) {
 
 function renderGhosts(events) {
   return events.ghosts.map((ghost, index) => {
-    const ghostRoute = ghost.route;
+    const route = ghost.route;
 
-    if (!ghostRoute || ghostRoute.length < 2) {
-      return "";
-    }
+    if (!route || route.length < 2) return "";
 
-    const start = ghostRoute[0];
+    const start = route[0];
+    const initial = cellCenter(start.x, start.y);
+    const path = routeToSvgPath(route, start);
 
-    const initialPosition = cellCenter(
-      start.x,
-      start.y
-    );
-
-    // Ghost paths use coordinates relative to their
-    // initial position so they remain stationary
-    // until their individual animation delay starts.
-    const path = routeToSvgPath(
-      ghostRoute,
-      start
-    );
-
-    const color = GHOST_COLORS[
-      index % GHOST_COLORS.length
-    ];
+    const color = GHOST_COLORS[index % GHOST_COLORS.length];
 
     return `
-      <g
-        transform="translate(
-          ${initialPosition.x}
-          ${initialPosition.y}
-        )"
-      >
-
+      <g transform="translate(${initial.x} ${initial.y})">
         ${renderGhostShape(color, index)}
 
         ${renderGhostEscape({
@@ -797,7 +622,6 @@ function renderGhosts(events) {
           duration: LAYOUT.cycleDuration,
           delay: ghost.delay ?? 0,
         })}
-
       </g>
     `;
   }).join("");
@@ -814,12 +638,7 @@ function renderFooter() {
       font-size="10"
       letter-spacing="1.4"
     >
-
-      <text
-        x="45"
-        y="430"
-        fill="#00D9FF"
-      >
+      <text x="45" y="430" fill="#00D9FF">
         PAC-MAN // ACTIVE
       </text>
 
@@ -840,7 +659,6 @@ function renderFooter() {
       >
         SYSTEM ONLINE
       </text>
-
     </g>
   `;
 }
@@ -850,15 +668,11 @@ function renderFooter() {
 // --------------------------------------------------
 
 function renderHud() {
-  return `
-    <g>
-      ${renderHudParticles()}
-    </g>
-  `;
+  return `<g>${renderHudParticles()}</g>`;
 }
 
 // --------------------------------------------------
-// MAIN SVG RENDERER
+// MAIN SVG
 // --------------------------------------------------
 
 export function renderPacmanSvg(days = []) {
@@ -874,35 +688,21 @@ export function renderPacmanSvg(days = []) {
       role="img"
       aria-label="Wheatley06 Pac-Man contribution matrix"
     >
-
       ${renderBackground()}
-
       ${renderHeader()}
-
       ${renderMazePanel()}
 
       <g clip-path="url(#maze-clip)">
-
         ${renderWalls()}
-
         ${renderContributionCells(days, events)}
-
         ${renderNormalCoins(events)}
-
-        ${renderDecorativeContributionCells(events)}
-
         ${renderSpecialCoins(events)}
-
         ${renderPacman(events)}
-
         ${renderGhosts(events)}
-
       </g>
 
       ${renderHud()}
-
       ${renderFooter()}
-
     </svg>
   `;
 
