@@ -432,7 +432,7 @@ function renderContributionCells(days, events) {
           routePoint.y === point.y
       );
 
-      cconst pickupTime =
+      const pickupTime =
         Math.max(0, index) * events.speed.secondsPerCell;
 
       return `
