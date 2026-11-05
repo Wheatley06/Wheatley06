@@ -783,6 +783,7 @@ export function renderPacmanSvg(days = []) {
 // MAIN SVG RENDERER
 // --------------------------------------------------
 
+
 export function renderPacmanSvg({ contributions = [] } = {}) {
   const days = Array.isArray(contributions)
     ? contributions
