@@ -10,8 +10,9 @@ export const GAME_CONFIG = {
   specialCoinCount: 5,
   ghostCount: 8,
 
-  pacmanSecondsPerCell: 0.42,
-  ghostSecondsPerCell: 0.72,
+  // Movement speed, in seconds per maze cell.
+  pacmanSecondsPerCell: 0.12,
+  ghostSecondsPerCell: 0.22,
 
   collisionSamples: 3000,
   collisionRadius: 0.82,
@@ -314,32 +315,35 @@ export function createGhostRoutes(layout = MAZE_LAYOUT) {
 
 function findFirstCollision(
   pacmanMetrics,
-  ghostMetrics
+  ghostMetrics,
+  pacmanDuration,
+  ghostDuration
 ) {
   const samples = GAME_CONFIG.collisionSamples;
   const threshold = GAME_CONFIG.collisionRadius;
 
   for (let i = 1; i <= samples; i++) {
-    const fraction = i / samples;
+    const time = (i / samples) * pacmanDuration;
+
+    const pacmanFraction = time / pacmanDuration;
+    const ghostFraction =
+      (time % ghostDuration) / ghostDuration;
 
     const pacmanPosition = getPositionAtFraction(
       pacmanMetrics,
-      fraction
+      pacmanFraction
     );
 
     const ghostPosition = getPositionAtFraction(
       ghostMetrics,
-      fraction
+      ghostFraction
     );
 
-    const separation = distance(
-      pacmanPosition,
-      ghostPosition
-    );
-
-    if (separation <= threshold) {
+    if (
+      distance(pacmanPosition, ghostPosition) <= threshold
+    ) {
       return {
-        fraction,
+        fraction: pacmanFraction,
         position: ghostPosition,
         pacmanPosition,
       };
@@ -367,7 +371,6 @@ function getFirstVisitIndexes(route) {
 
 export function createGameEvents(layout = MAZE_LAYOUT) {
   const collectibles = getCollectibles(layout);
-
   const route = createPacmanRoute(layout);
 
   const duration = Math.max(
@@ -395,14 +398,21 @@ export function createGameEvents(layout = MAZE_LAYOUT) {
   const ghosts = createGhostRoutes(layout).map((ghost) => {
     const ghostMetrics = createRouteMetrics(ghost.route);
 
+    const ghostDuration = Math.max(
+      4,
+      ghostMetrics.total * GAME_CONFIG.ghostSecondsPerCell
+    );
+
     const collision = findFirstCollision(
       pacmanMetrics,
-      ghostMetrics
+      ghostMetrics,
+      duration,
+      ghostDuration
     );
 
     return {
       ...ghost,
-      duration,
+      duration: ghostDuration,
       collision,
     };
   });
@@ -415,10 +425,10 @@ export function createGameEvents(layout = MAZE_LAYOUT) {
 
     speed: {
       duration,
+      secondsPerCell: GAME_CONFIG.pacmanSecondsPerCell,
     },
   };
 }
-
 // --------------------------------------------------
 // SVG PATH
 // --------------------------------------------------
