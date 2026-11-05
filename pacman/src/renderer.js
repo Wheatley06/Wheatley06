@@ -566,10 +566,11 @@ function renderHud(events) {
   `;
 }
 
+
 export function renderPacmanSvg(days = []) {
   const events = createGameEvents();
 
-  return `
+  const svg = `
     <svg
       xmlns="${SVG_NS}"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -597,4 +598,6 @@ export function renderPacmanSvg(days = []) {
       ${renderFooter()}
     </svg>
   `;
+
+  return svg.trim();
 }
