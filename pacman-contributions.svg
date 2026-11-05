@@ -7,16 +7,8 @@
       role="img"
       aria-label="Wheatley06 Pac-Man contribution matrix"
     >
-
       
-    <rect
-      width="1200"
-      height="480"
-      fill="#0D1117"
-    />
-
     <defs>
-
       <pattern
         id="circuit-grid"
         width="32"
@@ -65,8 +57,13 @@
           rx="8"
         />
       </clipPath>
-
     </defs>
+
+    <rect
+      width="1200"
+      height="480"
+      fill="#0D1117"
+    />
 
     <rect
       width="1200"
@@ -74,7 +71,6 @@
       fill="url(#circuit-grid)"
     />
   
-
       
     <g font-family="monospace">
 
@@ -136,7 +132,6 @@
 
     </g>
   
-
       
     <rect
       x="25"
@@ -164,345 +159,21 @@
   
 
       <g clip-path="url(#maze-clip)">
-
         
-    <path
-      d="
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-       
-        M NaN NaN
-        L NaN NaN
-      "
-      fill="none"
-      stroke="#12364B"
-      stroke-width="1.8"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      filter="url(#cyan-glow)"
-    >
-      
+      <rect
+        x="157.69"
+        y="145.00"
+        width="884.62"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
     <animate
       attributeName="opacity"
       values="0.82;1;0.82"
@@ -511,11 +182,2601 @@
       repeatCount="indefinite"
     />
   
-    </path>
-  
-
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="162.69"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
         
-
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="476.15"
+        y="162.69"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="162.69"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="162.69"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="180.38"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="193.08"
+        y="180.38"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="246.15"
+        y="180.38"
+        width="141.54"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="405.38"
+        y="180.38"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="476.15"
+        y="180.38"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="511.54"
+        y="180.38"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="635.38"
+        y="180.38"
+        width="141.54"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="180.38"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="830.00"
+        y="180.38"
+        width="159.23"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="180.38"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="198.08"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="511.54"
+        y="198.08"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="546.92"
+        y="198.08"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="759.23"
+        y="198.08"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="830.00"
+        y="198.08"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="198.08"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="215.77"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="193.08"
+        y="215.77"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="316.92"
+        y="215.77"
+        width="70.77"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="405.38"
+        y="215.77"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="511.54"
+        y="215.77"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="546.92"
+        y="215.77"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="582.31"
+        y="215.77"
+        width="106.15"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="723.85"
+        y="215.77"
+        width="123.85"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="865.38"
+        y="215.77"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="936.15"
+        y="215.77"
+        width="106.15"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="193.08"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="299.23"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="405.38"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="546.92"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="233.46"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="233.46"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="193.08"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="228.46"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="299.23"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="334.62"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="405.38"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="440.77"
+        y="251.15"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="511.54"
+        y="251.15"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="617.69"
+        y="251.15"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="688.46"
+        y="251.15"
+        width="70.77"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="251.15"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="830.00"
+        y="251.15"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="900.77"
+        y="251.15"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="251.15"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="299.23"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="476.15"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="617.69"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="688.46"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="900.77"
+        y="268.85"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="268.85"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="286.54"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="299.23"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="334.62"
+        y="286.54"
+        width="106.15"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="476.15"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="511.54"
+        y="286.54"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="582.31"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="617.69"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="653.08"
+        y="286.54"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="723.85"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="759.23"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="286.54"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="847.69"
+        y="286.54"
+        width="70.77"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="936.15"
+        y="286.54"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="971.54"
+        y="286.54"
+        width="70.77"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="228.46"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="334.62"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="546.92"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="582.31"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="617.69"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="723.85"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="759.23"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="936.15"
+        y="304.23"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="304.23"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="193.08"
+        y="321.92"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="299.23"
+        y="321.92"
+        width="53.08"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="370.00"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="405.38"
+        y="321.92"
+        width="88.46"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="546.92"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="582.31"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="617.69"
+        y="321.92"
+        width="123.85"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="759.23"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="794.62"
+        y="321.92"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="830.00"
+        y="321.92"
+        width="70.77"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="918.46"
+        y="321.92"
+        width="70.77"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="321.92"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.72s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="339.62"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.8999999999999999s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="263.85"
+        y="339.62"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="1.08s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="511.54"
+        y="339.62"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="759.23"
+        y="339.62"
+        width="17.69"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.18s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="1006.92"
+        y="339.62"
+        width="35.38"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.36s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="157.69"
+        y="357.31"
+        width="884.62"
+        height="17.69"
+        rx="2"
+        fill="none"
+        stroke="#12364B"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="0.82;1;0.82"
+      dur="3.2s"
+      begin="0.54s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+        
         
       <circle
         cx="201.9230769230769"
@@ -5702,7 +7963,6 @@
   
       </circle>
     
-
         
       <g>
         
@@ -5899,13 +8159,11 @@
         />
       </g>
     
-
         
     <g
       transform="translate(184.23076923076923 171.53846153846155)"
       filter="url(#pacman-glow)"
     >
-
       <path
         d="
     M 0 0
@@ -5939,15 +8197,12 @@
     />
   
       </path>
-
     </g>
   
-
         
       <g
         transform="translate(538.0769230769231 242.30769230769232)"
       >
-
         
     <g>
 
@@ -6032,13 +8287,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(573.4615384615385 242.30769230769232)"
       >
-
         
     <g>
 
@@ -6123,13 +8376,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(608.8461538461538 242.30769230769232)"
       >
-
         
     <g>
 
@@ -6214,13 +8465,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(644.2307692307693 242.30769230769232)"
       >
-
         
     <g>
 
@@ -6305,13 +8554,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(538.0769230769231 277.69230769230774)"
       >
-
         
     <g>
 
@@ -6396,13 +8643,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(573.4615384615385 277.69230769230774)"
       >
-
         
     <g>
 
@@ -6487,13 +8732,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(608.8461538461538 277.69230769230774)"
       >
-
         
     <g>
 
@@ -6578,13 +8821,11 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
       <g
         transform="translate(644.2307692307693 277.69230769230774)"
       >
-
         
     <g>
 
@@ -6669,10 +8910,8 @@
       repeatCount="indefinite"
     />
   
-
       </g>
     
-
         
     <g transform="translate(523.0738461538463 242.30769230769232)">
 
@@ -9058,11 +11297,9 @@
 
     </g>
   
-
       </g>
 
-      <g>
-        
+      
     <g>
       
     <circle
@@ -9205,8 +11442,6 @@
   
     </g>
   
-      </g>
-
       
     <g
       font-family="monospace"
@@ -9242,5 +11477,4 @@
 
     </g>
   
-
     </svg>
