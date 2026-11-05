@@ -120,9 +120,20 @@ function createMaze() {
 
   // Open selected extra corridors to create wider
   // intersections and more recognizable Pac-Man routes.
+  // Add extra intersections only when they connect
+  // to an existing corridor.
   for (let y = 2; y < HEIGHT - 1; y += 2) {
     for (let x = 2; x < WIDTH - 2; x += 2) {
-      if ((x * 3 + y * 5) % 11 === 0) {
+      if ((x * 3 + y * 5) % 11 !== 0) continue;
+
+      const connected = [
+        grid[y][x - 1],
+        grid[y][x + 1],
+        grid[y - 1][x],
+        grid[y + 1][x],
+      ].some((cell) => cell !== "#");
+
+      if (connected) {
         grid[y][x] = ".";
       }
     }
