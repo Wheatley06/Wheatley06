@@ -27,8 +27,11 @@ function testGameEngineValidation() {
   const result = validateGameEngine();
 
   assert.equal(result.valid, true);
-  assert.equal(result.ghostCount, 5);
-  assert.equal(result.specialCoinCount, GAME_CONFIG.specialCoinCount);
+  assert.equal(result.ghostCount, 8);
+  assert.equal(
+    result.specialCoinCount,
+    GAME_CONFIG.specialCoinCount
+  );
   assert.ok(result.routeLength > 0);
 
   console.log("✓ Game engine validation");
@@ -141,15 +144,23 @@ function testPacmanRoute() {
 function testGhostRoutes() {
   const routes = createGhostRoutes();
 
-  assert.equal(routes.length, 5);
+  assert.equal(routes.length, 8);
 
   for (const ghost of routes) {
     assert.ok(ghost.route.length > 0);
-    assert.equal(ghost.route[0].x, ghost.start.x);
-    assert.equal(ghost.route[0].y, ghost.start.y);
+
+    assert.equal(
+      ghost.route[0].x,
+      ghost.start.x
+    );
+
+    assert.equal(
+      ghost.route[0].y,
+      ghost.start.y
+    );
   }
 
-  console.log("✓ Five ghost routes");
+  console.log("✓ Eight ghost routes");
 }
 
 // --------------------------------------------------
@@ -160,10 +171,20 @@ function testGameEvents() {
   const events = createGameEvents();
 
   assert.ok(events.route.length > 0);
-  assert.equal(events.specialCoins.length, 5);
-  assert.equal(events.ghosts.length, 5);
+
+  assert.equal(
+    events.specialCoins.length,
+    GAME_CONFIG.specialCoinCount
+  );
+
+  assert.equal(events.ghosts.length, 8);
+
+  // Ghosts must not be captured or removed.
+  assert.equal(events.capturedGhosts, undefined);
+  assert.equal(events.allGhostsCaptured, undefined);
 
   console.log("✓ Game event generation");
+  console.log("✓ Eight ghosts without capture mechanics");
 }
 
 // --------------------------------------------------
