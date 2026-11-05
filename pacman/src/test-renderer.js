@@ -8,6 +8,10 @@ import {
 } from "./game-engine.js";
 import { MAZE_LAYOUT } from "./maze.js";
 
+// --------------------------------------------------
+// SVG DOCUMENT
+// --------------------------------------------------
+
 function testSvgDocument() {
   const svg = renderPacmanSvg();
 
@@ -19,113 +23,162 @@ function testSvgDocument() {
   console.log("✓ SVG document and dimensions");
 }
 
+// --------------------------------------------------
+// VISUAL IDENTITY
+// --------------------------------------------------
+
 function testVisualIdentity() {
   const svg = renderPacmanSvg();
 
   assert.ok(svg.includes("WHEATLEY06"));
   assert.ok(svg.includes("CONTRIBUTION MATRIX"));
   assert.ok(svg.includes("#0D1117"));
+  assert.ok(svg.includes("PAC-MAN CONTRIBUTIONS"));
 
   console.log("✓ Cyberpunk visual identity");
 }
 
+// --------------------------------------------------
+// GAME ENGINE
+// --------------------------------------------------
+
 function testGameEngine() {
-  const result = validateGameEngine(MAZE_LAYOUT);
+  const result = validateGameEngine();
 
   assert.equal(result.valid, true);
-  assert.equal(result.ghostCount, 5);
+  assert.equal(result.ghostCount, 8);
   assert.equal(result.specialCoinCount, 5);
   assert.ok(result.routeLength > 0);
 
   console.log("✓ Game engine and connected routes");
 }
 
+// --------------------------------------------------
+// ANIMATED ROUTES
+// --------------------------------------------------
+
 function testAnimatedRoutes() {
   const svg = renderPacmanSvg();
-  const events = createGameEvents(MAZE_LAYOUT);
+  const events = createGameEvents();
 
   assert.ok(events.route.length > 0);
-  assert.equal(events.ghosts.length, 5);
+  assert.equal(events.ghosts.length, 8);
   assert.ok(svg.includes("<animateMotion"));
 
-  const motionCount = (svg.match(/<animateMotion/g) || []).length;
+  const motionCount = (
+    svg.match(/<animateMotion/g) || []
+  ).length;
 
   assert.ok(
-    motionCount >= 6,
-    `Expected at least six motion animations; found ${motionCount}`
+    motionCount >= 9,
+    `Expected at least nine motion animations; found ${motionCount}`
   );
 
-  console.log("✓ Pac-Man and ghost movement");
+  console.log("✓ Pac-Man and eight ghost movements");
 }
+
+// --------------------------------------------------
+// GHOSTS
+// --------------------------------------------------
+
+function testGhosts() {
+  const events = createGameEvents();
+  const svg = renderPacmanSvg();
+
+  assert.equal(events.ghosts.length, 8);
+
+  for (const ghost of events.ghosts) {
+    assert.ok(ghost.route.length > 0);
+  }
+
+  // Ghost capture mechanics must not exist.
+  assert.equal(events.capturedGhosts, undefined);
+  assert.equal(events.allGhostsCaptured, undefined);
+
+  console.log("✓ Eight ghosts with continuous movement");
+  console.log("✓ No ghost capture mechanics");
+}
+
+// --------------------------------------------------
+// GHOST COLORS
+// --------------------------------------------------
 
 function testGhostColors() {
   const svg = renderPacmanSvg();
 
   for (const color of [
-    "#00CFFF",
-    "#8B35FF",
-    "#D946EF",
-    "#FF5C8A",
-    "#35E6A5",
+    "#FF4B75",
+    "#00E5FF",
+    "#FFB84D",
+    "#B66DFF",
+    "#FF6BCE",
   ]) {
-    assert.ok(svg.includes(color), `Missing ghost color: ${color}`);
+    assert.ok(
+      svg.includes(color),
+      `Missing ghost color: ${color}`
+    );
   }
 
-  console.log("✓ Five distinct ghost colors");
+  console.log("✓ Ghost color palette");
 }
 
-function testBoostAndCaptureEvents() {
-  const events = createGameEvents(MAZE_LAYOUT);
-
-  assert.equal(events.specialCoins.length, 5);
-  assert.equal(events.ghosts.length, 5);
-  assert.ok(events.boostWindows.length > 0);
-
-  for (const ghost of events.ghosts) {
-    assert.ok(ghost.route.length > 0);
-    assert.ok(ghost.captureIndex >= 0);
-  }
-
-  console.log("✓ Boost windows and ghost capture timeline");
-}
-
-function testContributionRendering() {
-  const contributions = [
-    { date: "2026-10-01", count: 0 },
-    { date: "2026-10-02", count: 2 },
-    { date: "2026-10-03", count: 5 },
-    { date: "2026-10-04", count: 8 },
-    { date: "2026-10-05", count: 12 },
-  ];
-
-  const svg = renderPacmanSvg({ contributions });
-
-  for (const day of contributions) {
-    assert.ok(svg.includes(day.date));
-  }
-
-  assert.ok(svg.includes("CONTRIBUTIONS"));
-
-  console.log("✓ Contribution cells inside maze corridors");
-}
+// --------------------------------------------------
+// COLLECTIBLES
+// --------------------------------------------------
 
 function testCollectibles() {
+  const events = createGameEvents();
   const svg = renderPacmanSvg();
 
-  assert.ok(svg.includes("#FFE600"));
-  assert.ok(svg.includes("attributeName=\"opacity\""));
-  assert.ok(svg.includes("attributeName=\"r\""));
+  assert.equal(events.specialCoins.length, 5);
+  assert.ok(events.normalCoins.length > 0);
 
-  console.log("✓ Normal and special collectible animations");
+  assert.ok(svg.includes("#FFE58A"));
+  assert.ok(svg.includes("#FFD166"));
+
+  assert.ok(
+    svg.includes('attributeName="opacity"')
+  );
+
+  console.log("✓ Normal and special collectible rendering");
 }
 
+// --------------------------------------------------
+// NO BOOST EFFECTS
+// --------------------------------------------------
+
+function testNoBoostEffects() {
+  const events = createGameEvents();
+  const svg = renderPacmanSvg();
+
+  assert.equal(events.boostWindows, undefined);
+  assert.equal(events.speedBoost, undefined);
+
+  // There should be no speed boost animation.
+  assert.ok(!svg.includes("SPEED BOOST"));
+
+  console.log("✓ Special coins have no boost effects");
+}
+
+// --------------------------------------------------
+// CONTRIBUTION RENDERING
+// --------------------------------------------------
+
+function testContributionRendering() {
+  const svg = renderPacmanSvg([]);
+
+  assert.ok(svg.includes("PAC-MAN CONTRIBUTIONS"));
+  assert.ok(svg.includes("#39D353"));
+
+  console.log("✓ Contribution rendering");
+}
+
+// --------------------------------------------------
+// SVG INTEGRITY
+// --------------------------------------------------
+
 function testSvgIntegrity() {
-  const svg = renderPacmanSvg({
-    contributions: [
-      { date: "2026-10-01", count: 3 },
-      { date: "2026-10-02", count: 0 },
-    ],
-  });
+  const svg = renderPacmanSvg([]);
 
   assert.ok(!svg.includes("NaN"));
   assert.ok(!svg.includes("undefined"));
@@ -134,6 +187,25 @@ function testSvgIntegrity() {
   console.log("✓ SVG output integrity");
 }
 
+// --------------------------------------------------
+// MAZE
+// --------------------------------------------------
+
+function testMazeGhostCount() {
+  const ghostCount = MAZE_LAYOUT
+    .join("")
+    .split("G")
+    .length - 1;
+
+  assert.equal(ghostCount, 8);
+
+  console.log("✓ Maze contains exactly eight ghosts");
+}
+
+// --------------------------------------------------
+// RUN
+// --------------------------------------------------
+
 function runTests() {
   console.log("\nPAC-MAN CONSOLIDATED TESTS\n");
 
@@ -141,11 +213,13 @@ function runTests() {
   testVisualIdentity();
   testGameEngine();
   testAnimatedRoutes();
+  testGhosts();
   testGhostColors();
-  testBoostAndCaptureEvents();
-  testContributionRendering();
   testCollectibles();
+  testNoBoostEffects();
+  testContributionRendering();
   testSvgIntegrity();
+  testMazeGhostCount();
 
   console.log("\nALL PAC-MAN TESTS PASSED\n");
 }
