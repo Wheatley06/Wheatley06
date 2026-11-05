@@ -1,3 +1,4 @@
+
 /** WHEATLEY06 — PAC-MAN CYBERPUNK SVG renderer. */
 
 import {
@@ -131,14 +132,7 @@ function routeToSvgPath(route, relativeTo = null) {
 
 function renderBackground() {
   return `
-    <rect
-      width="${LAYOUT.width}"
-      height="${LAYOUT.height}"
-      fill="${MAZE_CONFIG.background}"
-    />
-
     <defs>
-
       <pattern
         id="circuit-grid"
         width="32"
@@ -187,8 +181,13 @@ function renderBackground() {
           rx="8"
         />
       </clipPath>
-
     </defs>
+
+    <rect
+      width="${LAYOUT.width}"
+      height="${LAYOUT.height}"
+      fill="${MAZE_CONFIG.background}"
+    />
 
     <rect
       width="${LAYOUT.width}"
@@ -305,33 +304,52 @@ function renderMazePanel() {
 function renderWalls() {
   const metrics = mazeMetrics();
 
-  const path = getWallSegments(MAZE_LAYOUT)
-    .map((edge) => {
-      const x1 = metrics.originX + edge.x1 * metrics.cell;
-      const y1 = metrics.originY + edge.y1 * metrics.cell;
-      const x2 = metrics.originX + edge.x2 * metrics.cell;
-      const y2 = metrics.originY + edge.y2 * metrics.cell;
+  const segments = getWallSegments(MAZE_LAYOUT);
 
-      return `
-        M ${x1.toFixed(2)} ${y1.toFixed(2)}
-        L ${x2.toFixed(2)} ${y2.toFixed(2)}
-      `;
-    })
-    .join(" ");
+  return segments.map((segment, index) => {
+    const x =
+      metrics.originX +
+      segment.x * metrics.cell;
 
-  return `
-    <path
-      d="${path}"
-      fill="none"
-      stroke="${MAZE_CONFIG.wallColor}"
-      stroke-width="${MAZE_CONFIG.wallThickness}"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      filter="url(#cyan-glow)"
-    >
-      ${renderWallGlow(0)}
-    </path>
-  `;
+    const y =
+      metrics.originY +
+      segment.y * metrics.cell;
+
+    const width =
+      segment.width * metrics.cell;
+
+    const height =
+      segment.height * metrics.cell;
+
+    if (
+      ![
+        x,
+        y,
+        width,
+        height,
+      ].every(Number.isFinite)
+    ) {
+      return "";
+    }
+
+    return `
+      <rect
+        x="${x.toFixed(2)}"
+        y="${y.toFixed(2)}"
+        width="${width.toFixed(2)}"
+        height="${height.toFixed(2)}"
+        rx="2"
+        fill="none"
+        stroke="${MAZE_CONFIG.wallColor}"
+        stroke-width="${MAZE_CONFIG.wallThickness}"
+        stroke-linejoin="round"
+        filter="url(#cyan-glow)"
+        opacity="0.95"
+      >
+        ${renderWallGlow(index)}
+      </rect>
+    `;
+  }).join("");
 }
 
 // --------------------------------------------------
@@ -533,7 +551,6 @@ function renderPacman(events) {
       transform="translate(${position.x} ${position.y})"
       filter="url(#pacman-glow)"
     >
-
       <path
         d="${mouth}"
         fill="#FFD43B"
@@ -545,7 +562,6 @@ function renderPacman(events) {
           duration: events.speed.duration,
         })}
       </path>
-
     </g>
   `;
 }
@@ -636,7 +652,6 @@ function renderGhosts(events) {
       <g
         transform="translate(${position.x} ${position.y})"
       >
-
         ${renderGhostShape(color)}
 
         ${renderGhostEscape({
@@ -649,7 +664,6 @@ function renderGhosts(events) {
           ghost.collision,
           events.speed.duration
         )}
-
       </g>
     `;
   }).join("");
@@ -731,7 +745,15 @@ function renderFooter() {
 // MAIN SVG RENDERER
 // --------------------------------------------------
 
-export function renderPacmanSvg(days = []) {
+export function renderPacmanSvg(input = {}) {
+  const contributions = Array.isArray(input)
+    ? input
+    : input?.contributions ?? [];
+
+  const days = Array.isArray(contributions)
+    ? contributions
+    : contributions?.days ?? [];
+
   const events = createGameEvents(MAZE_LAYOUT);
 
   return `
@@ -744,71 +766,11 @@ export function renderPacmanSvg(days = []) {
       role="img"
       aria-label="Wheatley06 Pac-Man contribution matrix"
     >
-
       ${renderBackground()}
-
       ${renderHeader()}
-
       ${renderMazePanel()}
 
       <g clip-path="url(#maze-clip)">
-
-        ${renderWalls()}
-
-        ${renderContributionCells(days, events)}
-
-        ${renderNormalCoins(events)}
-
-        ${renderSpecialCoins(events)}
-
-        ${renderPacman(events)}
-
-        ${renderGhosts(events)}
-
-        ${renderGhostExplosions(events)}
-
-      </g>
-
-      <g>
-        ${renderHudParticles()}
-      </g>
-
-      ${renderFooter()}
-
-    </svg>
-  `.trim();
-}
-
-// --------------------------------------------------
-// MAIN SVG RENDERER
-// --------------------------------------------------
-
-
-export function renderPacmanSvg({ contributions = [] } = {}) {
-  const days = Array.isArray(contributions)
-    ? contributions
-    : contributions?.days ?? [];
-
-  const events = createGameEvents(MAZE_LAYOUT);
-
-  return `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="1200"
-      height="480"
-      viewBox="0 0 1200 480"
-      role="img"
-      aria-label="Wheatley06 Pac-Man contribution matrix"
-    >
-      ${renderDefinitions()}
-      ${renderBackground()}
-      ${renderPanel()}
-      ${renderHeader()}
-      ${renderMazeLabels(events, days)}
-
-      <g clip-path="url(#mazeClip)">
-        ${renderMazeFloor()}
         ${renderWalls()}
         ${renderContributionCells(days, events)}
         ${renderNormalCoins(events)}
