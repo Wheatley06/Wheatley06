@@ -1,4 +1,3 @@
-
 /**
  * WHEATLEY06 — PAC-MAN CYBERPUNK
  * SVG SMIL animation utilities.
@@ -7,7 +6,7 @@
 import { COLORS, EFFECTS } from "./config.js";
 
 // --------------------------------------------------
-// PAC-MAN ANIMATIONS
+// PAC-MAN
 // --------------------------------------------------
 
 export function renderPacmanMouth(radius = 10) {
@@ -24,7 +23,7 @@ export function renderPacmanMouth(radius = 10) {
         M 0 0 L ${r} ${-r * 0.65}
         A ${r} ${r} 0 1 1 ${r} ${r * 0.65} Z
       "
-      dur="0.45s"
+      dur="0.42s"
       repeatCount="indefinite"
     />
   `;
@@ -38,16 +37,19 @@ export function renderPacmanPath({
 } = {}) {
   if (!path) return "";
 
-  const speedAttributes =
-    keyPoints && keyTimes
-      ? `keyPoints="${keyPoints}" keyTimes="${keyTimes}" calcMode="linear"`
-      : `calcMode="linear"`;
+  const hasTiming =
+    keyPoints &&
+    keyTimes &&
+    keyPoints.split(";").length === keyTimes.split(";").length;
 
   return `
     <animateMotion
       path="${path}"
       dur="${duration}s"
-      ${speedAttributes}
+      calcMode="linear"
+      ${hasTiming
+        ? `keyPoints="${keyPoints}" keyTimes="${keyTimes}"`
+        : ""}
       rotate="auto"
       repeatCount="indefinite"
     />
@@ -55,7 +57,7 @@ export function renderPacmanPath({
 }
 
 // --------------------------------------------------
-// GHOST ANIMATIONS
+// GHOSTS
 // --------------------------------------------------
 
 export function renderGhostEscape({
@@ -70,40 +72,41 @@ export function renderGhostEscape({
       path="${path}"
       dur="${duration}s"
       begin="${delay}s"
-      rotate="auto"
       calcMode="linear"
+      rotate="auto"
       repeatCount="indefinite"
     />
   `;
 }
 
-// No ghost capture mechanics are used.
-// Kept as a compatibility helper only.
+// Ghosts are never captured or removed.
 export function renderGhostCapture() {
   return "";
 }
 
 // --------------------------------------------------
-// COLLECTIBLE ANIMATIONS
+// COLLECTIBLES
 // --------------------------------------------------
 
 export function renderCollectiblePickup({
   duration = 90,
   pickupTime = 5,
 } = {}) {
+  const safeDuration = Math.max(1, Number(duration) || 90);
+
   const fraction = Math.max(
     0.001,
-    Math.min(0.97, pickupTime / duration)
+    Math.min(0.97, Number(pickupTime) / safeDuration)
   );
 
-  const fadeEnd = Math.min(0.99, fraction + 0.003);
+  const fadeEnd = Math.min(0.99, fraction + 0.002);
 
   return `
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
       keyTimes="0;${fraction};${fadeEnd};0.999;1"
-      dur="${duration}s"
+      dur="${safeDuration}s"
       repeatCount="indefinite"
     />
   `;
@@ -113,15 +116,20 @@ export function renderSpecialCoinGlow() {
   return `
     <animate
       attributeName="r"
-      values="3;4.5;3"
-      dur="0.7s"
+      values="3;4;3"
+      dur="0.8s"
       repeatCount="indefinite"
     />
   `;
 }
 
+// Special coins have no speed or capture effect.
+export function renderSpeedBoost() {
+  return "";
+}
+
 // --------------------------------------------------
-// GHOST VISUAL MOVEMENT
+// GHOST IDLE MOVEMENT
 // --------------------------------------------------
 
 export function renderGhostMovement(index = 0) {
@@ -130,25 +138,25 @@ export function renderGhostMovement(index = 0) {
       attributeName="transform"
       type="translate"
       additive="sum"
-      values="0 0;0 -3;0 0;0 3;0 0"
+      values="0 0;0 -1.5;0 0;0 1.5;0 0"
       dur="2.4s"
-      begin="${Math.max(0, index) * 0.35}s"
+      begin="${Math.max(0, index) * 0.2}s"
       repeatCount="indefinite"
     />
   `;
 }
 
 // --------------------------------------------------
-// WALL AND CONTRIBUTION EFFECTS
+// WALLS AND CONTRIBUTIONS
 // --------------------------------------------------
 
 export function renderWallGlow(index = 0) {
   return `
     <animate
       attributeName="opacity"
-      values="0.65;1;0.65"
-      dur="2.5s"
-      begin="${(Math.max(0, index) % 5) * 0.25}s"
+      values="0.82;1;0.82"
+      dur="3s"
+      begin="${(Math.max(0, index) % 6) * 0.18}s"
       repeatCount="indefinite"
     />
   `;
@@ -163,16 +171,11 @@ export function renderContributionGlow(intensity = 1) {
   return `
     <animate
       attributeName="opacity"
-      values="${value * 0.65};${value};${value * 0.65}"
+      values="${value * 0.7};${value};${value * 0.7}"
       dur="3s"
       repeatCount="indefinite"
     />
   `;
-}
-
-// No speed boost effect: special coins behave like normal coins.
-export function renderSpeedBoost() {
-  return "";
 }
 
 // --------------------------------------------------
