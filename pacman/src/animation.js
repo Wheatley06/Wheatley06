@@ -6,6 +6,10 @@
 
 import { COLORS, EFFECTS } from "./config.js";
 
+// --------------------------------------------------
+// PAC-MAN ANIMATIONS
+// --------------------------------------------------
+
 export function renderPacmanMouth(radius = 10) {
   const r = Math.max(1, Number(radius) || 10);
 
@@ -34,9 +38,10 @@ export function renderPacmanPath({
 } = {}) {
   if (!path) return "";
 
-  const speedAttributes = keyPoints && keyTimes
-    ? `keyPoints="${keyPoints}" keyTimes="${keyTimes}" calcMode="linear"`
-    : `calcMode="linear"`;
+  const speedAttributes =
+    keyPoints && keyTimes
+      ? `keyPoints="${keyPoints}" keyTimes="${keyTimes}" calcMode="linear"`
+      : `calcMode="linear"`;
 
   return `
     <animateMotion
@@ -48,6 +53,10 @@ export function renderPacmanPath({
     />
   `;
 }
+
+// --------------------------------------------------
+// GHOST ANIMATIONS
+// --------------------------------------------------
 
 export function renderGhostEscape({
   path,
@@ -68,27 +77,15 @@ export function renderGhostEscape({
   `;
 }
 
-export function renderGhostCapture({
-  duration = 90,
-  captureTime = 60,
-} = {}) {
-  const fraction = Math.max(
-    0.01,
-    Math.min(0.97, captureTime / duration)
-  );
-
-  const fadeEnd = Math.min(0.99, fraction + 0.012);
-
-  return `
-    <animate
-      attributeName="opacity"
-      values="1;1;0;0;1"
-      keyTimes="0;${fraction};${fadeEnd};0.999;1"
-      dur="${duration}s"
-      repeatCount="indefinite"
-    />
-  `;
+// No ghost capture mechanics are used.
+// Kept as a compatibility helper only.
+export function renderGhostCapture() {
+  return "";
 }
+
+// --------------------------------------------------
+// COLLECTIBLE ANIMATIONS
+// --------------------------------------------------
 
 export function renderCollectiblePickup({
   duration = 90,
@@ -123,6 +120,10 @@ export function renderSpecialCoinGlow() {
   `;
 }
 
+// --------------------------------------------------
+// GHOST VISUAL MOVEMENT
+// --------------------------------------------------
+
 export function renderGhostMovement(index = 0) {
   return `
     <animateTransform
@@ -137,6 +138,10 @@ export function renderGhostMovement(index = 0) {
   `;
 }
 
+// --------------------------------------------------
+// WALL AND CONTRIBUTION EFFECTS
+// --------------------------------------------------
+
 export function renderWallGlow(index = 0) {
   return `
     <animate
@@ -150,7 +155,10 @@ export function renderWallGlow(index = 0) {
 }
 
 export function renderContributionGlow(intensity = 1) {
-  const value = Math.max(0.2, Math.min(1, Number(intensity) || 0.2));
+  const value = Math.max(
+    0.2,
+    Math.min(1, Number(intensity) || 0.2)
+  );
 
   return `
     <animate
@@ -162,21 +170,14 @@ export function renderContributionGlow(intensity = 1) {
   `;
 }
 
-export function renderSpeedBoost({
-  duration = 90,
-  start = 10,
-  end = 18,
-} = {}) {
-  return `
-    <animate
-      attributeName="opacity"
-      values="1;1;0.72;1"
-      keyTimes="0;${start / duration};${end / duration};1"
-      dur="${duration}s"
-      repeatCount="indefinite"
-    />
-  `;
+// No speed boost effect: special coins behave like normal coins.
+export function renderSpeedBoost() {
+  return "";
 }
+
+// --------------------------------------------------
+// HUD PARTICLES
+// --------------------------------------------------
 
 function renderParticle({
   x,
