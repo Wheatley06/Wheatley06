@@ -7,6 +7,7 @@
       role="img"
       aria-label="Wheatley06 Pac-Man contribution matrix"
     >
+
       
     <rect
       width="1200"
@@ -71,8 +72,10 @@
       fill="url(#circuit-grid)"
     />
   
+
       
     <g font-family="monospace">
+
       <text
         x="45"
         y="36"
@@ -90,7 +93,12 @@
         letter-spacing="3"
       >WHEATLEY06</text>
 
-      <circle cx="1150" cy="34" r="5" fill="#39D353">
+      <circle
+        cx="1150"
+        cy="34"
+        r="5"
+        fill="#39D353"
+      >
         <animate
           attributeName="opacity"
           values="1;0.35;1"
@@ -115,8 +123,10 @@
         font-size="12"
         letter-spacing="3"
       >PAC-MAN CONTRIBUTIONS</text>
+
     </g>
   
+
       
     <rect
       x="25"
@@ -144,6 +154,7 @@
   
 
       <g clip-path="url(#maze-clip)">
+
         
       <rect
         x="45"
@@ -7597,11 +7608,13 @@
   
       </rect>
     
+
         
+
         
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="100.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7618,8 +7631,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7636,8 +7649,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="144.89999999999998"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7654,8 +7667,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="167.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7672,8 +7685,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7690,8 +7703,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="211.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7708,8 +7721,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="233.7"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7726,8 +7739,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="255.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7744,8 +7757,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7762,8 +7775,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="300.29999999999995"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7780,8 +7793,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="322.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7798,8 +7811,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7816,8 +7829,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="366.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7834,8 +7847,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="389.09999999999997"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7852,8 +7865,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="411.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7870,8 +7883,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7888,8 +7901,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="455.7"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7906,8 +7919,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="477.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7924,8 +7937,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7942,8 +7955,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7960,8 +7973,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="544.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7978,8 +7991,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="566.6999999999999"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -7996,8 +8009,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="588.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8014,8 +8027,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="611.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8032,8 +8045,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="633.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8050,8 +8063,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8068,8 +8081,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="677.6999999999999"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8086,8 +8099,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8104,8 +8117,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="722.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8122,8 +8135,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="744.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8140,8 +8153,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8158,8 +8171,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="788.6999999999999"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8176,8 +8189,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="810.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8194,8 +8207,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="833.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8212,8 +8225,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8230,8 +8243,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="877.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8248,8 +8261,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="899.6999999999999"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8266,8 +8279,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8284,8 +8297,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="944.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8302,8 +8315,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="966.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8320,8 +8333,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="988.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8338,8 +8351,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8356,8 +8369,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1032.9"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8374,8 +8387,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1055.1"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8392,8 +8405,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8410,8 +8423,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1099.5"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8428,8 +8441,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1121.7"
+        cy="171.53846153846155"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8446,8 +8459,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8464,8 +8477,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8482,8 +8495,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8500,8 +8513,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8518,8 +8531,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8536,8 +8549,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8554,8 +8567,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="189.23076923076923"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8572,8 +8585,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="78.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8590,8 +8603,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="100.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8608,8 +8621,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8626,8 +8639,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="144.89999999999998"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8644,8 +8657,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="167.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8662,8 +8675,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8680,8 +8693,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="211.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8698,8 +8711,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="255.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8716,8 +8729,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8734,8 +8747,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="300.29999999999995"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8752,8 +8765,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="322.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8770,8 +8783,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8788,8 +8801,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="366.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8806,8 +8819,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="389.09999999999997"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8824,8 +8837,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="411.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8842,8 +8855,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8860,8 +8873,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="455.7"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8878,8 +8891,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="477.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8896,8 +8909,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8914,8 +8927,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8932,8 +8945,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="544.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8950,8 +8963,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="566.6999999999999"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8968,8 +8981,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="588.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -8986,8 +8999,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="611.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9004,8 +9017,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="633.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9022,8 +9035,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9040,8 +9053,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="677.6999999999999"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9058,8 +9071,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9076,8 +9089,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="722.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9094,8 +9107,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="744.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9112,8 +9125,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9130,8 +9143,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="788.6999999999999"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9148,8 +9161,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="810.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9166,8 +9179,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="833.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9184,8 +9197,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9202,8 +9215,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="877.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9220,8 +9233,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="899.6999999999999"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9238,8 +9251,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9256,8 +9269,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="944.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9274,8 +9287,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="988.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9292,8 +9305,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9310,8 +9323,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1032.9"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9328,8 +9341,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1055.1"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9346,8 +9359,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9364,8 +9377,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1099.5"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9382,8 +9395,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1121.7"
+        cy="206.92307692307693"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9400,8 +9413,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="224.6153846153846"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9418,8 +9431,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="224.6153846153846"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9436,8 +9449,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="224.6153846153846"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9454,8 +9467,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="224.6153846153846"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9472,8 +9485,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="224.6153846153846"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9490,8 +9503,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="78.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9508,8 +9521,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="100.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9526,8 +9539,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9544,8 +9557,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="144.89999999999998"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9562,8 +9575,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="167.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9580,8 +9593,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9598,8 +9611,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="211.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9616,8 +9629,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="233.7"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9634,8 +9647,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="255.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9652,8 +9665,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9670,8 +9683,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="300.29999999999995"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9688,8 +9701,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="322.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9706,8 +9719,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9724,8 +9737,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="366.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9742,8 +9755,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="389.09999999999997"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9760,8 +9773,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="411.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9778,8 +9791,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9796,8 +9809,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="455.7"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9814,8 +9827,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="477.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9832,8 +9845,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9850,8 +9863,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9868,8 +9881,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="544.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9886,8 +9899,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="566.6999999999999"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9904,8 +9917,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="588.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9922,8 +9935,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="611.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9940,8 +9953,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="633.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9958,8 +9971,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9976,8 +9989,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="677.6999999999999"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -9994,8 +10007,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10012,8 +10025,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="722.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10030,8 +10043,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="744.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10048,8 +10061,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10066,8 +10079,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="788.6999999999999"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10084,8 +10097,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="810.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10102,8 +10115,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="833.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10120,8 +10133,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10138,8 +10151,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="877.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10156,8 +10169,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="899.6999999999999"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10174,8 +10187,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10192,8 +10205,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="944.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10210,8 +10223,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="966.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10228,8 +10241,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="988.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10246,8 +10259,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10264,8 +10277,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1032.9"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10282,8 +10295,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1055.1"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10300,8 +10313,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10318,8 +10331,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1099.5"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10336,8 +10349,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1121.7"
+        cy="242.30769230769232"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10354,8 +10367,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="260"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10372,8 +10385,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="260"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10390,8 +10403,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="260"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10408,8 +10421,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="260"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10426,8 +10439,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="78.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10444,8 +10457,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="100.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10462,8 +10475,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10480,8 +10493,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="144.89999999999998"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10498,8 +10511,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="167.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10516,8 +10529,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10534,8 +10547,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="211.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10552,8 +10565,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="233.7"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10570,8 +10583,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="255.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10588,8 +10601,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10606,8 +10619,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="300.29999999999995"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10624,8 +10637,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="322.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10642,8 +10655,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10660,8 +10673,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="366.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10678,8 +10691,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="389.09999999999997"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10696,8 +10709,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="411.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10714,8 +10727,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10732,8 +10745,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="455.7"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10750,8 +10763,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="477.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10768,8 +10781,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10786,8 +10799,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10804,8 +10817,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="544.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10822,8 +10835,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="566.6999999999999"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10840,8 +10853,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="588.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10858,8 +10871,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="611.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10876,8 +10889,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="633.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10894,8 +10907,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10912,8 +10925,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="677.6999999999999"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10930,8 +10943,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10948,8 +10961,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="722.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10966,8 +10979,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="744.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -10984,8 +10997,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11002,8 +11015,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="788.6999999999999"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11020,8 +11033,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="810.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11038,8 +11051,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="833.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11056,8 +11069,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11074,8 +11087,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="877.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11092,8 +11105,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="899.6999999999999"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11110,8 +11123,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11128,8 +11141,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="944.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11146,8 +11159,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="966.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11164,8 +11177,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="988.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11182,8 +11195,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11200,8 +11213,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1032.9"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11218,8 +11231,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1055.1"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11236,8 +11249,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11254,8 +11267,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1099.5"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11272,8 +11285,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1121.7"
+        cy="277.69230769230774"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11290,8 +11303,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="295.38461538461536"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11308,8 +11321,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="295.38461538461536"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11326,8 +11339,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="295.38461538461536"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11344,8 +11357,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="295.38461538461536"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11362,8 +11375,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="295.38461538461536"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11380,8 +11393,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="78.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11398,8 +11411,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="100.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11416,8 +11429,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11434,8 +11447,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="144.89999999999998"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11452,8 +11465,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="167.1"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11470,8 +11483,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11488,8 +11501,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="211.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11506,8 +11519,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="233.7"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11524,8 +11537,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="255.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11542,8 +11555,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11560,8 +11573,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="300.29999999999995"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11578,8 +11591,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="322.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11596,8 +11609,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11614,8 +11627,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="366.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11632,8 +11645,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="389.09999999999997"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11650,8 +11663,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="411.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11668,8 +11681,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11686,8 +11699,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="455.7"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11704,8 +11717,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="477.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11722,8 +11735,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11740,8 +11753,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11758,8 +11771,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="544.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11776,8 +11789,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="566.6999999999999"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11794,8 +11807,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="588.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11812,8 +11825,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="633.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11830,8 +11843,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11848,8 +11861,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="677.6999999999999"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11866,8 +11879,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11884,8 +11897,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="722.1"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11902,8 +11915,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="744.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11920,8 +11933,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11938,8 +11951,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="788.6999999999999"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11956,8 +11969,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="810.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11974,8 +11987,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="833.1"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -11992,8 +12005,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12010,8 +12023,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="877.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12028,8 +12041,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="899.6999999999999"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12046,8 +12059,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12064,8 +12077,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="944.1"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12082,8 +12095,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="966.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12100,8 +12113,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="988.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12118,8 +12131,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12136,8 +12149,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1032.9"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12154,8 +12167,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1055.1"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12172,8 +12185,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12190,8 +12203,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1099.5"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12208,8 +12221,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1121.7"
+        cy="313.0769230769231"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12226,8 +12239,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12244,8 +12257,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12262,8 +12275,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12280,8 +12293,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12298,8 +12311,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12316,8 +12329,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12334,8 +12347,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="330.7692307692308"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12352,8 +12365,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="78.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12370,8 +12383,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="100.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12388,8 +12401,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="122.7"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12406,8 +12419,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="144.89999999999998"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12424,8 +12437,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="167.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12442,8 +12455,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="189.29999999999998"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12460,8 +12473,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="211.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12478,8 +12491,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="233.7"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12496,8 +12509,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="255.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12514,8 +12527,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="278.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12532,8 +12545,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="300.29999999999995"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12550,8 +12563,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="322.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12568,8 +12581,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="344.7"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12586,8 +12599,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="366.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12604,8 +12617,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="389.09999999999997"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12622,8 +12635,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="411.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12640,8 +12653,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="433.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12658,8 +12671,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="455.7"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12676,8 +12689,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="477.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12694,8 +12707,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="500.09999999999997"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12712,8 +12725,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="522.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12730,8 +12743,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="544.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12748,8 +12761,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="566.6999999999999"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12766,8 +12779,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="588.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12784,8 +12797,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="611.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12802,8 +12815,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="633.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12820,8 +12833,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="655.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12838,8 +12851,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="677.6999999999999"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12856,8 +12869,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="699.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12874,8 +12887,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="722.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12892,8 +12905,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="744.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12910,8 +12923,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="766.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12928,8 +12941,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="788.6999999999999"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12946,8 +12959,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="810.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12964,8 +12977,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="833.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -12982,8 +12995,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="855.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13000,8 +13013,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="877.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13018,8 +13031,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="899.6999999999999"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13036,8 +13049,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="921.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13054,8 +13067,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="944.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13072,8 +13085,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="966.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13090,8 +13103,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="988.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13108,8 +13121,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1010.6999999999999"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13126,8 +13139,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1032.9"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13144,8 +13157,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1055.1"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13162,8 +13175,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1077.3"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13180,8 +13193,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1099.5"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13198,8 +13211,8 @@
       </circle>
     
       <circle
-        cx="NaN"
-        cy="NaN"
+        cx="1121.7"
+        cy="348.46153846153845"
         r="2.1"
         fill="#FFE58A"
         filter="url(#green-glow)"
@@ -13215,217 +13228,738 @@
   
       </circle>
     
+
         
-        
-      <g>
-        <g>
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="6"
-            fill="none"
-            stroke="#FFD166"
-            stroke-width="1"
-            opacity="0.7"
-          >
-            
-    <animate
-      attributeName="r"
-      values="3;4.5;3"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-  
-          </circle>
-
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="3.1"
-            fill="#FFD166"
-            stroke="#FFF1B8"
-            stroke-width="0.7"
-          />
-        </g>
-
-        <animate
-          attributeName="opacity"
-          values="1;1;0;0;1"
-          keyTimes="0;0.9015384615384616;0.9015384615384616;0.99;1"
-          dur="90s"
-          repeatCount="indefinite"
-        />
-      </g>
-    
-      <g>
-        <g>
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="6"
-            fill="none"
-            stroke="#FFD166"
-            stroke-width="1"
-            opacity="0.7"
-          >
-            
-    <animate
-      attributeName="r"
-      values="3;4.5;3"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-  
-          </circle>
-
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="3.1"
-            fill="#FFD166"
-            stroke="#FFF1B8"
-            stroke-width="0.7"
-          />
-        </g>
-
-        <animate
-          attributeName="opacity"
-          values="1;1;0;0;1"
-          keyTimes="0;0.2553846153846154;0.2553846153846154;0.99;1"
-          dur="90s"
-          repeatCount="indefinite"
-        />
-      </g>
-    
-      <g>
-        <g>
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="6"
-            fill="none"
-            stroke="#FFD166"
-            stroke-width="1"
-            opacity="0.7"
-          >
-            
-    <animate
-      attributeName="r"
-      values="3;4.5;3"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-  
-          </circle>
-
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="3.1"
-            fill="#FFD166"
-            stroke="#FFF1B8"
-            stroke-width="0.7"
-          />
-        </g>
-
-        <animate
-          attributeName="opacity"
-          values="1;1;0;0;1"
-          keyTimes="0;0.27076923076923076;0.27076923076923076;0.99;1"
-          dur="90s"
-          repeatCount="indefinite"
-        />
-      </g>
-    
-      <g>
-        <g>
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="6"
-            fill="none"
-            stroke="#FFD166"
-            stroke-width="1"
-            opacity="0.7"
-          >
-            
-    <animate
-      attributeName="r"
-      values="3;4.5;3"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-  
-          </circle>
-
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="3.1"
-            fill="#FFD166"
-            stroke="#FFF1B8"
-            stroke-width="0.7"
-          />
-        </g>
-
-        <animate
-          attributeName="opacity"
-          values="1;1;0;0;1"
-          keyTimes="0;0.5476923076923077;0.5476923076923077;0.99;1"
-          dur="90s"
-          repeatCount="indefinite"
-        />
-      </g>
-    
-      <g>
-        <g>
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="6"
-            fill="none"
-            stroke="#FFD166"
-            stroke-width="1"
-            opacity="0.7"
-          >
-            
-    <animate
-      attributeName="r"
-      values="3;4.5;3"
-      dur="0.7s"
-      repeatCount="indefinite"
-    />
-  
-          </circle>
-
-          <circle
-            cx="NaN"
-            cy="NaN"
-            r="3.1"
-            fill="#FFD166"
-            stroke="#FFF1B8"
-            stroke-width="0.7"
-          />
-        </g>
-
-        <animate
-          attributeName="opacity"
-          values="1;1;0;0;1"
-          keyTimes="0;0.5553846153846154;0.5553846153846154;0.99;1"
-          dur="90s"
-          repeatCount="indefinite"
-        />
-      </g>
-    
-        
-    <g filter="url(#pacman-glow)">
-      <circle
-        cx="NaN"
-        cy="NaN"
-        r="10"
-        fill="#FFD43B"
+      <rect
+        x="97.75"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#0E4429"
+        opacity="0.95"
+        filter="url(#green-glow)"
       >
         
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.0015384615384615385;0.004538461538461538;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="119.95"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#006D32"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.003076923076923077;0.006076923076923077;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="142.14999999999998"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#26A641"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.004615384615384616;0.007615384615384616;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="164.35"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#39D353"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.006153846153846154;0.009153846153846155;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="186.54999999999998"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#0E4429"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.007692307692307692;0.010692307692307692;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="208.75"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#006D32"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.009230769230769232;0.012230769230769233;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="230.95"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#26A641"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.010769230769230769;0.01376923076923077;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="253.15"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#39D353"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.012307692307692308;0.015307692307692307;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="275.35"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#0E4429"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.013846153846153847;0.016846153846153848;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="297.54999999999995"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#006D32"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.015384615384615384;0.018384615384615385;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="319.75"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#26A641"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.016923076923076923;0.019923076923076922;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="341.95"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#39D353"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.018461538461538463;0.021461538461538462;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="364.15"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#0E4429"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.02;0.023;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="386.34999999999997"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#006D32"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.021538461538461538;0.024538461538461537;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="408.55"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#26A641"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.023076923076923078;0.026076923076923077;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="430.75"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#39D353"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.024615384615384615;0.027615384615384615;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="452.95"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#0E4429"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.026153846153846156;0.029153846153846155;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="475.15"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#006D32"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.027692307692307693;0.030692307692307692;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="497.34999999999997"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#26A641"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.02923076923076923;0.03223076923076923;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="519.55"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#39D353"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.030769230769230767;0.03376923076923077;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="541.75"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#0E4429"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.03230769230769231;0.03530769230769231;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="563.9499999999999"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#006D32"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.033846153846153845;0.03684615384615385;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="586.15"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#26A641"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.03538461538461538;0.038384615384615385;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+      <rect
+        x="608.35"
+        y="168.78846153846155"
+        width="5.5"
+        height="5.5"
+        rx="1"
+        fill="#39D353"
+        opacity="0.95"
+        filter="url(#green-glow)"
+      >
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.036923076923076927;0.03992307692307693;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </rect>
+    
+
+        
+      <g>
+        <g>
+          <circle
+            cx="766.5"
+            cy="189.23076923076923"
+            r="6"
+            fill="none"
+            stroke="#FFD166"
+            stroke-width="1"
+            opacity="0.7"
+          >
+            
+    <animate
+      attributeName="r"
+      values="3;4.5;3"
+      dur="0.7s"
+      repeatCount="indefinite"
+    />
+  
+          </circle>
+
+          <circle
+            cx="766.5"
+            cy="189.23076923076923"
+            r="3.1"
+            fill="#FFD166"
+            stroke="#FFF1B8"
+            stroke-width="0.7"
+          />
+        </g>
+
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.9015384615384616;0.9045384615384616;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </g>
+    
+      <g>
+        <g>
+          <circle
+            cx="855.3"
+            cy="224.6153846153846"
+            r="6"
+            fill="none"
+            stroke="#FFD166"
+            stroke-width="1"
+            opacity="0.7"
+          >
+            
+    <animate
+      attributeName="r"
+      values="3;4.5;3"
+      dur="0.7s"
+      repeatCount="indefinite"
+    />
+  
+          </circle>
+
+          <circle
+            cx="855.3"
+            cy="224.6153846153846"
+            r="3.1"
+            fill="#FFD166"
+            stroke="#FFF1B8"
+            stroke-width="0.7"
+          />
+        </g>
+
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.2553846153846154;0.2583846153846154;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </g>
+    
+      <g>
+        <g>
+          <circle
+            cx="677.6999999999999"
+            cy="260"
+            r="6"
+            fill="none"
+            stroke="#FFD166"
+            stroke-width="1"
+            opacity="0.7"
+          >
+            
+    <animate
+      attributeName="r"
+      values="3;4.5;3"
+      dur="0.7s"
+      repeatCount="indefinite"
+    />
+  
+          </circle>
+
+          <circle
+            cx="677.6999999999999"
+            cy="260"
+            r="3.1"
+            fill="#FFD166"
+            stroke="#FFF1B8"
+            stroke-width="0.7"
+          />
+        </g>
+
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.27076923076923076;0.27376923076923076;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </g>
+    
+      <g>
+        <g>
+          <circle
+            cx="500.09999999999997"
+            cy="295.38461538461536"
+            r="6"
+            fill="none"
+            stroke="#FFD166"
+            stroke-width="1"
+            opacity="0.7"
+          >
+            
+    <animate
+      attributeName="r"
+      values="3;4.5;3"
+      dur="0.7s"
+      repeatCount="indefinite"
+    />
+  
+          </circle>
+
+          <circle
+            cx="500.09999999999997"
+            cy="295.38461538461536"
+            r="3.1"
+            fill="#FFD166"
+            stroke="#FFF1B8"
+            stroke-width="0.7"
+          />
+        </g>
+
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.5476923076923077;0.5506923076923077;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </g>
+    
+      <g>
+        <g>
+          <circle
+            cx="433.5"
+            cy="330.7692307692308"
+            r="6"
+            fill="none"
+            stroke="#FFD166"
+            stroke-width="1"
+            opacity="0.7"
+          >
+            
+    <animate
+      attributeName="r"
+      values="3;4.5;3"
+      dur="0.7s"
+      repeatCount="indefinite"
+    />
+  
+          </circle>
+
+          <circle
+            cx="433.5"
+            cy="330.7692307692308"
+            r="3.1"
+            fill="#FFD166"
+            stroke="#FFF1B8"
+            stroke-width="0.7"
+          />
+        </g>
+
+        
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0;1"
+      keyTimes="0;0.5553846153846154;0.5583846153846154;0.999;1"
+      dur="90s"
+      repeatCount="indefinite"
+    />
+  
+      </g>
+    
+
+        
+    <g filter="url(#pacman-glow)">
+
+      <path
+        d="
+    M 0 0
+    L 10 -6.5
+    A 10 10 0 1 1
+    10 6.5
+    Z
+  "
+        fill="#FFD43B"
+      >
         
     <animate
       attributeName="d"
@@ -13441,13 +13975,32 @@
       repeatCount="indefinite"
     />
   
-      </circle>
+
+        
+    <animateMotion
+      path="M 78.3 171.53846153846155 L 100.5 171.53846153846155 L 122.7 171.53846153846155 L 144.89999999999998 171.53846153846155 L 167.1 171.53846153846155 L 189.29999999999998 171.53846153846155 L 211.5 171.53846153846155 L 233.7 171.53846153846155 L 255.9 171.53846153846155 L 278.1 171.53846153846155 L 300.29999999999995 171.53846153846155 L 322.5 171.53846153846155 L 344.7 171.53846153846155 L 366.9 171.53846153846155 L 389.09999999999997 171.53846153846155 L 411.3 171.53846153846155 L 433.5 171.53846153846155 L 455.7 171.53846153846155 L 477.9 171.53846153846155 L 500.09999999999997 171.53846153846155 L 522.3 171.53846153846155 L 544.5 171.53846153846155 L 566.6999999999999 171.53846153846155 L 588.9 171.53846153846155 L 611.1 171.53846153846155 L 633.3 171.53846153846155 L 655.5 171.53846153846155 L 677.6999999999999 171.53846153846155 L 699.9 171.53846153846155 L 722.1 171.53846153846155 L 744.3 171.53846153846155 L 766.5 171.53846153846155 L 788.6999999999999 171.53846153846155 L 810.9 171.53846153846155 L 833.1 171.53846153846155 L 855.3 171.53846153846155 L 877.5 171.53846153846155 L 899.6999999999999 171.53846153846155 L 921.9 171.53846153846155 L 944.1 171.53846153846155 L 966.3 171.53846153846155 L 988.5 171.53846153846155 L 1010.6999999999999 171.53846153846155 L 1032.9 171.53846153846155 L 1055.1 171.53846153846155 L 1077.3 171.53846153846155 L 1099.5 171.53846153846155 L 1121.7 171.53846153846155 L 1099.5 171.53846153846155 L 1077.3 171.53846153846155 L 1077.3 189.23076923076923 L 1077.3 206.92307692307693 L 1099.5 206.92307692307693 L 1121.7 206.92307692307693 L 1099.5 206.92307692307693 L 1077.3 206.92307692307693 L 1055.1 206.92307692307693 L 1032.9 206.92307692307693 L 1010.6999999999999 206.92307692307693 L 988.5 206.92307692307693 L 966.3 206.92307692307693 L 944.1 206.92307692307693 L 921.9 206.92307692307693 L 899.6999999999999 206.92307692307693 L 877.5 206.92307692307693 L 855.3 206.92307692307693 L 833.1 206.92307692307693 L 810.9 206.92307692307693 L 788.6999999999999 206.92307692307693 L 766.5 206.92307692307693 L 744.3 206.92307692307693 L 722.1 206.92307692307693 L 699.9 206.92307692307693 L 677.6999999999999 206.92307692307693 L 655.5 206.92307692307693 L 633.3 206.92307692307693 L 611.1 206.92307692307693 L 588.9 206.92307692307693 L 566.6999999999999 206.92307692307693 L 544.5 206.92307692307693 L 522.3 206.92307692307693 L 500.09999999999997 206.92307692307693 L 477.9 206.92307692307693 L 455.7 206.92307692307693 L 433.5 206.92307692307693 L 411.3 206.92307692307693 L 389.09999999999997 206.92307692307693 L 366.9 206.92307692307693 L 344.7 206.92307692307693 L 322.5 206.92307692307693 L 300.29999999999995 206.92307692307693 L 278.1 206.92307692307693 L 255.9 206.92307692307693 L 233.7 206.92307692307693 L 211.5 206.92307692307693 L 189.29999999999998 206.92307692307693 L 167.1 206.92307692307693 L 144.89999999999998 206.92307692307693 L 122.7 206.92307692307693 L 100.5 206.92307692307693 L 78.3 206.92307692307693 L 100.5 206.92307692307693 L 122.7 206.92307692307693 L 122.7 189.23076923076923 L 122.7 206.92307692307693 L 144.89999999999998 206.92307692307693 L 167.1 206.92307692307693 L 189.29999999999998 206.92307692307693 L 189.29999999999998 224.6153846153846 L 189.29999999999998 242.30769230769232 L 211.5 242.30769230769232 L 233.7 242.30769230769232 L 255.9 242.30769230769232 L 278.1 242.30769230769232 L 300.29999999999995 242.30769230769232 L 322.5 242.30769230769232 L 344.7 242.30769230769232 L 366.9 242.30769230769232 L 389.09999999999997 242.30769230769232 L 411.3 242.30769230769232 L 433.5 242.30769230769232 L 455.7 242.30769230769232 L 477.9 242.30769230769232 L 500.09999999999997 242.30769230769232 L 522.3 242.30769230769232 L 544.5 242.30769230769232 L 566.6999999999999 242.30769230769232 L 588.9 242.30769230769232 L 611.1 242.30769230769232 L 633.3 242.30769230769232 L 655.5 242.30769230769232 L 677.6999999999999 242.30769230769232 L 699.9 242.30769230769232 L 722.1 242.30769230769232 L 744.3 242.30769230769232 L 766.5 242.30769230769232 L 788.6999999999999 242.30769230769232 L 810.9 242.30769230769232 L 833.1 242.30769230769232 L 855.3 242.30769230769232 L 877.5 242.30769230769232 L 899.6999999999999 242.30769230769232 L 921.9 242.30769230769232 L 944.1 242.30769230769232 L 966.3 242.30769230769232 L 988.5 242.30769230769232 L 1010.6999999999999 242.30769230769232 L 1032.9 242.30769230769232 L 1055.1 242.30769230769232 L 1077.3 242.30769230769232 L 1099.5 242.30769230769232 L 1121.7 242.30769230769232 L 1099.5 242.30769230769232 L 1077.3 242.30769230769232 L 1055.1 242.30769230769232 L 1032.9 242.30769230769232 L 1010.6999999999999 242.30769230769232 L 1010.6999999999999 224.6153846153846 L 1010.6999999999999 242.30769230769232 L 988.5 242.30769230769232 L 966.3 242.30769230769232 L 944.1 242.30769230769232 L 921.9 242.30769230769232 L 899.6999999999999 242.30769230769232 L 877.5 242.30769230769232 L 855.3 242.30769230769232 L 855.3 224.6153846153846 L 855.3 242.30769230769232 L 833.1 242.30769230769232 L 810.9 242.30769230769232 L 788.6999999999999 242.30769230769232 L 766.5 242.30769230769232 L 744.3 242.30769230769232 L 722.1 242.30769230769232 L 699.9 242.30769230769232 L 699.9 260 L 677.6999999999999 260 L 655.5 260 L 633.3 260 L 611.1 260 L 588.9 260 L 566.6999999999999 260 L 544.5 260 L 522.3 260 L 500.09999999999997 260 L 500.09999999999997 277.69230769230774 L 522.3 277.69230769230774 L 544.5 277.69230769230774 L 566.6999999999999 277.69230769230774 L 588.9 277.69230769230774 L 611.1 277.69230769230774 L 633.3 277.69230769230774 L 655.5 277.69230769230774 L 677.6999999999999 277.69230769230774 L 699.9 277.69230769230774 L 722.1 277.69230769230774 L 744.3 277.69230769230774 L 766.5 277.69230769230774 L 788.6999999999999 277.69230769230774 L 810.9 277.69230769230774 L 833.1 277.69230769230774 L 855.3 277.69230769230774 L 877.5 277.69230769230774 L 899.6999999999999 277.69230769230774 L 921.9 277.69230769230774 L 944.1 277.69230769230774 L 966.3 277.69230769230774 L 988.5 277.69230769230774 L 1010.6999999999999 277.69230769230774 L 1032.9 277.69230769230774 L 1055.1 277.69230769230774 L 1077.3 277.69230769230774 L 1099.5 277.69230769230774 L 1121.7 277.69230769230774 L 1099.5 277.69230769230774 L 1077.3 277.69230769230774 L 1055.1 277.69230769230774 L 1032.9 277.69230769230774 L 1010.6999999999999 277.69230769230774 L 1010.6999999999999 295.38461538461536 L 1010.6999999999999 313.0769230769231 L 1032.9 313.0769230769231 L 1055.1 313.0769230769231 L 1077.3 313.0769230769231 L 1099.5 313.0769230769231 L 1121.7 313.0769230769231 L 1099.5 313.0769230769231 L 1077.3 313.0769230769231 L 1077.3 330.7692307692308 L 1077.3 348.46153846153845 L 1099.5 348.46153846153845 L 1121.7 348.46153846153845 L 1099.5 348.46153846153845 L 1077.3 348.46153846153845 L 1055.1 348.46153846153845 L 1032.9 348.46153846153845 L 1010.6999999999999 348.46153846153845 L 988.5 348.46153846153845 L 966.3 348.46153846153845 L 944.1 348.46153846153845 L 921.9 348.46153846153845 L 899.6999999999999 348.46153846153845 L 877.5 348.46153846153845 L 855.3 348.46153846153845 L 833.1 348.46153846153845 L 810.9 348.46153846153845 L 788.6999999999999 348.46153846153845 L 766.5 348.46153846153845 L 744.3 348.46153846153845 L 722.1 348.46153846153845 L 699.9 348.46153846153845 L 677.6999999999999 348.46153846153845 L 655.5 348.46153846153845 L 633.3 348.46153846153845 L 611.1 348.46153846153845 L 588.9 348.46153846153845 L 566.6999999999999 348.46153846153845 L 544.5 348.46153846153845 L 522.3 348.46153846153845 L 500.09999999999997 348.46153846153845 L 477.9 348.46153846153845 L 455.7 348.46153846153845 L 433.5 348.46153846153845 L 411.3 348.46153846153845 L 389.09999999999997 348.46153846153845 L 366.9 348.46153846153845 L 344.7 348.46153846153845 L 322.5 348.46153846153845 L 300.29999999999995 348.46153846153845 L 278.1 348.46153846153845 L 255.9 348.46153846153845 L 233.7 348.46153846153845 L 211.5 348.46153846153845 L 189.29999999999998 348.46153846153845 L 167.1 348.46153846153845 L 144.89999999999998 348.46153846153845 L 122.7 348.46153846153845 L 100.5 348.46153846153845 L 78.3 348.46153846153845 L 100.5 348.46153846153845 L 122.7 348.46153846153845 L 122.7 330.7692307692308 L 122.7 313.0769230769231 L 144.89999999999998 313.0769230769231 L 167.1 313.0769230769231 L 189.29999999999998 313.0769230769231 L 211.5 313.0769230769231 L 233.7 313.0769230769231 L 255.9 313.0769230769231 L 278.1 313.0769230769231 L 300.29999999999995 313.0769230769231 L 322.5 313.0769230769231 L 344.7 313.0769230769231 L 366.9 313.0769230769231 L 389.09999999999997 313.0769230769231 L 411.3 313.0769230769231 L 433.5 313.0769230769231 L 455.7 313.0769230769231 L 477.9 313.0769230769231 L 500.09999999999997 313.0769230769231 L 522.3 313.0769230769231 L 544.5 313.0769230769231 L 566.6999999999999 313.0769230769231 L 588.9 313.0769230769231 L 611.1 313.0769230769231 L 633.3 313.0769230769231 L 655.5 313.0769230769231 L 677.6999999999999 313.0769230769231 L 699.9 313.0769230769231 L 722.1 313.0769230769231 L 744.3 313.0769230769231 L 766.5 313.0769230769231 L 788.6999999999999 313.0769230769231 L 810.9 313.0769230769231 L 833.1 313.0769230769231 L 855.3 313.0769230769231 L 877.5 313.0769230769231 L 899.6999999999999 313.0769230769231 L 921.9 313.0769230769231 L 944.1 313.0769230769231 L 966.3 313.0769230769231 L 988.5 313.0769230769231 L 966.3 313.0769230769231 L 944.1 313.0769230769231 L 921.9 313.0769230769231 L 921.9 330.7692307692308 L 921.9 313.0769230769231 L 899.6999999999999 313.0769230769231 L 877.5 313.0769230769231 L 855.3 313.0769230769231 L 855.3 295.38461538461536 L 855.3 313.0769230769231 L 833.1 313.0769230769231 L 810.9 313.0769230769231 L 788.6999999999999 313.0769230769231 L 766.5 313.0769230769231 L 766.5 330.7692307692308 L 766.5 313.0769230769231 L 744.3 313.0769230769231 L 722.1 313.0769230769231 L 699.9 313.0769230769231 L 699.9 330.7692307692308 L 699.9 313.0769230769231 L 699.9 295.38461538461536 L 699.9 313.0769230769231 L 677.6999999999999 313.0769230769231 L 655.5 313.0769230769231 L 633.3 313.0769230769231 L 611.1 313.0769230769231 L 588.9 313.0769230769231 L 566.6999999999999 313.0769230769231 L 544.5 313.0769230769231 L 522.3 313.0769230769231 L 500.09999999999997 313.0769230769231 L 500.09999999999997 330.7692307692308 L 500.09999999999997 313.0769230769231 L 500.09999999999997 295.38461538461536 L 500.09999999999997 313.0769230769231 L 477.9 313.0769230769231 L 455.7 313.0769230769231 L 433.5 313.0769230769231 L 433.5 330.7692307692308 L 433.5 313.0769230769231 L 411.3 313.0769230769231 L 389.09999999999997 313.0769230769231 L 366.9 313.0769230769231 L 344.7 313.0769230769231 L 344.7 295.38461538461536 L 344.7 277.69230769230774 L 366.9 277.69230769230774 L 389.09999999999997 277.69230769230774 L 411.3 277.69230769230774 L 433.5 277.69230769230774 L 455.7 277.69230769230774 L 477.9 277.69230769230774 L 455.7 277.69230769230774 L 433.5 277.69230769230774 L 411.3 277.69230769230774 L 389.09999999999997 277.69230769230774 L 366.9 277.69230769230774 L 344.7 277.69230769230774 L 322.5 277.69230769230774 L 300.29999999999995 277.69230769230774 L 278.1 277.69230769230774 L 255.9 277.69230769230774 L 233.7 277.69230769230774 L 211.5 277.69230769230774 L 189.29999999999998 277.69230769230774 L 167.1 277.69230769230774 L 144.89999999999998 277.69230769230774 L 122.7 277.69230769230774 L 100.5 277.69230769230774 L 78.3 277.69230769230774 L 100.5 277.69230769230774 L 122.7 277.69230769230774 L 144.89999999999998 277.69230769230774 L 167.1 277.69230769230774 L 189.29999999999998 277.69230769230774 L 189.29999999999998 295.38461538461536 L 189.29999999999998 277.69230769230774 L 211.5 277.69230769230774 L 233.7 277.69230769230774 L 255.9 277.69230769230774 L 278.1 277.69230769230774 L 300.29999999999995 277.69230769230774 L 322.5 277.69230769230774 L 344.7 277.69230769230774 L 344.7 295.38461538461536 L 344.7 313.0769230769231 L 322.5 313.0769230769231 L 300.29999999999995 313.0769230769231 L 278.1 313.0769230769231 L 278.1 330.7692307692308 L 278.1 313.0769230769231 L 255.9 313.0769230769231 L 233.7 313.0769230769231 L 211.5 313.0769230769231 L 189.29999999999998 313.0769230769231 L 167.1 313.0769230769231 L 144.89999999999998 313.0769230769231 L 122.7 313.0769230769231 L 100.5 313.0769230769231 L 78.3 313.0769230769231 L 100.5 313.0769230769231 L 122.7 313.0769230769231 L 122.7 330.7692307692308 L 122.7 348.46153846153845 L 144.89999999999998 348.46153846153845 L 167.1 348.46153846153845 L 189.29999999999998 348.46153846153845 L 211.5 348.46153846153845 L 233.7 348.46153846153845 L 255.9 348.46153846153845 L 278.1 348.46153846153845 L 300.29999999999995 348.46153846153845 L 322.5 348.46153846153845 L 344.7 348.46153846153845 L 366.9 348.46153846153845 L 389.09999999999997 348.46153846153845 L 411.3 348.46153846153845 L 433.5 348.46153846153845 L 455.7 348.46153846153845 L 477.9 348.46153846153845 L 500.09999999999997 348.46153846153845 L 522.3 348.46153846153845 L 544.5 348.46153846153845 L 566.6999999999999 348.46153846153845 L 588.9 348.46153846153845 L 611.1 348.46153846153845 L 633.3 348.46153846153845 L 655.5 348.46153846153845 L 677.6999999999999 348.46153846153845 L 699.9 348.46153846153845 L 722.1 348.46153846153845 L 744.3 348.46153846153845 L 766.5 348.46153846153845 L 788.6999999999999 348.46153846153845 L 810.9 348.46153846153845 L 833.1 348.46153846153845 L 855.3 348.46153846153845 L 877.5 348.46153846153845 L 899.6999999999999 348.46153846153845 L 921.9 348.46153846153845 L 944.1 348.46153846153845 L 966.3 348.46153846153845 L 988.5 348.46153846153845 L 1010.6999999999999 348.46153846153845 L 1032.9 348.46153846153845 L 1055.1 348.46153846153845 L 1077.3 348.46153846153845 L 1077.3 330.7692307692308 L 1077.3 313.0769230769231 L 1055.1 313.0769230769231 L 1032.9 313.0769230769231 L 1010.6999999999999 313.0769230769231 L 1010.6999999999999 295.38461538461536 L 1010.6999999999999 277.69230769230774 L 988.5 277.69230769230774 L 966.3 277.69230769230774 L 944.1 277.69230769230774 L 921.9 277.69230769230774 L 899.6999999999999 277.69230769230774 L 877.5 277.69230769230774 L 855.3 277.69230769230774 L 833.1 277.69230769230774 L 810.9 277.69230769230774 L 788.6999999999999 277.69230769230774 L 766.5 277.69230769230774 L 744.3 277.69230769230774 L 722.1 277.69230769230774 L 699.9 277.69230769230774 L 677.6999999999999 277.69230769230774 L 655.5 277.69230769230774 L 633.3 277.69230769230774 L 611.1 277.69230769230774 L 588.9 277.69230769230774 L 566.6999999999999 277.69230769230774 L 544.5 277.69230769230774 L 522.3 277.69230769230774 L 500.09999999999997 277.69230769230774 L 500.09999999999997 260 L 522.3 260 L 544.5 260 L 566.6999999999999 260 L 588.9 260 L 611.1 260 L 633.3 260 L 655.5 260 L 677.6999999999999 260 L 699.9 260 L 699.9 242.30769230769232 L 699.9 224.6153846153846 L 699.9 242.30769230769232 L 677.6999999999999 242.30769230769232 L 655.5 242.30769230769232 L 633.3 242.30769230769232 L 611.1 242.30769230769232 L 588.9 242.30769230769232 L 566.6999999999999 242.30769230769232 L 544.5 242.30769230769232 L 522.3 242.30769230769232 L 500.09999999999997 242.30769230769232 L 500.09999999999997 224.6153846153846 L 500.09999999999997 242.30769230769232 L 477.9 242.30769230769232 L 455.7 242.30769230769232 L 433.5 242.30769230769232 L 411.3 242.30769230769232 L 389.09999999999997 242.30769230769232 L 366.9 242.30769230769232 L 344.7 242.30769230769232 L 344.7 224.6153846153846 L 344.7 242.30769230769232 L 322.5 242.30769230769232 L 300.29999999999995 242.30769230769232 L 278.1 242.30769230769232 L 255.9 242.30769230769232 L 233.7 242.30769230769232 L 211.5 242.30769230769232 L 189.29999999999998 242.30769230769232 L 167.1 242.30769230769232 L 144.89999999999998 242.30769230769232 L 122.7 242.30769230769232 L 100.5 242.30769230769232 L 78.3 242.30769230769232 L 100.5 242.30769230769232 L 122.7 242.30769230769232 L 144.89999999999998 242.30769230769232 L 167.1 242.30769230769232 L 189.29999999999998 242.30769230769232 L 189.29999999999998 224.6153846153846 L 189.29999999999998 206.92307692307693 L 211.5 206.92307692307693 L 233.7 206.92307692307693 L 255.9 206.92307692307693 L 278.1 206.92307692307693 L 278.1 189.23076923076923 L 278.1 206.92307692307693 L 300.29999999999995 206.92307692307693 L 322.5 206.92307692307693 L 344.7 206.92307692307693 L 366.9 206.92307692307693 L 389.09999999999997 206.92307692307693 L 411.3 206.92307692307693 L 433.5 206.92307692307693 L 433.5 189.23076923076923 L 433.5 206.92307692307693 L 455.7 206.92307692307693 L 477.9 206.92307692307693 L 500.09999999999997 206.92307692307693 L 500.09999999999997 189.23076923076923 L 500.09999999999997 206.92307692307693 L 522.3 206.92307692307693 L 544.5 206.92307692307693 L 566.6999999999999 206.92307692307693 L 588.9 206.92307692307693 L 611.1 206.92307692307693 L 633.3 206.92307692307693 L 655.5 206.92307692307693 L 677.6999999999999 206.92307692307693 L 699.9 206.92307692307693 L 699.9 189.23076923076923 L 699.9 206.92307692307693 L 722.1 206.92307692307693 L 744.3 206.92307692307693 L 766.5 206.92307692307693 L 766.5 189.23076923076923 L 766.5 206.92307692307693 L 788.6999999999999 206.92307692307693 L 810.9 206.92307692307693 L 833.1 206.92307692307693 L 855.3 206.92307692307693 L 877.5 206.92307692307693 L 899.6999999999999 206.92307692307693 L 921.9 206.92307692307693 L 921.9 189.23076923076923 L 921.9 206.92307692307693 L 944.1 206.92307692307693 L 966.3 206.92307692307693 L 988.5 206.92307692307693 L 1010.6999999999999 206.92307692307693 L 1032.9 206.92307692307693 L 1055.1 206.92307692307693 L 1077.3 206.92307692307693 L 1077.3 189.23076923076923 L 1077.3 171.53846153846155 L 1055.1 171.53846153846155 L 1032.9 171.53846153846155 L 1010.6999999999999 171.53846153846155 L 988.5 171.53846153846155 L 966.3 171.53846153846155 L 944.1 171.53846153846155 L 921.9 171.53846153846155 L 899.6999999999999 171.53846153846155 L 877.5 171.53846153846155 L 855.3 171.53846153846155 L 833.1 171.53846153846155 L 810.9 171.53846153846155 L 788.6999999999999 171.53846153846155 L 766.5 171.53846153846155 L 744.3 171.53846153846155 L 722.1 171.53846153846155 L 699.9 171.53846153846155 L 677.6999999999999 171.53846153846155 L 655.5 171.53846153846155 L 633.3 171.53846153846155 L 611.1 171.53846153846155 L 588.9 171.53846153846155 L 566.6999999999999 171.53846153846155 L 544.5 171.53846153846155 L 522.3 171.53846153846155 L 500.09999999999997 171.53846153846155 L 477.9 171.53846153846155 L 455.7 171.53846153846155 L 433.5 171.53846153846155 L 411.3 171.53846153846155 L 389.09999999999997 171.53846153846155 L 366.9 171.53846153846155 L 344.7 171.53846153846155 L 322.5 171.53846153846155 L 300.29999999999995 171.53846153846155 L 278.1 171.53846153846155 L 255.9 171.53846153846155 L 233.7 171.53846153846155 L 211.5 171.53846153846155 L 189.29999999999998 171.53846153846155 L 167.1 171.53846153846155 L 144.89999999999998 171.53846153846155 L 122.7 171.53846153846155 L 100.5 171.53846153846155 L 78.3 171.53846153846155"
+      dur="90s"
+      keyPoints="0;0.0015738601783926165;0.003147720356785233;0.004721580535177848;0.006295440713570465;0.00786930089196308;0.009443161070355697;0.011017021248748314;0.01259088142714093;0.014164741605533548;0.01573860178392616;0.017312461962318778;0.018886322140711394;0.02046018231910401;0.022034042497496627;0.023607902675889247;0.02518176285428186;0.026755623032674477;0.028329483211067093;0.02990334338945971;0.03147720356785232;0.033051063746244946;0.034624923924637556;0.03619878410303017;0.03777264428142279;0.039346504459815405;0.04092036463820802;0.04249422481660063;0.044068084994993255;0.04564194517338587;0.04721580535177848;0.048789665530171104;0.050363525708563714;0.05193738588695634;0.053511246065348954;0.05508510624374156;0.05665896642213419;0.058232826600526796;0.05980668677891942;0.061380546957312036;0.06295440713570465;0.06452826731409726;0.06610212749248988;0.06767598767088251;0.06924984784927511;0.07082370802766773;0.07239756820606034;0.07397142838445298;0.07554528856284559;0.07711914874123822;0.07837343786469733;0.07962772698815644;0.08120158716654906;0.08277544734494169;0.0843493075233343;0.08592316770172692;0.08749702788011954;0.08907088805851214;0.09064474823690477;0.09221860841529737;0.09379246859368999;0.0953663287720826;0.09694018895047522;0.09851404912886785;0.10008790930726046;0.10166176948565307;0.10323562966404569;0.1048094898424383;0.10638335002083094;0.10795721019922354;0.10953107037761615;0.11110493055600877;0.11267879073440139;0.11425265091279402;0.11582651109118662;0.11740037126957924;0.11897423144797185;0.12054809162636447;0.1221219518047571;0.1236958119831497;0.1252696721615423;0.12684353233993495;0.12841739251832757;0.12999125269672018;0.1315651128751128;0.13313897305350542;0.13471283323189803;0.13628669341029065;0.13786055358868327;0.13943441376707588;0.14100827394546853;0.14258213412386114;0.14415599430225376;0.14572985448064638;0.14730371465903896;0.14887757483743158;0.15045143501582417;0.1520252951942168;0.1535991553726094;0.155173015551002;0.1567468757293946;0.1583207359077872;0.1598945960861798;0.1611488852096389;0.16240317433309803;0.16397703451149065;0.16555089468988324;0.16712475486827585;0.16837904399173495;0.16963333311519407;0.17120719329358666;0.17278105347197928;0.17435491365037187;0.17592877382876448;0.1775026340071571;0.1790764941855497;0.1806503543639423;0.1822242145423349;0.1837980747207275;0.1853719348991201;0.18694579507751272;0.1885196552559053;0.19009351543429792;0.1916673756126905;0.19324123579108313;0.19481509596947572;0.19638895614786833;0.19796281632626092;0.19953667650465354;0.20111053668304615;0.20268439686143874;0.20425825703983136;0.20583211721822395;0.20740597739661656;0.20897983757500915;0.21055369775340177;0.21212755793179436;0.21370141811018697;0.21527527828857956;0.21684913846697218;0.21842299864536477;0.21999685882375739;0.22157071900214997;0.2231445791805426;0.2247184393589352;0.2262922995373278;0.2278661597157204;0.22944001989411303;0.23101388007250565;0.23258774025089826;0.23416160042929088;0.2357354606076835;0.23730932078607608;0.2388831809644687;0.2404570411428613;0.2420309013212539;0.24360476149964652;0.24485905062310565;0.24611333974656477;0.24768719992495736;0.24926106010335;0.2508349202817426;0.2524087804601352;0.2539826406385278;0.25555650081692044;0.257130360995313;0.25838465011877215;0.25963893924223125;0.26121279942062386;0.2627866595990164;0.26436051977740904;0.26593437995580166;0.2675082401341943;0.2690821003125869;0.27065596049097945;0.2719102496144386;0.27348410979283116;0.2750579699712238;0.2766318301496164;0.278205690328009;0.2797795505064016;0.2813534106847942;0.2829272708631868;0.2845011310415794;0.28607499121997204;0.28732928034343114;0.28890314052182375;0.2904770007002163;0.29205086087860893;0.29362472105700155;0.29519858123539416;0.2967724414137867;0.29834630159217934;0.29992016177057196;0.3014940219489646;0.3030678821273572;0.30464174230574975;0.30621560248414237;0.307789462662535;0.3093633228409276;0.31093718301932016;0.3125110431977128;0.3140849033761054;0.315658763554498;0.3172326237328906;0.3188064839112832;0.3203803440896758;0.3219542042680684;0.323528064446461;0.3251019246248536;0.3266757848032462;0.32824964498163883;0.32982350516003145;0.331397365338424;0.3329712255168166;0.33454508569520924;0.33611894587360186;0.3376928060519944;0.33926666623038704;0.34052095535384613;0.3417752444773053;0.3433491046556979;0.34492296483409046;0.3464968250124831;0.3480706851908757;0.3496445453692683;0.3512184055476609;0.3527922657260535;0.35404655484951264;0.35530084397297174;0.35687470415136435;0.3584485643297569;0.36002242450814953;0.36159628468654215;0.36317014486493476;0.3647440050433273;0.36631786522171994;0.36789172540011256;0.3694655855785052;0.37103944575689773;0.37261330593529035;0.37418716611368297;0.3757610262920756;0.3773348864704682;0.37890874664886076;0.3804826068272534;0.382056467005646;0.3836303271840386;0.38520418736243117;0.3867780475408238;0.3883519077192164;0.389925767897609;0.3914996280760016;0.3930734882543942;0.3946473484327868;0.39622120861117943;0.39779506878957205;0.3993689289679646;0.4009427891463572;0.40251664932474984;0.40409050950314246;0.405664369681535;0.40723822985992764;0.40881209003832025;0.41038595021671287;0.41195981039510543;0.41353367057349805;0.41510753075189066;0.4166813909302833;0.41825525110867584;0.41982911128706846;0.4214029714654611;0.4229768316438537;0.4245506918222463;0.42612455200063887;0.4276984121790315;0.4292722723574241;0.4308461325358167;0.4324199927142093;0.4339938528926019;0.4355677130709945;0.4368220021944536;0.43807629131791276;0.4396501514963053;0.44122401167469794;0.44279787185309055;0.44437173203148317;0.44594559220987573;0.44751945238826835;0.44909331256666096;0.4506671727450536;0.45224103292344614;0.45381489310183876;0.4553887532802314;0.456962613458624;0.4585364736370166;0.46011033381540917;0.4616841939938018;0.4632580541721944;0.464831914350587;0.4664057745289796;0.4679796347073722;0.4695534948857648;0.4711273550641574;0.47270121524255;0.4742750754209426;0.4758489355993352;0.47742279577772784;0.4789966559561204;0.480570516134513;0.48214437631290563;0.48371823649129825;0.48529209666969086;0.4868659568480834;0.48843981702647604;0.49001367720486866;0.4915875373832613;0.49316139756165384;0.49473525774004645;0.49630911791843907;0.4978829780968317;0.49945683827522425;0.5010306984536169;0.5026045586320095;0.504178418810402;0.5054327079338612;0.5066869970573203;0.5082608572357129;0.5098347174141055;0.5114085775924981;0.5126628667159573;0.5139171558394163;0.515491016017809;0.5170648761962016;0.5186387363745941;0.5202125965529868;0.5214668856764458;0.522721174799905;0.5242950349782975;0.5258688951566902;0.5274427553350828;0.5286970444585419;0.5299513335820011;0.5312056227054601;0.5324599118289193;0.5340337720073118;0.5356076321857045;0.5371814923640971;0.5387553525424896;0.5403292127208823;0.5419030728992749;0.5434769330776675;0.5450507932560601;0.5466246534344527;0.5478789425579118;0.549133231681371;0.55038752080483;0.5516418099282892;0.5532156701066817;0.5547895302850744;0.556363390463467;0.5576176795869261;0.5588719687103851;0.5604458288887778;0.5620196890671704;0.563593549245563;0.5651674094239556;0.5664216985474148;0.5676759876708738;0.5692498478492665;0.570823708027659;0.5723975682060516;0.5739714283844443;0.5755452885628368;0.5771191487412295;0.578693008919622;0.5802668690980146;0.5818407292764073;0.5834145894548;0.5849884496331926;0.5865623098115853;0.588136169989978;0.5897100301683706;0.5912838903467633;0.5928577505251559;0.5944316107035486;0.5960054708819412;0.5975793310603339;0.5991531912387266;0.6007270514171192;0.6023009115955119;0.6038747717739046;0.6054486319522973;0.6070224921306899;0.6085963523090826;0.6101702124874753;0.6117440726658679;0.6133179328442606;0.6145722219677198;0.615826511091179;0.6174003712695716;0.6189742314479643;0.6205480916263569;0.6221219518047496;0.6236958119831423;0.625269672161535;0.6268435323399276;0.6280978214633868;0.629352110586846;0.6309259707652387;0.6324998309436314;0.634073691122024;0.6353279802454832;0.6365822693689424;0.638156129547335;0.6397299897257277;0.6413038499041204;0.642877710082513;0.6444515702609057;0.6460254304392984;0.6475992906176911;0.6491731507960837;0.6507470109744764;0.6523208711528691;0.6538947313312617;0.6551490204547209;0.65640330957818;0.6579771697565727;0.6595510299349654;0.6611248901133581;0.6626987502917507;0.6642726104701434;0.6658464706485361;0.6674203308269288;0.6689941910053214;0.6705680511837141;0.6721419113621068;0.6737157715404994;0.6752896317188921;0.6768634918972848;0.6784373520756775;0.6800112122540701;0.6815850724324628;0.6831589326108555;0.6847327927892481;0.6863066529676408;0.6878805131460334;0.689454373324426;0.6910282335028187;0.6926020936812114;0.6941759538596041;0.6957498140379967;0.6973236742163894;0.6988975343947821;0.7004713945731748;0.7020452547515674;0.7036191149299601;0.7051929751083528;0.7067668352867454;0.7083406954651381;0.7099145556435308;0.7114884158219235;0.7130622760003161;0.7146361361787088;0.7162099963571015;0.7177838565354941;0.7193577167138868;0.7209315768922795;0.7225054370706722;0.7240792972490648;0.725333586372524;0.7265878754959831;0.7281617356743758;0.7297355958527685;0.7313094560311612;0.7325637451546203;0.7338180342780796;0.7353918944564722;0.7369657546348648;0.7385396148132575;0.7401134749916501;0.7416873351700428;0.7432611953484355;0.7448350555268282;0.7464089157052208;0.7479827758836135;0.7495566360620062;0.7511304962403988;0.7527043564187915;0.7542782165971842;0.7558520767755769;0.7574259369539695;0.7589997971323622;0.7605736573107549;0.7621475174891476;0.7637213776675402;0.7652952378459329;0.7668690980243256;0.7684429582027182;0.7700168183811109;0.7712711075045701;0.7728449676829627;0.7744188278613554;0.7759926880397481;0.7775665482181408;0.7791404083965334;0.7807142685749261;0.7822881287533188;0.7838619889317114;0.7854358491101041;0.7866901382335633;0.7879444273570224;0.7891987164804816;0.7907725766588742;0.7923464368372669;0.7939202970156596;0.7954941571940523;0.7970680173724449;0.7986418775508376;0.8002157377292303;0.8017895979076229;0.8033634580860156;0.8046177472094748;0.805872036332934;0.8074458965113266;0.8090197566897193;0.8105936168681119;0.8121674770465046;0.8137413372248973;0.81531519740329;0.8168890575816826;0.8181433467051419;0.819397635828601;0.8209714960069937;0.8225453561853864;0.824119216363779;0.8256930765421717;0.8272669367205644;0.8288407968989571;0.8304146570773497;0.8319885172557423;0.833562377434135;0.8351362376125276;0.8367100977909203;0.838283957969313;0.8398578181477057;0.8414316783260983;0.843005538504491;0.8445793986828837;0.8461532588612763;0.8474075479847355;0.8486618371081948;0.8502356972865874;0.8518095574649801;0.8533834176433728;0.8549572778217653;0.8562115669452246;0.8574658560686838;0.8590397162470764;0.8606135764254691;0.8621874366038618;0.8637612967822544;0.8653351569606471;0.8669090171390398;0.8684828773174325;0.8697371664408916;0.8709914555643508;0.8725653157427434;0.8741391759211361;0.8757130360995288;0.8769673252229879;0.8782216143464472;0.8797954745248399;0.8813693347032325;0.8829431948816251;0.8845170550600178;0.8860909152384104;0.8876647754168031;0.8892386355951958;0.8908124957735885;0.8923863559519811;0.8936406450754404;0.8948949341988995;0.8964687943772922;0.8980426545556849;0.8996165147340776;0.9008708038575367;0.9021250929809959;0.9036989531593885;0.9052728133377812;0.9068466735161739;0.9084205336945665;0.9099943938729592;0.9115682540513519;0.9131421142297446;0.9143964033532037;0.9156506924766629;0.9172245526550555;0.9187984128334482;0.9203722730118409;0.9219461331902336;0.9235199933686262;0.9250938535470189;0.9266677137254116;0.9279220028488707;0.92917629197233;0.9307501521507227;0.9323240123291153;0.933897872507508;0.9354717326859006;0.9370455928642932;0.9386194530426859;0.9401933132210786;0.9417671733994712;0.9433410335778639;0.9449148937562566;0.9464887539346493;0.9480626141130419;0.9496364742914346;0.9512103344698273;0.95278419464822;0.9543580548266126;0.9559319150050053;0.957505775183398;0.9590796353617906;0.9606534955401833;0.962227355718576;0.9638012158969687;0.9653750760753613;0.966948936253754;0.9685227964321467;0.9700966566105393;0.971670516788932;0.9732443769673247;0.9748182371457174;0.97639209732411;0.9779659575025027;0.9795398176808953;0.9811136778592879;0.9826875380376806;0.9842613982160733;0.985835258394466;0.9874091185728586;0.9889829787512513;0.990556838929644;0.9921306991080366;0.9937045592864293;0.995278419464822;0.9968522796432147;0.9984261398216073;1" keyTimes="0;0.0015384615384615385;0.003076923076923077;0.004615384615384616;0.006153846153846154;0.007692307692307693;0.009230769230769232;0.010769230769230769;0.012307692307692308;0.013846153846153847;0.015384615384615385;0.016923076923076923;0.018461538461538463;0.02;0.021538461538461538;0.023076923076923078;0.024615384615384615;0.026153846153846153;0.027692307692307693;0.02923076923076923;0.03076923076923077;0.03230769230769231;0.033846153846153845;0.03538461538461538;0.036923076923076927;0.038461538461538464;0.04;0.04153846153846154;0.043076923076923075;0.04461538461538461;0.046153846153846156;0.047692307692307694;0.04923076923076923;0.05076923076923077;0.052307692307692305;0.05384615384615385;0.055384615384615386;0.05692307692307692;0.05846153846153846;0.06;0.06153846153846154;0.06307692307692307;0.06461538461538462;0.06615384615384616;0.06769230769230769;0.06923076923076923;0.07076923076923076;0.07230769230769231;0.07384615384615385;0.07538461538461538;0.07692307692307693;0.07846153846153846;0.08;0.08153846153846153;0.08307692307692308;0.08461538461538462;0.08615384615384615;0.0876923076923077;0.08923076923076922;0.09076923076923077;0.09230769230769231;0.09384615384615384;0.09538461538461539;0.09692307692307692;0.09846153846153846;0.1;0.10153846153846154;0.10307692307692308;0.10461538461538461;0.10615384615384615;0.1076923076923077;0.10923076923076923;0.11076923076923077;0.1123076923076923;0.11384615384615385;0.11538461538461539;0.11692307692307692;0.11846153846153847;0.12;0.12153846153846154;0.12307692307692308;0.12461538461538461;0.12615384615384614;0.1276923076923077;0.12923076923076923;0.13076923076923078;0.13230769230769232;0.13384615384615384;0.13538461538461538;0.13692307692307693;0.13846153846153847;0.14;0.14153846153846153;0.14307692307692307;0.14461538461538462;0.14615384615384616;0.1476923076923077;0.14923076923076922;0.15076923076923077;0.1523076923076923;0.15384615384615385;0.15538461538461537;0.15692307692307692;0.15846153846153846;0.16;0.16153846153846155;0.16307692307692306;0.1646153846153846;0.16615384615384615;0.1676923076923077;0.16923076923076924;0.17076923076923076;0.1723076923076923;0.17384615384615384;0.1753846153846154;0.17692307692307693;0.17846153846153845;0.18;0.18153846153846154;0.18307692307692308;0.18461538461538463;0.18615384615384614;0.18769230769230769;0.18923076923076923;0.19076923076923077;0.19230769230769232;0.19384615384615383;0.19538461538461538;0.19692307692307692;0.19846153846153847;0.2;0.20153846153846153;0.20307692307692307;0.20461538461538462;0.20615384615384616;0.2076923076923077;0.20923076923076922;0.21076923076923076;0.2123076923076923;0.21384615384615385;0.2153846153846154;0.2169230769230769;0.21846153846153846;0.22;0.22153846153846155;0.2230769230769231;0.2246153846153846;0.22615384615384615;0.2276923076923077;0.22923076923076924;0.23076923076923078;0.2323076923076923;0.23384615384615384;0.2353846153846154;0.23692307692307693;0.23846153846153847;0.24;0.24153846153846154;0.24307692307692308;0.24461538461538462;0.24615384615384617;0.24769230769230768;0.24923076923076923;0.25076923076923074;0.2523076923076923;0.25384615384615383;0.2553846153846154;0.2569230769230769;0.25846153846153846;0.26;0.26153846153846155;0.2630769230769231;0.26461538461538464;0.26615384615384613;0.2676923076923077;0.2692307692307692;0.27076923076923076;0.2723076923076923;0.27384615384615385;0.2753846153846154;0.27692307692307694;0.2784615384615385;0.28;0.2815384615384615;0.28307692307692306;0.2846153846153846;0.28615384615384615;0.2876923076923077;0.28923076923076924;0.2907692307692308;0.2923076923076923;0.29384615384615387;0.2953846153846154;0.2969230769230769;0.29846153846153844;0.3;0.30153846153846153;0.3030769230769231;0.3046153846153846;0.30615384615384617;0.3076923076923077;0.30923076923076925;0.31076923076923074;0.3123076923076923;0.31384615384615383;0.3153846153846154;0.3169230769230769;0.31846153846153846;0.32;0.32153846153846155;0.3230769230769231;0.32461538461538464;0.3261538461538461;0.32769230769230767;0.3292307692307692;0.33076923076923076;0.3323076923076923;0.33384615384615385;0.3353846153846154;0.33692307692307694;0.3384615384615385;0.34;0.3415384615384615;0.34307692307692306;0.3446153846153846;0.34615384615384615;0.3476923076923077;0.34923076923076923;0.3507692307692308;0.3523076923076923;0.35384615384615387;0.3553846153846154;0.3569230769230769;0.35846153846153844;0.36;0.36153846153846153;0.3630769230769231;0.3646153846153846;0.36615384615384616;0.3676923076923077;0.36923076923076925;0.3707692307692308;0.3723076923076923;0.37384615384615383;0.37538461538461537;0.3769230769230769;0.37846153846153846;0.38;0.38153846153846155;0.3830769230769231;0.38461538461538464;0.3861538461538462;0.38769230769230767;0.3892307692307692;0.39076923076923076;0.3923076923076923;0.39384615384615385;0.3953846153846154;0.39692307692307693;0.3984615384615385;0.4;0.4015384615384615;0.40307692307692305;0.4046153846153846;0.40615384615384614;0.4076923076923077;0.40923076923076923;0.4107692307692308;0.4123076923076923;0.41384615384615386;0.4153846153846154;0.4169230769230769;0.41846153846153844;0.42;0.42153846153846153;0.4230769230769231;0.4246153846153846;0.42615384615384616;0.4276923076923077;0.42923076923076925;0.4307692307692308;0.4323076923076923;0.4338461538461538;0.43538461538461537;0.4369230769230769;0.43846153846153846;0.44;0.44153846153846155;0.4430769230769231;0.44461538461538463;0.4461538461538462;0.44769230769230767;0.4492307692307692;0.45076923076923076;0.4523076923076923;0.45384615384615384;0.4553846153846154;0.45692307692307693;0.4584615384615385;0.46;0.46153846153846156;0.46307692307692305;0.4646153846153846;0.46615384615384614;0.4676923076923077;0.46923076923076923;0.4707692307692308;0.4723076923076923;0.47384615384615386;0.4753846153846154;0.47692307692307695;0.47846153846153844;0.48;0.4815384615384615;0.48307692307692307;0.4846153846153846;0.48615384615384616;0.4876923076923077;0.48923076923076925;0.4907692307692308;0.49230769230769234;0.4938461538461538;0.49538461538461537;0.4969230769230769;0.49846153846153846;0.5;0.5015384615384615;0.5030769230769231;0.5046153846153846;0.5061538461538462;0.5076923076923077;0.5092307692307693;0.5107692307692308;0.5123076923076924;0.5138461538461538;0.5153846153846153;0.5169230769230769;0.5184615384615384;0.52;0.5215384615384615;0.5230769230769231;0.5246153846153846;0.5261538461538462;0.5276923076923077;0.5292307692307693;0.5307692307692308;0.5323076923076923;0.5338461538461539;0.5353846153846153;0.536923076923077;0.5384615384615384;0.54;0.5415384615384615;0.5430769230769231;0.5446153846153846;0.5461538461538461;0.5476923076923077;0.5492307692307692;0.5507692307692308;0.5523076923076923;0.5538461538461539;0.5553846153846154;0.556923076923077;0.5584615384615385;0.56;0.5615384615384615;0.563076923076923;0.5646153846153846;0.5661538461538461;0.5676923076923077;0.5692307692307692;0.5707692307692308;0.5723076923076923;0.5738461538461539;0.5753846153846154;0.5769230769230769;0.5784615384615385;0.58;0.5815384615384616;0.583076923076923;0.5846153846153846;0.5861538461538461;0.5876923076923077;0.5892307692307692;0.5907692307692308;0.5923076923076923;0.5938461538461538;0.5953846153846154;0.5969230769230769;0.5984615384615385;0.6;0.6015384615384616;0.6030769230769231;0.6046153846153847;0.6061538461538462;0.6076923076923076;0.6092307692307692;0.6107692307692307;0.6123076923076923;0.6138461538461538;0.6153846153846154;0.6169230769230769;0.6184615384615385;0.62;0.6215384615384615;0.6230769230769231;0.6246153846153846;0.6261538461538462;0.6276923076923077;0.6292307692307693;0.6307692307692307;0.6323076923076923;0.6338461538461538;0.6353846153846154;0.6369230769230769;0.6384615384615384;0.64;0.6415384615384615;0.6430769230769231;0.6446153846153846;0.6461538461538462;0.6476923076923077;0.6492307692307693;0.6507692307692308;0.6523076923076923;0.6538461538461539;0.6553846153846153;0.6569230769230769;0.6584615384615384;0.66;0.6615384615384615;0.6630769230769231;0.6646153846153846;0.6661538461538462;0.6676923076923077;0.6692307692307692;0.6707692307692308;0.6723076923076923;0.6738461538461539;0.6753846153846154;0.676923076923077;0.6784615384615384;0.68;0.6815384615384615;0.683076923076923;0.6846153846153846;0.6861538461538461;0.6876923076923077;0.6892307692307692;0.6907692307692308;0.6923076923076923;0.6938461538461539;0.6953846153846154;0.696923076923077;0.6984615384615385;0.7;0.7015384615384616;0.703076923076923;0.7046153846153846;0.7061538461538461;0.7076923076923077;0.7092307692307692;0.7107692307692308;0.7123076923076923;0.7138461538461538;0.7153846153846154;0.7169230769230769;0.7184615384615385;0.72;0.7215384615384616;0.7230769230769231;0.7246153846153847;0.7261538461538461;0.7276923076923076;0.7292307692307692;0.7307692307692307;0.7323076923076923;0.7338461538461538;0.7353846153846154;0.7369230769230769;0.7384615384615385;0.74;0.7415384615384616;0.7430769230769231;0.7446153846153846;0.7461538461538462;0.7476923076923077;0.7492307692307693;0.7507692307692307;0.7523076923076923;0.7538461538461538;0.7553846153846154;0.7569230769230769;0.7584615384615384;0.76;0.7615384615384615;0.7630769230769231;0.7646153846153846;0.7661538461538462;0.7676923076923077;0.7692307692307693;0.7707692307692308;0.7723076923076924;0.7738461538461539;0.7753846153846153;0.7769230769230769;0.7784615384615384;0.78;0.7815384615384615;0.7830769230769231;0.7846153846153846;0.7861538461538462;0.7876923076923077;0.7892307692307692;0.7907692307692308;0.7923076923076923;0.7938461538461539;0.7953846153846154;0.796923076923077;0.7984615384615384;0.8;0.8015384615384615;0.803076923076923;0.8046153846153846;0.8061538461538461;0.8076923076923077;0.8092307692307692;0.8107692307692308;0.8123076923076923;0.8138461538461539;0.8153846153846154;0.816923076923077;0.8184615384615385;0.82;0.8215384615384616;0.823076923076923;0.8246153846153846;0.8261538461538461;0.8276923076923077;0.8292307692307692;0.8307692307692308;0.8323076923076923;0.8338461538461538;0.8353846153846154;0.8369230769230769;0.8384615384615385;0.84;0.8415384615384616;0.8430769230769231;0.8446153846153847;0.8461538461538461;0.8476923076923077;0.8492307692307692;0.8507692307692307;0.8523076923076923;0.8538461538461538;0.8553846153846154;0.8569230769230769;0.8584615384615385;0.86;0.8615384615384616;0.8630769230769231;0.8646153846153846;0.8661538461538462;0.8676923076923077;0.8692307692307693;0.8707692307692307;0.8723076923076923;0.8738461538461538;0.8753846153846154;0.8769230769230769;0.8784615384615385;0.88;0.8815384615384615;0.8830769230769231;0.8846153846153846;0.8861538461538462;0.8876923076923077;0.8892307692307693;0.8907692307692308;0.8923076923076924;0.8938461538461538;0.8953846153846153;0.8969230769230769;0.8984615384615384;0.9;0.9015384615384615;0.9030769230769231;0.9046153846153846;0.9061538461538462;0.9076923076923077;0.9092307692307692;0.9107692307692308;0.9123076923076923;0.9138461538461539;0.9153846153846154;0.916923076923077;0.9184615384615384;0.92;0.9215384615384615;0.9230769230769231;0.9246153846153846;0.9261538461538461;0.9276923076923077;0.9292307692307692;0.9307692307692308;0.9323076923076923;0.9338461538461539;0.9353846153846154;0.936923076923077;0.9384615384615385;0.94;0.9415384615384615;0.943076923076923;0.9446153846153846;0.9461538461538461;0.9476923076923077;0.9492307692307692;0.9507692307692308;0.9523076923076923;0.9538461538461539;0.9553846153846154;0.9569230769230769;0.9584615384615385;0.96;0.9615384615384616;0.963076923076923;0.9646153846153847;0.9661538461538461;0.9676923076923077;0.9692307692307692;0.9707692307692307;0.9723076923076923;0.9738461538461538;0.9753846153846154;0.9769230769230769;0.9784615384615385;0.98;0.9815384615384616;0.9830769230769231;0.9846153846153847;0.9861538461538462;0.9876923076923076;0.9892307692307692;0.9907692307692307;0.9923076923076923;0.9938461538461538;0.9953846153846154;0.9969230769230769;0.9984615384615385;1" calcMode="linear"
+      rotate="auto"
+      repeatCount="indefinite"
+    />
+  
+      </path>
+
     </g>
   
+
         
-      <g>
+      <g
+        transform="translate(
+          233.7
+          206.92307692307693
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13465,11 +14018,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13482,14 +14059,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 22.200000000000017 0 L 44.400000000000034 0 L 44.400000000000034 -17.692307692307708 L 44.400000000000034 -35.38461538461539 L 66.59999999999997 -35.38461538461539 L 88.80000000000001 -35.38461538461539 L 111 -35.38461538461539 L 133.2 -35.38461538461539 L 155.39999999999998 -35.38461538461539 L 177.60000000000002 -35.38461538461539 L 199.8 -35.38461538461539 L 222 -35.38461538461539 L 244.2 -35.38461538461539 L 266.4 -35.38461538461539 L 288.59999999999997 -35.38461538461539 L 310.8 -35.38461538461539 L 332.99999999999994 -35.38461538461539 L 355.2 -35.38461538461539 L 377.40000000000003 -35.38461538461539 L 399.59999999999997 -35.38461538461539 L 421.8 -35.38461538461539 L 443.99999999999994 -35.38461538461539 L 466.2 -35.38461538461539 L 488.40000000000003 -35.38461538461539"
+      dur="90s"
+      begin="0s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          966.3
+          206.92307692307693
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13507,11 +14103,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13524,14 +14144,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 22.200000000000045 0 L 44.39999999999998 0 L 66.60000000000014 0 L 88.79999999999995 0 L 111 0 L 111 -17.692307692307708 L 111 -35.38461538461539 L 133.20000000000005 -35.38461538461539 L 155.4000000000001 -35.38461538461539 L 133.20000000000005 -35.38461538461539 L 111 -35.38461538461539 L 88.79999999999995 -35.38461538461539 L 66.60000000000014 -35.38461538461539 L 44.39999999999998 -35.38461538461539 L 22.200000000000045 -35.38461538461539 L 0 -35.38461538461539 L -22.199999999999932 -35.38461538461539 L -44.39999999999998 -35.38461538461539 L -66.60000000000002 -35.38461538461539 L -88.79999999999995 -35.38461538461539 L -111 -35.38461538461539 L -133.19999999999993 -35.38461538461539 L -155.39999999999998 -35.38461538461539 L -177.60000000000002 -35.38461538461539"
+      dur="90s"
+      begin="0.35s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          544.5
+          260
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13549,11 +14188,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13566,14 +14229,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 0 -17.69230769230768 L 22.199999999999932 -17.69230769230768 L 44.39999999999998 -17.69230769230768 L 66.60000000000002 -17.69230769230768 L 88.79999999999995 -17.69230769230768 L 111 -17.69230769230768 L 133.19999999999993 -17.69230769230768 L 133.19999999999993 0 L 155.39999999999998 0 L 155.39999999999998 -17.69230769230768 L 155.39999999999998 -35.38461538461539 L 155.39999999999998 -53.076923076923066 L 155.39999999999998 -70.76923076923077 L 155.39999999999998 -88.46153846153845 L 177.60000000000002 -88.46153846153845 L 199.79999999999995 -88.46153846153845 L 222 -88.46153846153845 L 244.19999999999993 -88.46153846153845 L 266.4 -88.46153846153845 L 288.6 -88.46153846153845 L 310.79999999999995 -88.46153846153845 L 333 -88.46153846153845 L 355.19999999999993 -88.46153846153845 L 377.4 -88.46153846153845"
+      dur="90s"
+      begin="0.7s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          566.6999999999999
+          260
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13591,11 +14273,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13608,14 +14314,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 0 -17.69230769230768 L 22.200000000000045 -17.69230769230768 L 44.40000000000009 -17.69230769230768 L 66.60000000000002 -17.69230769230768 L 88.80000000000007 -17.69230769230768 L 111 -17.69230769230768 L 133.20000000000005 -17.69230769230768 L 133.20000000000005 -35.38461538461539 L 133.20000000000005 -53.076923076923066 L 133.20000000000005 -70.76923076923077 L 133.20000000000005 -88.46153846153845 L 155.4000000000001 -88.46153846153845 L 177.60000000000002 -88.46153846153845 L 199.80000000000007 -88.46153846153845 L 222 -88.46153846153845 L 244.20000000000005 -88.46153846153845 L 266.4000000000001 -88.46153846153845 L 288.6 -88.46153846153845 L 310.80000000000007 -88.46153846153845 L 333 -88.46153846153845 L 355.20000000000005 -88.46153846153845 L 355.20000000000005 -70.76923076923077 L 355.20000000000005 -53.076923076923066 L 377.4000000000001 -53.076923076923066"
+      dur="90s"
+      begin="1.0499999999999998s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          588.9
+          260
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13633,11 +14358,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13650,14 +14399,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L -22.200000000000045 0 L -22.200000000000045 -17.69230769230768 L -44.39999999999998 -17.69230769230768 L -66.60000000000002 -17.69230769230768 L -88.80000000000001 -17.69230769230768 L -111 -17.69230769230768 L -133.2 -17.69230769230768 L -155.39999999999998 -17.69230769230768 L -177.59999999999997 -17.69230769230768 L -199.8 -17.69230769230768 L -222 -17.69230769230768 L -244.2 -17.69230769230768 L -244.2 -35.38461538461539 L -244.2 -53.076923076923066 L -222 -53.076923076923066 L -199.8 -53.076923076923066 L -177.59999999999997 -53.076923076923066 L -155.39999999999998 -53.076923076923066 L -155.39999999999998 -70.76923076923077 L -155.39999999999998 -88.46153846153845 L -177.59999999999997 -88.46153846153845 L -199.8 -88.46153846153845 L -222 -88.46153846153845 L -244.2 -88.46153846153845"
+      dur="90s"
+      begin="1.4s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          611.1
+          260
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13675,11 +14443,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13692,14 +14484,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 0 -17.69230769230768 L -22.200000000000045 -17.69230769230768 L -44.40000000000009 -17.69230769230768 L -66.60000000000002 -17.69230769230768 L -88.80000000000007 -17.69230769230768 L -111.00000000000006 -17.69230769230768 L -111.00000000000006 -35.38461538461539 L -111.00000000000006 -53.076923076923066 L -133.20000000000005 -53.076923076923066 L -155.40000000000003 -53.076923076923066 L -177.60000000000002 -53.076923076923066 L -199.8 -53.076923076923066 L -222.00000000000006 -53.076923076923066 L -244.20000000000005 -53.076923076923066 L -266.40000000000003 -53.076923076923066 L -288.6 -53.076923076923066 L -310.80000000000007 -53.076923076923066 L -333 -53.076923076923066 L -333 -70.76923076923077 L -333 -88.46153846153845 L -310.80000000000007 -88.46153846153845 L -288.6 -88.46153846153845 L -266.40000000000003 -88.46153846153845 L -244.20000000000005 -88.46153846153845"
+      dur="90s"
+      begin="1.75s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          633.3
+          260
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13717,11 +14528,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13734,14 +14569,33 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 0 -17.69230769230768 L 22.200000000000045 -17.69230769230768 L 22.200000000000045 0 L 44.39999999999998 0 L 44.39999999999998 -17.69230769230768 L 66.60000000000002 -17.69230769230768 L 88.80000000000007 -17.69230769230768 L 111 -17.69230769230768 L 133.20000000000005 -17.69230769230768 L 155.39999999999998 -17.69230769230768 L 177.60000000000002 -17.69230769230768 L 199.80000000000007 -17.69230769230768 L 222 -17.69230769230768 L 222 -35.38461538461539 L 222 -53.076923076923066 L 244.20000000000005 -53.076923076923066 L 266.4 -53.076923076923066 L 288.6 -53.076923076923066 L 288.6 -70.76923076923077 L 288.6 -88.46153846153845 L 310.80000000000007 -88.46153846153845 L 333 -88.46153846153845 L 355.20000000000005 -88.46153846153845 L 377.4 -88.46153846153845"
+      dur="90s"
+      begin="2.0999999999999996s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
-      <g>
+      <g
+        transform="translate(
+          611.1
+          313.0769230769231
+        )"
+      >
+
         
-    <g transform="translate(NaN NaN)">
+    <g>
+
       <path
         d="
           M -8 7
@@ -13759,11 +14613,35 @@
         opacity="0.96"
       />
 
-      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
-      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse
+        cx="-3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
 
-      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
-      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+      <ellipse
+        cx="3"
+        cy="-1"
+        rx="2.5"
+        ry="3"
+        fill="#FFFFFF"
+      />
+
+      <circle
+        cx="-2.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
+
+      <circle
+        cx="3.5"
+        cy="-1"
+        r="1.2"
+        fill="#17202B"
+      />
 
       
     <animateTransform
@@ -13776,11 +14654,24 @@
       repeatCount="indefinite"
     />
   
+
     </g>
   
+
         
+    <animateMotion
+      path="M 0 0 L 22.199999999999932 0 L 44.39999999999998 0 L 66.59999999999991 0 L 88.79999999999995 0 L 88.79999999999995 -17.692307692307736 L 88.79999999999995 -35.38461538461536 L 88.79999999999995 -53.076923076923094 L 66.59999999999991 -53.076923076923094 L 66.59999999999991 -70.76923076923077 L 44.39999999999998 -70.76923076923077 L 22.199999999999932 -70.76923076923077 L 0 -70.76923076923077 L -22.200000000000045 -70.76923076923077 L -44.40000000000009 -70.76923076923077 L -66.60000000000002 -70.76923076923077 L -88.80000000000007 -70.76923076923077 L -111.00000000000006 -70.76923076923077 L -111.00000000000006 -88.46153846153848 L -111.00000000000006 -106.15384615384616 L -133.20000000000005 -106.15384615384616 L -155.40000000000003 -106.15384615384616 L -177.60000000000002 -106.15384615384616 L -199.8 -106.15384615384616 L -222.00000000000006 -106.15384615384616"
+      dur="90s"
+      begin="2.4499999999999997s"
+      rotate="auto"
+      calcMode="linear"
+      repeatCount="indefinite"
+    />
+  
+
       </g>
     
+
       </g>
 
       
@@ -13890,19 +14781,41 @@
   </g>
     </g>
   
+
       
-    <g font-family="monospace" font-size="10" letter-spacing="1.4">
-      <text x="45" y="430" fill="#00D9FF">
+    <g
+      font-family="monospace"
+      font-size="10"
+      letter-spacing="1.4"
+    >
+
+      <text
+        x="45"
+        y="430"
+        fill="#00D9FF"
+      >
         PAC-MAN // ACTIVE
       </text>
 
-      <text x="600" y="430" text-anchor="middle" fill="#657B8C">
+      <text
+        x="600"
+        y="430"
+        text-anchor="middle"
+        fill="#657B8C"
+      >
         CONTRIBUTION DATA // REAL-TIME VISUALIZATION
       </text>
 
-      <text x="1155" y="430" text-anchor="end" fill="#39D353">
+      <text
+        x="1155"
+        y="430"
+        text-anchor="end"
+        fill="#39D353"
+      >
         SYSTEM ONLINE
       </text>
+
     </g>
   
+
     </svg>
