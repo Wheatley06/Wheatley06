@@ -432,7 +432,8 @@ function renderContributionCells(days, events) {
           routePoint.y === point.y
       );
 
-      const pickupTime = Math.max(0, index) * 0.42;
+      cconst pickupTime =
+        Math.max(0, index) * events.speed.secondsPerCell;
 
       return `
         <rect
@@ -462,7 +463,8 @@ function renderContributionCells(days, events) {
 function renderNormalCoins(events) {
   return events.normalCoins.map((coin) => {
     const position = cellCenter(coin.x, coin.y);
-    const pickupTime = Math.max(0, coin.routeIndex) * 0.42;
+    const pickupTime =
+  Math.max(0, coin.routeIndex) * events.speed.secondsPerCell;
 
     return `
       <circle
@@ -487,7 +489,8 @@ function renderNormalCoins(events) {
 function renderSpecialCoins(events) {
   return events.specialCoins.map((coin) => {
     const position = cellCenter(coin.x, coin.y);
-    const pickupTime = Math.max(0, coin.routeIndex) * 0.42;
+    const pickupTime =
+      Math.max(0, coin.routeIndex) * events.speed.secondsPerCell;
 
     return `
       <g>
@@ -533,7 +536,6 @@ function renderPacman(events) {
 
   const start = route[0];
   const position = cellCenter(start.x, start.y);
-
   const path = routeToSvgPath(route, start);
 
   const radius = mazeMetrics().cell * 0.43;
@@ -556,16 +558,15 @@ function renderPacman(events) {
         fill="#FFD43B"
       >
         ${renderPacmanMouth(radius)}
-
-        ${renderPacmanPath({
-          path,
-          duration: events.speed.duration,
-        })}
       </path>
+
+      ${renderPacmanPath({
+        path,
+        duration: events.speed.duration,
+      })}
     </g>
   `;
 }
-
 // --------------------------------------------------
 // GHOST SHAPE
 // --------------------------------------------------
@@ -656,7 +657,7 @@ function renderGhosts(events) {
 
         ${renderGhostEscape({
           path,
-          duration: events.speed.duration,
+          duration: ghost.duration,
           delay: 0,
         })}
 
