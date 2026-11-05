@@ -35,7 +35,10 @@ function walkable(x, y, layout) {
 
 export function getNeighbors(position, layout = MAZE_LAYOUT) {
   return DIRECTIONS
-    .map((d) => ({ x: position.x + d.x, y: position.y + d.y }))
+    .map((d) => ({
+      x: position.x + d.x,
+      y: position.y + d.y,
+    }))
     .filter((p) => walkable(p.x, p.y, layout));
 }
 
@@ -99,9 +102,15 @@ export function getCollectibles(layout = MAZE_LAYOUT) {
 
   const normalCoins = corridors
     .filter((p) => !specialKeys.has(key(p)))
-    .map((p) => ({ ...p, type: "normal" }));
+    .map((p) => ({
+      ...p,
+      type: "normal",
+    }));
 
-  return { normalCoins, specialCoins };
+  return {
+    normalCoins,
+    specialCoins,
+  };
 }
 
 // --------------------------------------------------
@@ -124,12 +133,15 @@ export function createPacmanRoute(layout = MAZE_LAYOUT) {
 
       visited.add(key(next));
       route.push(next);
+
       traverse(next);
+
       route.push(current);
     }
   }
 
   traverse(pacman);
+
   return route;
 }
 
@@ -168,10 +180,10 @@ function buildSpeedTimeline(route) {
 
 function createGhostRoute(start, layout, ghostIndex) {
   const route = [start];
+
   let current = start;
   let previous = null;
 
-  // Each ghost follows a deterministic wandering route.
   for (let step = 0; step < 24; step++) {
     const options = getNeighbors(current, layout);
 
@@ -179,7 +191,9 @@ function createGhostRoute(start, layout, ghostIndex) {
       (p) => !previous || key(p) !== key(previous)
     );
 
-    const available = candidates.length ? candidates : options;
+    const available = candidates.length
+      ? candidates
+      : options;
 
     if (!available.length) break;
 
@@ -195,6 +209,7 @@ function createGhostRoute(start, layout, ghostIndex) {
 
     previous = current;
     current = available[0];
+
     route.push(current);
   }
 
@@ -213,7 +228,7 @@ export function createGhostRoutes(layout = MAZE_LAYOUT) {
 }
 
 // --------------------------------------------------
-// EVENTS
+// GAME EVENTS
 // --------------------------------------------------
 
 export function createGameEvents(layout = MAZE_LAYOUT) {
