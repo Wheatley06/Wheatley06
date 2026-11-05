@@ -8547,7 +8547,7 @@
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
-      keyTimes="0;0.9015384615384616;0.9045384615384616;0.999;1"
+      keyTimes="0;0.9153846153846155;0.9183846153846155;0.999;1"
       dur="90s"
       repeatCount="indefinite"
     />
@@ -8692,24 +8692,6 @@
       attributeName="opacity"
       values="1;1;0;0;1"
       keyTimes="0;0.14461538461538462;0.14761538461538462;0.999;1"
-      dur="90s"
-      repeatCount="indefinite"
-    />
-  
-      </circle>
-    
-      <circle
-        cx="NaN"
-        cy="NaN"
-        r="2.1"
-        fill="#FFE58A"
-        filter="url(#green-glow)"
-      >
-        
-    <animate
-      attributeName="opacity"
-      values="1;1;0;0;1"
-      keyTimes="0;0.14307692307692307;0.14607692307692308;0.999;1"
       dur="90s"
       repeatCount="indefinite"
     />
@@ -9303,24 +9285,6 @@
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
-      keyTimes="0;0.09230769230769231;0.09530769230769232;0.999;1"
-      dur="90s"
-      repeatCount="indefinite"
-    />
-  
-      </circle>
-    
-      <circle
-        cx="NaN"
-        cy="NaN"
-        r="2.1"
-        fill="#FFE58A"
-        filter="url(#green-glow)"
-      >
-        
-    <animate
-      attributeName="opacity"
-      values="1;1;0;0;1"
       keyTimes="0;0.09076923076923077;0.09376923076923077;0.999;1"
       dur="90s"
       repeatCount="indefinite"
@@ -9501,7 +9465,7 @@
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
-      keyTimes="0;0.2553846153846154;0.2583846153846154;0.999;1"
+      keyTimes="0;0.7861538461538462;0.7891538461538462;0.999;1"
       dur="90s"
       repeatCount="indefinite"
     />
@@ -10437,7 +10401,7 @@
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
-      keyTimes="0;0.27076923076923076;0.27376923076923076;0.999;1"
+      keyTimes="0;0.2723076923076923;0.2753076923076923;0.999;1"
       dur="90s"
       repeatCount="indefinite"
     />
@@ -11859,24 +11823,6 @@
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
-      keyTimes="0;0.4676923076923077;0.4706923076923077;0.999;1"
-      dur="90s"
-      repeatCount="indefinite"
-    />
-  
-      </circle>
-    
-      <circle
-        cx="NaN"
-        cy="NaN"
-        r="2.1"
-        fill="#FFE58A"
-        filter="url(#green-glow)"
-      >
-        
-    <animate
-      attributeName="opacity"
-      values="1;1;0;0;1"
       keyTimes="0;0.4692307692307693;0.4722307692307693;0.999;1"
       dur="90s"
       repeatCount="indefinite"
@@ -12309,7 +12255,7 @@
     <animate
       attributeName="opacity"
       values="1;1;0;0;1"
-      keyTimes="0;0.5553846153846154;0.5583846153846154;0.999;1"
+      keyTimes="0;0.6338461538461538;0.6368461538461538;0.999;1"
       dur="90s"
       repeatCount="indefinite"
     />
@@ -13306,7 +13252,7 @@
         <animate
           attributeName="opacity"
           values="1;1;0;0;1"
-          keyTimes="0;0.9153846153846155;0.9153846153846155;0.99;1"
+          keyTimes="0;0.9015384615384616;0.9015384615384616;0.99;1"
           dur="90s"
           repeatCount="indefinite"
         />
@@ -13346,7 +13292,7 @@
         <animate
           attributeName="opacity"
           values="1;1;0;0;1"
-          keyTimes="0;0.7861538461538462;0.7861538461538462;0.99;1"
+          keyTimes="0;0.2553846153846154;0.2553846153846154;0.99;1"
           dur="90s"
           repeatCount="indefinite"
         />
@@ -13386,7 +13332,7 @@
         <animate
           attributeName="opacity"
           values="1;1;0;0;1"
-          keyTimes="0;0.2723076923076923;0.2723076923076923;0.99;1"
+          keyTimes="0;0.27076923076923076;0.27076923076923076;0.99;1"
           dur="90s"
           repeatCount="indefinite"
         />
@@ -13466,7 +13412,7 @@
         <animate
           attributeName="opacity"
           values="1;1;0;0;1"
-          keyTimes="0;0.6338461538461538;0.6338461538461538;0.99;1"
+          keyTimes="0;0.5553846153846154;0.5553846153846154;0.99;1"
           dur="90s"
           repeatCount="indefinite"
         />
@@ -13702,6 +13648,132 @@
       values="0 0;0 -3;0 0;0 3;0 0"
       dur="2.4s"
       begin="1.4s"
+      repeatCount="indefinite"
+    />
+  
+    </g>
+  
+        
+      </g>
+    
+      <g>
+        
+    <g transform="translate(NaN NaN)">
+      <path
+        d="
+          M -8 7
+          L -8 -1
+          A 8 8 0 0 1 8 -1
+          L 8 7
+          L 4 4
+          L 0 7
+          L -4 4
+          Z
+        "
+        fill="#FF4B75"
+        stroke="#FFFFFF"
+        stroke-width="0.55"
+        opacity="0.96"
+      />
+
+      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+
+      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
+      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+
+      
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      additive="sum"
+      values="0 0;0 -3;0 0;0 3;0 0"
+      dur="2.4s"
+      begin="1.75s"
+      repeatCount="indefinite"
+    />
+  
+    </g>
+  
+        
+      </g>
+    
+      <g>
+        
+    <g transform="translate(NaN NaN)">
+      <path
+        d="
+          M -8 7
+          L -8 -1
+          A 8 8 0 0 1 8 -1
+          L 8 7
+          L 4 4
+          L 0 7
+          L -4 4
+          Z
+        "
+        fill="#00E5FF"
+        stroke="#FFFFFF"
+        stroke-width="0.55"
+        opacity="0.96"
+      />
+
+      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+
+      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
+      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+
+      
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      additive="sum"
+      values="0 0;0 -3;0 0;0 3;0 0"
+      dur="2.4s"
+      begin="2.0999999999999996s"
+      repeatCount="indefinite"
+    />
+  
+    </g>
+  
+        
+      </g>
+    
+      <g>
+        
+    <g transform="translate(NaN NaN)">
+      <path
+        d="
+          M -8 7
+          L -8 -1
+          A 8 8 0 0 1 8 -1
+          L 8 7
+          L 4 4
+          L 0 7
+          L -4 4
+          Z
+        "
+        fill="#FFB84D"
+        stroke="#FFFFFF"
+        stroke-width="0.55"
+        opacity="0.96"
+      />
+
+      <ellipse cx="-3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+      <ellipse cx="3" cy="-1" rx="2.5" ry="3" fill="#FFFFFF"/>
+
+      <circle cx="-2.5" cy="-1" r="1.2" fill="#17202B"/>
+      <circle cx="3.5" cy="-1" r="1.2" fill="#17202B"/>
+
+      
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      additive="sum"
+      values="0 0;0 -3;0 0;0 3;0 0"
+      dur="2.4s"
+      begin="2.4499999999999997s"
       repeatCount="indefinite"
     />
   
