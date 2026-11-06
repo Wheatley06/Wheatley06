@@ -3,7 +3,7 @@ R, C = 13, 50
 W, H = 1110, 230
 CW, CH = W / C, H / R
 D4 = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-T, SP, SG = 3200, 7, 9           # 90 s en unidades de 0.05 s; pac 0.2 s/casilla, fantasma 0.25 s/casilla
+T, SP, SG = 3200, 7, 9          # 90 s en unidades de 0.05 s; pac 0.2 s/casilla, fantasma 0.25 s/casilla
 LOOP = 160
 GCOL = ["#FF5C8A", "#35E6A5", "#00CFFF", "#8B35FF", "#D946EF", "#FFB84D", "#FF4B75", "#4D8DFF"]
 LV = ["#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"]
@@ -295,44 +295,47 @@ def make(g, s):
     S = s['S']; out = []; A = out.append
     A('''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="Wheatley06 cyberpunk Pac-Man contribution maze">
 <defs>
-<linearGradient id="panelGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#12243A"/><stop offset="55%" stop-color="#0B1728"/><stop offset="100%" stop-color="#101020"/></linearGradient>
-<linearGradient id="headerGradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00CFFF" stop-opacity="0.8"/><stop offset="50%" stop-color="#1677FF" stop-opacity="0.25"/><stop offset="100%" stop-color="#D946EF" stop-opacity="0.8"/></linearGradient>
-<linearGradient id="wallGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00CFFF"/><stop offset="100%" stop-color="#1677FF"/></linearGradient>
-<radialGradient id="backgroundGlow"><stop offset="0%" stop-color="#1677FF" stop-opacity="0.18"/><stop offset="100%" stop-color="#0D1117" stop-opacity="0"/></radialGradient>
+<linearGradient id="panelGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#07111F"/><stop offset="55%" stop-color="#0A1226"/><stop offset="100%" stop-color="#11152F"/></linearGradient>
+<linearGradient id="headerGradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7C3AED" stop-opacity="0.9"/><stop offset="48%" stop-color="#22D3EE" stop-opacity="0.7"/><stop offset="100%" stop-color="#10B981" stop-opacity="0.9"/></linearGradient>
+<linearGradient id="wallGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+<radialGradient id="backgroundGlow"><stop offset="0%" stop-color="#7C3AED" stop-opacity="0.15"/><stop offset="100%" stop-color="#020617" stop-opacity="0"/></radialGradient>
 <filter id="neonGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <filter id="strongGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <filter id="greenGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <filter id="wallFx" filterUnits="userSpaceOnUse" x="-6" y="-6" width="1122" height="242"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<pattern id="circuitGrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#00CFFF" stroke-opacity="0.07"/><circle cx="0" cy="0" r="1.5" fill="#00CFFF" opacity="0.2"/></pattern>
+<pattern id="circuitGrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22D3EE" stroke-opacity="0.07"/><circle cx="0" cy="0" r="1.5" fill="#22D3EE" opacity="0.2"/></pattern>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020617"/><stop offset="1" stop-color="#11152F"/></linearGradient>
+<linearGradient id="borderGradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="0.48" stop-color="#22D3EE"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+<linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset="0.5" stop-color="#22D3EE" stop-opacity="0.35"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
 <clipPath id="mazeClip"><rect width="1110" height="230" rx="4"/></clipPath>
 </defs>
-<rect width="1200" height="480" fill="#0D1117"/><rect width="1200" height="480" fill="url(#circuitGrid)"/>
+<rect width="1200" height="480" fill="url(#bgGrad)"/><rect width="1200" height="480" fill="url(#circuitGrid)"/>
 <ellipse cx="600" cy="240" rx="570" ry="300" fill="url(#backgroundGlow)"/>
-<path d="M0 90H1200 M0 420H1200" stroke="#00CFFF" stroke-opacity="0.15"/>
-<path id="circ" d="M25 25H160L180 45H300 M900 25H1040L1060 45H1175" fill="none" stroke="#00CFFF" stroke-opacity="0.35" stroke-width="1.5"/>
+<path d="M0 90H1200 M0 420H1200" stroke="#22D3EE" stroke-opacity="0.15"/>
+<path id="circ" d="M25 25H160L180 45H300 M900 25H1040L1060 45H1175" fill="none" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="1.5"/>
 <path id="trL" d="M25 25H160L180 45H300" fill="none"/><path id="trR" d="M1175 45H1060L1040 25H900" fill="none"/>
-<circle r="2.6" fill="#00CFFF" filter="url(#neonGlow)"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#trL"/></animateMotion></circle>
-<circle r="2.6" fill="#D946EF" filter="url(#neonGlow)"><animateMotion dur="4s" begin="1.5s" repeatCount="indefinite"><mpath href="#trR"/></animateMotion></circle>
-<rect x="25" y="115" width="1150" height="290" rx="12" fill="url(#panelGradient)" stroke="#00CFFF" stroke-opacity="0.45" stroke-width="1.5"/>
-<path d="M45 135H170 M1030 135H1155 M45 385H170 M1030 385H1155" fill="none" stroke="#00CFFF" stroke-opacity="0.5" stroke-width="2"/>
-<path d="M25 155V135Q25 115 45 115 M1155 115Q1175 115 1175 135V155 M25 365V385Q25 405 45 405 M1155 405Q1175 405 1175 385V365" fill="none" stroke="#00CFFF" stroke-width="1.5" opacity="0.7"/>
+<circle r="2.6" fill="#22D3EE" filter="url(#neonGlow)"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#trL"/></animateMotion></circle>
+<circle r="2.6" fill="#7C3AED" filter="url(#neonGlow)"><animateMotion dur="4s" begin="1.5s" repeatCount="indefinite"><mpath href="#trR"/></animateMotion></circle>
+<rect x="25" y="115" width="1150" height="290" rx="12" fill="url(#panelGradient)" stroke="url(#borderGradient)" stroke-opacity="0.9" stroke-width="1.6"/>
+<path d="M45 135H170 M1030 135H1155 M45 385H170 M1030 385H1155" fill="none" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M25 155V135Q25 115 45 115 M1155 115Q1175 115 1175 135V155 M25 365V385Q25 405 45 405 M1155 405Q1175 405 1175 385V365" fill="none" stroke="#22D3EE" stroke-width="1.5" opacity="0.7"/>
 <g font-family="monospace">
-<text x="36" y="48" fill="#00CFFF" font-size="13" letter-spacing="4">SYSTEM // PAC-MAN MATRIX</text>
-<text x="36" y="78" fill="#FFFFFF" font-size="27" font-weight="bold" letter-spacing="3">WHEATLEY06<animate attributeName="fill-opacity" values="1;0.82;1;1;0.9;1" keyTimes="0;0.04;0.08;0.7;0.73;1" dur="6s" repeatCount="indefinite"/></text>
-<circle cx="1094" cy="44" r="3.6" fill="#00D6B0" filter="url(#neonGlow)"><animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
-<text x="1160" y="48" text-anchor="end" fill="#00D6B0" font-size="12" letter-spacing="2">ONLINE</text>
-<text x="1160" y="75" text-anchor="end" fill="#8299B5" font-size="10" letter-spacing="2">STREAK // CURRENT @@CUR@@ DAYS // BEST @@BEST@@</text>
+<text x="36" y="48" fill="#22D3EE" font-size="13" letter-spacing="4">SYSTEM // PAC-MAN MATRIX</text>
+<text x="36" y="78" fill="#E5E7EB" font-size="27" font-weight="bold" letter-spacing="3">WHEATLEY06<animate attributeName="fill-opacity" values="1;0.82;1;1;0.9;1" keyTimes="0;0.04;0.08;0.7;0.73;1" dur="6s" repeatCount="indefinite"/></text>
+<circle cx="1094" cy="44" r="3.6" fill="#10B981" filter="url(#neonGlow)"><animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
+<text x="1160" y="48" text-anchor="end" fill="#10B981" font-size="12" letter-spacing="2">ONLINE</text>
+<text x="1160" y="75" text-anchor="end" fill="#64748B" font-size="10" letter-spacing="2">STREAK // CURRENT @@CUR@@ DAYS // BEST @@BEST@@</text>
 <rect x="35" y="98" width="1130" height="2" fill="url(#headerGradient)"/>
-<text x="45" y="135" fill="#00CFFF" font-size="9" letter-spacing="1.5">NEON MAZE // @@N@@ MOVEMENT NODES</text>
-<text x="1155" y="135" text-anchor="end" fill="#00D6B0" font-size="9" letter-spacing="1.5">@@K@@ CONTRIBUTION CELLS</text>
+<text x="45" y="135" fill="#22D3EE" font-size="9" letter-spacing="1.5">NEON MAZE // @@N@@ MOVEMENT NODES</text>
+<text x="1155" y="135" text-anchor="end" fill="#10B981" font-size="9" letter-spacing="1.5">@@K@@ CONTRIBUTION CELLS</text>
 </g>'''.replace('@@CUR@@', str(s['streak'][0])).replace('@@BEST@@', str(s['streak'][1])).replace('@@N@@', str(len(S))).replace('@@K@@', str(sum(1 for v in s['contrib'].values() if v > 0))))
-    for i, (x, y, col, b) in enumerate([(80, 105, "#00CFFF", 0), (180, 424, "#1677FF", .5), (1040, 108, "#8B35FF", 1),
-                                        (1120, 424, "#D946EF", 1.5), (420, 424, "#00D6B0", .8), (790, 424, "#00CFFF", 1.2)]):
+    for i, (x, y, col, b) in enumerate([(80, 105, "#22D3EE", 0), (180, 424, "#38BDF8", .5), (1040, 108, "#8B35FF", 1),
+                                        (1120, 424, "#7C3AED", 1.5), (420, 424, "#10B981", .8), (790, 424, "#22D3EE", 1.2)]):
         A(f'<circle cx="{x}" cy="{y}" r="2" fill="{col}"><animate attributeName="opacity" values="0;1;0" dur="2.5s" begin="{b}s" repeatCount="indefinite"/><animate attributeName="r" values="2;3.6;2" dur="2.5s" begin="{b}s" repeatCount="indefinite"/></circle>')
     A('<g transform="translate(45 145)" clip-path="url(#mazeClip)">')
     # suelo
-    for (r, c) in sorted(S): A(f'<rect x="{f(c*CW)}" y="{f(r*CH)}" width="{f(CW)}" height="{f(CH)}" fill="#0D1724" opacity="0.65"/>')
-    for c in range(22, 28): A(f'<rect x="{f(c*CW)}" y="{f(6*CH)}" width="{f(CW)}" height="{f(CH)}" fill="#1A1030" opacity="0.8"/>')
+    for (r, c) in sorted(S): A(f'<rect x="{f(c*CW)}" y="{f(r*CH)}" width="{f(CW)}" height="{f(CH)}" fill="#07111F" opacity="0.65"/>')
+    for c in range(22, 28): A(f'<rect x="{f(c*CW)}" y="{f(6*CH)}" width="{f(CW)}" height="{f(CH)}" fill="#1A1340" opacity="0.8"/>')
     # contribuciones (solo visuales, nunca se recogen)
     A('<g filter="url(#greenGlow)">')
     rnd = random.Random(99)
@@ -351,7 +354,7 @@ def make(g, s):
         for c in range(C):
             if g[r][c] == '#':
                 ph[(c + 2 * r) % 5].append(f'<rect x="{f(c*CW+1)}" y="{f(r*CH+1)}" width="{f(CW-2)}" height="{f(CH-2)}" rx="3"/>')
-    A('<g filter="url(#wallFx)" fill="url(#wallGradient)" fill-opacity="0.16" stroke="#00CFFF" stroke-width="1.3">')
+    A('<g filter="url(#wallFx)" fill="url(#wallGradient)" fill-opacity="0.16" stroke="#22D3EE" stroke-width="1.3">')
     for i, rs in enumerate(ph):
         A('<g>' + "".join(rs) + f'<animate attributeName="opacity" values="0.65;1;0.65" dur="2.5s" begin="{i*.25}s" repeatCount="indefinite"/></g>')
     A('</g>')
@@ -362,7 +365,7 @@ def make(g, s):
     for p in s['coins']:
         x, y = px(p); te = s['eaten'].get(p)
         if p in s['sp']:
-            inner = (f'<circle cx="{f(x)}" cy="{f(y)}" r="3.4" fill="#FFE600" stroke="#00CFFF" stroke-width="1"><animate attributeName="r" values="3;4.5;3" dur="0.7s" repeatCount="indefinite"/></circle>'
+            inner = (f'<circle cx="{f(x)}" cy="{f(y)}" r="3.4" fill="#FFE600" stroke="#22D3EE" stroke-width="1"><animate attributeName="r" values="3;4.5;3" dur="0.7s" repeatCount="indefinite"/></circle>'
                      f'<circle cx="{f(x)}" cy="{f(y)}" r="5.2" fill="none" stroke="#FFE600" stroke-opacity="0.35"><animate attributeName="r" values="4;7;4" dur="1.2s" repeatCount="indefinite"/></circle>')
             A(f'<g>{inner}{eat_anim(te) if te else ""}</g>')
         else:
@@ -398,9 +401,10 @@ def make(g, s):
       '<path fill="#FFE600" filter="url(#strongGlow)" d="M0 0L7.4 -4.8A7.4 7.4 0 1 1 7.4 4.8Z"><animate attributeName="d" dur="0.5s" repeatCount="indefinite" '
       'values="M0 0L7.4 -4.8A7.4 7.4 0 1 1 7.4 4.8Z;M0 0L7.4 0A7.4 7.4 0 1 1 7.4 0Z;M0 0L7.4 -4.8A7.4 7.4 0 1 1 7.4 4.8Z"/></path></g></g>')
     A('</g></g>')
-    A('<g font-family="monospace"><text x="36" y="445" fill="#00CFFF" font-size="10" letter-spacing="2">PAC-MAN // CONTRIBUTION ENGINE</text>'
-      '<text x="1160" y="445" text-anchor="end" fill="#8299B5" font-size="10">GENERATED AUTOMATICALLY // GITHUB</text>'
-      '<path d="M35 455H1165" stroke="#00CFFF" stroke-opacity="0.2"/></g></svg>')
+    A('<rect x="45" y="145" width="1110" height="38" fill="url(#scanGrad)" opacity="0.4"><animate attributeName="y" values="145;367;145" dur="8s" repeatCount="indefinite"/></rect>')
+    A('<g font-family="monospace"><text x="36" y="445" fill="#22D3EE" font-size="10" letter-spacing="2">PAC-MAN // CONTRIBUTION ENGINE</text>'
+      '<text x="1160" y="445" text-anchor="end" fill="#64748B" font-size="10">GENERATED AUTOMATICALLY // GITHUB</text>'
+      '<path d="M35 455H1165" stroke="#22D3EE" stroke-opacity="0.2"/></g></svg>')
     return "\n".join(out)
 
 B = [(2,4,2,3),(6,9,2,3),(11,12,1,5),(14,18,2,3),(20,22,2,3),
