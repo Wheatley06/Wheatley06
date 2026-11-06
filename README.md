@@ -15,7 +15,7 @@
   src="pacman/tests/wheatley06-pacman-contributions.svg"
 />
 -->
-![Pac-Man](https://raw.githubusercontent.com/Wheatley06/Wheatley06/main/pacman-contributions.svg)
+<img width="100%" alt="Pac-Man" src="https://raw.githubusercontent.com/Wheatley06/Wheatley06/main/pacman-contributions.svg" />
 
 ## Hi there 👋
 
