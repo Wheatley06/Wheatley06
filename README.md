@@ -8,16 +8,18 @@
   <source media="(max-width: 600px)" srcset="assets/profile-console/console-mobile-dark.svg">
   <img src="assets/profile-console/console-dark.svg" alt="GitHub Profile Console" width="100%">
 </picture>
-
+<!--
 <img
   width="100%"
   alt="Pacman"
   src="pacman/tests/wheatley06-pacman-contributions.svg"
 />
+-->
+![Pac-Man](https://raw.githubusercontent.com/Wheatley06/Wheatley06/main/pacman-contributions.svg)
 
 ## Hi there 👋
 
-<!--
+
 **Wheatley06/Wheatley06** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -30,7 +32,7 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
+
 
 ![Space Shooter](./game.gif)
 
