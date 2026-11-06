@@ -9,6 +9,12 @@
   <img src="assets/profile-console/console-dark.svg" alt="GitHub Profile Console" width="100%">
 </picture>
 
+<img
+  width="100%"
+  alt="Pacman"
+  src="pacman/tests/wheatley06-pacman-contributions.svg"
+/>
+
 ## Hi there 👋
 
 <!--
