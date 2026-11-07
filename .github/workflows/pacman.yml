@@ -1,4 +1,4 @@
-name: Update Pac-Man banner
+name: Update profile banners
 
 on:
   schedule:
@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - generate.py
+      - generate_chambers.py
       - .github/workflows/pacman.yml
 
 permissions:
@@ -20,16 +21,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Generate SVG
-        run: python generate.py pacman-contributions.svg
+      - name: Generate Pac-Man banner
+        run: |
+          mkdir -p assets/pacman
+          python generate.py assets/pacman/pacman-contributions.svg
         env:
           GH_USER: Wheatley06
+      - name: Generate test chambers
+        run: |
+          mkdir -p assets/test-chambers
+          python generate_chambers.py assets/test-chambers/test-chambers.svg
+        env:
+          GH_USER: Wheatley06
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pacman-contributions.svg
+          git add assets/pacman/pacman-contributions.svg assets/test-chambers/test-chambers.svg
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update pac-man banner"
+            git commit -m "chore: update profile banners"
             git push
           fi
