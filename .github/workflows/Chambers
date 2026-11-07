@@ -1,0 +1,39 @@
+name: Update test chambers
+
+on:
+  schedule:
+    - cron: "30 6 * * *"     # todos los días 06:30 UTC (después del banner de Pac-Man)
+  workflow_dispatch:          # botón "Run workflow" manual
+  push:
+    paths:
+      - generate_chambers.py
+      - .github/workflows/chambers.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate test chambers
+        run: |
+          mkdir -p assets/test-chambers
+          python generate_chambers.py assets/test-chambers/test-chambers.svg
+        env:
+          GH_USER: Wheatley06
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/test-chambers/test-chambers.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update test chambers"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push
+          fi
