@@ -29,7 +29,7 @@
 <text x="36" y="78" fill="#E5E7EB" font-size="27" font-weight="bold" letter-spacing="3">WHEATLEY06<animate attributeName="fill-opacity" values="1;0.82;1;1;0.9;1" keyTimes="0;0.04;0.08;0.7;0.73;1" dur="6s" repeatCount="indefinite"/></text>
 <circle cx="1094" cy="44" r="3.6" fill="#10B981" filter="url(#neonGlow)"><animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
 <text x="1160" y="48" text-anchor="end" fill="#10B981" font-size="12" letter-spacing="2">ONLINE</text>
-<text x="1160" y="75" text-anchor="end" fill="#64748B" font-size="10" letter-spacing="2">STREAK // CURRENT 0 DAYS // BEST 8</text>
+<text x="1160" y="75" text-anchor="end" fill="#64748B" font-size="10" letter-spacing="2">STREAK // CURRENT 1 DAYS // BEST 8</text>
 <rect x="35" y="98" width="1130" height="2" fill="url(#headerGradient)"/>
 <text x="45" y="135" fill="#22D3EE" font-size="9" letter-spacing="1.5">NEON MAZE // 262 MOVEMENT NODES</text>
 <text x="1155" y="135" text-anchor="end" fill="#10B981" font-size="9" letter-spacing="1.5">72 CONTRIBUTION CELLS</text>
