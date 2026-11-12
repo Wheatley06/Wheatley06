@@ -44,6 +44,13 @@ Here are some ideas to get you started:
 
 ![Space Shooter](./game.gif)
 
+<img
+  width="100%"
+  alt="Rainbow"
+  src="Images/Miscellaneous/light-bridge.svg"
+/>
+
+
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-rainbow.svg)
 
 <img
