@@ -18,6 +18,13 @@
 <img width="100%" alt="Pac-Man" src="https://raw.githubusercontent.com/Wheatley06/Wheatley06/main/assets/pacman/pacman-contributions.svg" />
 
 
+<img
+  width="100%"
+  alt="Rainbow"
+  src="Images/Miscellaneous/light-bridge.svg"
+/>
+
+
 <img width="100%" alt="Test-chambers" src="https://raw.githubusercontent.com/Wheatley06/Wheatley06/main/assets/test-chambers/test-chambers.svg" />
 
 ## Hi there 👋
@@ -39,11 +46,6 @@ Here are some ideas to get you started:
 
 ![Space Shooter](./game.gif)
 
-<img
-  width="100%"
-  alt="Rainbow"
-  src="Images/Miscellaneous/light-bridge.svg"
-/>
 
 
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-rainbow.svg)
