@@ -1,5 +1,11 @@
 <img
   width="100%"
+  alt="light-bridge"
+  src="Images/Miscellaneous/light-bridge.svg"
+/>
+
+<img
+  width="100%"
   alt="Rainbow"
   src="Images/Banners/03-gemelodigital3.png"
 />
@@ -20,7 +26,7 @@
 
 <img
   width="100%"
-  alt="Rainbow"
+  alt="light-bridge"
   src="Images/Miscellaneous/light-bridge.svg"
 />
 
@@ -45,8 +51,6 @@ Here are some ideas to get you started:
 -->
 
 ![Space Shooter](./game.gif)
-
-
 
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-rainbow.svg)
 
