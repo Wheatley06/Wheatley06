@@ -1,8 +1,3 @@
-<img
-  width="100%"
-  alt="light-bridge"
-  src="Images/Miscellaneous/light-bridge.svg"
-/>
 
 <img
   width="100%"
